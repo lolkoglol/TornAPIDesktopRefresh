@@ -1,0 +1,1000 @@
+"Hammer": { id:"1" } 
+"Baseball Bat": { id:"2" } 
+"Crow Bar": { id:"3" } 
+"Knuckle Dusters": { id:"4" } 
+"Pen Knife": { id:"5" } 
+"Kitchen Knife": { id:"6" } 
+"Dagger": { id:"7" } 
+"Axe": { id:"8" } 
+"Scimitar": { id:"9" } 
+"Chainsaw": { id:"10" } 
+"Samurai Sword": { id:"11" } 
+"Glock 17": { id:"12" } 
+"Raven MP25": { id:"13" } 
+"Ruger 22/45": { id:"14" } 
+"Beretta M9": { id:"15" } 
+"USP": { id:"16" } 
+"Beretta 92FS": { id:"17" } 
+"Fiveseven": { id:"18" } 
+"Magnum": { id:"19" } 
+"Desert Eagle": { id:"20" } 
+"Dual 92G Berettas": { id:"21" } 
+"Sawed-Off Shotgun": { id:"22" } 
+"Benelli M1 Tactical": { id:"23" } 
+"MP5 Navy": { id:"24" } 
+"P90": { id:"25" } 
+"AK-47": { id:"26" } 
+"M4A1 Colt Carbine": { id:"27" } 
+"Benelli M4 Super": { id:"28" } 
+"M16 A2 Rifle": { id:"29" } 
+"Steyr AUG": { id:"30" } 
+"M249 PARA LMG": { id:"31" } 
+"Leather Vest": { id:"32" } 
+"Police Vest": { id:"33" } 
+"Bulletproof Vest": { id:"34" } 
+"Box of Chocolate Bars": { id:"35" } 
+"Big Box of Chocolate Bars": { id:"36" } 
+"Bag of Bon Bons": { id:"37" } 
+"Box of Bon Bons": { id:"38" } 
+"Box of Extra Strong Mints": { id:"39" } 
+"Pack of Music CDs": { id:"40" } 
+"DVD Player": { id:"41" } 
+"MP3 Player": { id:"42" } 
+"CD Player": { id:"43" } 
+"Pack of Blank CDs : 100": { id:"44" } 
+"Hard Drive": { id:"45" } 
+"Tank Top": { id:"46" } 
+"Pair of Trainers": { id:"47" } 
+"Jacket": { id:"48" } 
+"Full Body Armor": { id:"49" } 
+"Outer Tactical Vest": { id:"50" } 
+"Plain Silver Ring": { id:"51" } 
+"Sapphire Ring": { id:"52" } 
+"Gold Ring": { id:"53" } 
+"Diamond Ring": { id:"54" } 
+"Pearl Necklace": { id:"55" } 
+"Silver Necklace": { id:"56" } 
+"Gold Necklace": { id:"57" } 
+"Plastic Watch": { id:"58" } 
+"Stainless Steel Watch": { id:"59" } 
+"Gold Watch": { id:"60" } 
+"Personal Computer": { id:"61" } 
+"Microwave": { id:"62" } 
+"Minigun": { id:"63" } 
+"Pack of Cuban Cigars": { id:"64" } 
+"Big TV Screen": { id:"65" } 
+"Morphine": { id:"66" } 
+"First Aid Kit": { id:"67" } 
+"Small First Aid Kit": { id:"68" } 
+"Simple Virus": { id:"69" } 
+"Polymorphic Virus": { id:"70" } 
+"Tunneling Virus": { id:"71" } 
+"Armored Virus": { id:"72" } 
+"Stealth Virus": { id:"73" } 
+"Santa Hat '04": { id:"74" } 
+"Christmas Cracker '04": { id:"75" } 
+"Snow Cannon": { id:"76" } 
+"Toyota MR2": { id:"77" } 
+"Honda NSX": { id:"78" } 
+"Audi TT Quattro": { id:"79" } 
+"BMW M5": { id:"80" } 
+"BMW Z8": { id:"81" } 
+"Chevrolet Corvette Z06": { id:"82" } 
+"Dodge Charger": { id:"83" } 
+"Pontiac Firebird": { id:"84" } 
+"Ford GT40": { id:"85" } 
+"Hummer H3": { id:"86" } 
+"Audi S4": { id:"87" } 
+"Honda Integra R": { id:"88" } 
+"Honda Accord": { id:"89" } 
+"Honda Civic": { id:"90" } 
+"Volkswagen Beetle": { id:"91" } 
+"Chevrolet Cavalier": { id:"92" } 
+"Ford Mustang": { id:"93" } 
+"Reliant Robin": { id:"94" } 
+"Holden SS": { id:"95" } 
+"Coat Hanger": { id:"96" } 
+"Bunch of Flowers": { id:"97" } 
+"Neutrilux 2000": { id:"98" } 
+"Springfield 1911-A1": { id:"99" } 
+"Egg Propelled Launcher": { id:"100" } 
+"Bunny Suit": { id:"101" } 
+"Chocolate Egg '05": { id:"102" } 
+"Firewalk Virus": { id:"103" } 
+"Playstation": { id:"104" } 
+"Xbox": { id:"105" } 
+"Parachute": { id:"106" } 
+"Trench Coat": { id:"107" } 
+"9mm Uzi": { id:"108" } 
+"RPG Launcher": { id:"109" } 
+"Leather Bull Whip": { id:"110" } 
+"Ninja Claws": { id:"111" } 
+"Test Trophy": { id:"112" } 
+"Pet Rock": { id:"113" } 
+"Non-Anon Doll": { id:"114" } 
+"Poker Doll": { id:"115" } 
+"Yoda Figurine": { id:"116" } 
+"Trojan Horse": { id:"117" } 
+"Evil Doll": { id:"118" } 
+"Rubber Ducky of Doom": { id:"119" } 
+"Teppic Bear": { id:"120" } 
+"RockerHead Doll": { id:"121" } 
+"Mouser Doll": { id:"122" } 
+"Elite Action Man": { id:"123" } 
+"Toy Reactor": { id:"124" } 
+"Royal Doll": { id:"125" } 
+"Blue Dragon": { id:"126" } 
+"China Tea Set": { id:"127" } 
+"Mufasa Toy": { id:"128" } 
+"Dozen Roses": { id:"129" } 
+"Skanky Doll": { id:"130" } 
+"Lego Hurin": { id:"131" } 
+"Mystical Sphere": { id:"132" } 
+"10 Ton Pacifier": { id:"133" } 
+"Horse": { id:"134" } 
+"Uriel's Speakers": { id:"135" } 
+"Strife Clown": { id:"136" } 
+"Locked Teddy": { id:"137" } 
+"Riddle's Bat": { id:"138" } 
+"Soup Nazi Doll": { id:"139" } 
+"Pouncer Doll": { id:"140" } 
+"Spammer Doll": { id:"141" } 
+"Cookie Jar": { id:"142" } 
+"Vanity Mirror": { id:"143" } 
+"Banana Phone": { id:"144" } 
+"Xbox 360": { id:"145" } 
+"Yasukuni Sword": { id:"146" } 
+"Rusty Sword": { id:"147" } 
+"Dance Toy": { id:"148" } 
+"Lucky Dime": { id:"149" } 
+"Crystal Carousel": { id:"150" } 
+"Pixie Sticks": { id:"151" } 
+"Ice Sculpture": { id:"152" } 
+"Case of Whiskey": { id:"153" } 
+"Laptop": { id:"154" } 
+"Purple Frog Doll": { id:"155" } 
+"Skeleton Key": { id:"156" } 
+"Patriot Whip": { id:"157" } 
+"Statue Of Aeolus": { id:"158" } 
+"Bolt Cutters": { id:"159" } 
+"Photographs": { id:"160" } 
+"Black Unicorn": { id:"161" } 
+"WarPaint Kit": { id:"162" } 
+"Official Ninja Kit": { id:"163" } 
+"Leukaemia TeddyBear": { id:"164" } 
+"Chocobo Flute": { id:"165" } 
+"Annoying Man": { id:"166" } 
+"Article on Crime": { id:"167" } 
+"Unknown": { id:"168" } 
+"Barbie Doll": { id:"169" } 
+"Wand of Destruction": { id:"170" } 
+"Jack-O-Lantern '05": { id:"171" } 
+"Gas Can": { id:"172" } 
+"Butterfly Knife": { id:"173" } 
+"XM8 Rifle": { id:"174" } 
+"Taser": { id:"175" } 
+"Chain Mail": { id:"176" } 
+"Cobra Derringer": { id:"177" } 
+"Flak Jacket": { id:"178" } 
+"Birthday Cake '05": { id:"179" } 
+"Bottle of Beer": { id:"180" } 
+"Bottle of Champagne": { id:"181" } 
+"Soap on a Rope": { id:"182" } 
+"Single Red Rose": { id:"183" } 
+"Bunch of Black Roses": { id:"184" } 
+"Bunch of Balloons '05": { id:"185" } 
+"Sheep Plushie": { id:"186" } 
+"Teddy Bear Plushie": { id:"187" } 
+"Cracked Crystal Ball": { id:"188" } 
+"S&W Revolver": { id:"189" } 
+"C4 Explosive": { id:"190" } 
+"Memory Locket": { id:"191" } 
+"Rainbow Stud Earring": { id:"192" } 
+"Hamster Toy": { id:"193" } 
+"Snowflake '05": { id:"194" } 
+"Christmas Tree '05": { id:"195" } 
+"Cannabis": { id:"196" } 
+"Ecstasy": { id:"197" } 
+"Ketamine": { id:"198" } 
+"LSD": { id:"199" } 
+"Opium": { id:"200" } 
+"PCP": { id:"201" } 
+"Mr Torn Crown '07": { id:"202" } 
+"Shrooms": { id:"203" } 
+"Speed": { id:"204" } 
+"Vicodin": { id:"205" } 
+"Xanax": { id:"206" } 
+"Ms Torn Crown '07": { id:"207" } 
+"Unknown": { id:"208" } 
+"Box of Sweet Hearts": { id:"209" } 
+"Bag of Chocolate Kisses": { id:"210" } 
+"Crazy Cow": { id:"211" } 
+"Legend's Urn": { id:"212" } 
+"Dreamcatcher": { id:"213" } 
+"Brutus Keychain": { id:"214" } 
+"Kitten Plushie": { id:"215" } 
+"Single White Rose": { id:"216" } 
+"Claymore Sword": { id:"217" } 
+"Crossbow": { id:"218" } 
+"Enfield SA-80": { id:"219" } 
+"Grenade": { id:"220" } 
+"Stick Grenade": { id:"221" } 
+"Flash Grenade": { id:"222" } 
+"Jackhammer": { id:"223" } 
+"Swiss Army Knife": { id:"224" } 
+"Mag 7": { id:"225" } 
+"Smoke Grenade": { id:"226" } 
+"Spear": { id:"227" } 
+"Vektor CR-21": { id:"228" } 
+"Claymore Mine": { id:"229" } 
+"Flare Gun": { id:"230" } 
+"Heckler & Koch SL8": { id:"231" } 
+"Sig 550": { id:"232" } 
+"BT MP9": { id:"233" } 
+"Chain Whip": { id:"234" } 
+"Wooden Nunchakus": { id:"235" } 
+"Kama": { id:"236" } 
+"Kodachi Swords": { id:"237" } 
+"Sai": { id:"238" } 
+"Ninja Stars": { id:"239" } 
+"Anti Tank": { id:"240" } 
+"Bushmaster Carbon 15 Type 21s": { id:"241" } 
+"HEG": { id:"242" } 
+"Taurus": { id:"243" } 
+"Blowgun": { id:"244" } 
+"Bo Staff": { id:"245" } 
+"Fireworks": { id:"246" } 
+"Katana": { id:"247" } 
+"Qsz-92": { id:"248" } 
+"Sks Carbine": { id:"249" } 
+"Twin Tiger Hooks": { id:"250" } 
+"Wushu Double Axes": { id:"251" } 
+"Ithaca 37": { id:"252" } 
+"Lorcin 380": { id:"253" } 
+"S&W M29": { id:"254" } 
+"Flamethrower": { id:"255" } 
+"Tear Gas": { id:"256" } 
+"Throwing Knife": { id:"257" } 
+"Jaguar Plushie": { id:"258" } 
+"Mayan Statue": { id:"259" } 
+"Dahlia": { id:"260" } 
+"Wolverine Plushie": { id:"261" } 
+"Hockey Stick": { id:"262" } 
+"Crocus": { id:"263" } 
+"Orchid": { id:"264" } 
+"Pele Charm": { id:"265" } 
+"Nessie Plushie": { id:"266" } 
+"Heather": { id:"267" } 
+"Red Fox Plushie": { id:"268" } 
+"Monkey Plushie": { id:"269" } 
+"Soccer Ball": { id:"270" } 
+"Ceibo Flower": { id:"271" } 
+"Edelweiss": { id:"272" } 
+"Chamois Plushie": { id:"273" } 
+"Panda Plushie": { id:"274" } 
+"Jade Buddha": { id:"275" } 
+"Peony": { id:"276" } 
+"Cherry Blossom": { id:"277" } 
+"Kabuki Mask": { id:"278" } 
+"Maneki Neko": { id:"279" } 
+"Elephant Statue": { id:"280" } 
+"Lion Plushie": { id:"281" } 
+"African Violet": { id:"282" } 
+"Donator Pack": { id:"283" } 
+"Bronze Paint Brush": { id:"284" } 
+"Silver Paint Brush": { id:"285" } 
+"Gold Paint Brush": { id:"286" } 
+"Pand0ra's Box": { id:"287" } 
+"Mr Brownstone Doll": { id:"288" } 
+"Dual Axes": { id:"289" } 
+"Dual Hammers": { id:"290" } 
+"Dual Scimitars": { id:"291" } 
+"Dual Samurai Swords": { id:"292" } 
+"Japanese/English Dictionary": { id:"293" } 
+"Bottle of Saké": { id:"294" } 
+"Oriental Log": { id:"295" } 
+"Oriental Log Translation": { id:"296" } 
+"YouYou Yo Yo": { id:"297" } 
+"Monkey Cuffs": { id:"298" } 
+"Jester's Cap": { id:"299" } 
+"Gibal's Dragonfly": { id:"300" } 
+"Green Ornament": { id:"301" } 
+"Purple Ornament": { id:"302" } 
+"Blue Ornament": { id:"303" } 
+"Purple Bell": { id:"304" } 
+"Mistletoe": { id:"305" } 
+"Mini Sleigh": { id:"306" } 
+"Snowman": { id:"307" } 
+"Christmas Gnome": { id:"308" } 
+"Gingerbread House": { id:"309" } 
+"Lollipop": { id:"310" } 
+"Mardi Gras Beads": { id:"311" } 
+"Devil Toy": { id:"312" } 
+"Cookie Launcher": { id:"313" } 
+"Cursed Moon Pendant": { id:"314" } 
+"Apartment Blueprint": { id:"315" } 
+"Semi-Detached House Blueprint": { id:"316" } 
+"Detached House Blueprint": { id:"317" } 
+"Beach House Blueprint": { id:"318" } 
+"Chalet Blueprint": { id:"319" } 
+"Villa Blueprint": { id:"320" } 
+"Penthouse Blueprint": { id:"321" } 
+"Mansion Blueprint": { id:"322" } 
+"Ranch Blueprint": { id:"323" } 
+"Palace Blueprint": { id:"324" } 
+"Castle Blueprint": { id:"325" } 
+"Printing Paper": { id:"326" } 
+"Blank Tokens": { id:"327" } 
+"Blank Credit Cards": { id:"328" } 
+"Skateboard": { id:"329" } 
+"Boxing Gloves": { id:"330" } 
+"Dumbbells": { id:"331" } 
+"Combat Vest": { id:"332" } 
+"Liquid Body Armor": { id:"333" } 
+"Flexible Body Armor": { id:"334" } 
+"Stick of Dynamite": { id:"335" } 
+"Cesium-137": { id:"336" } 
+"Dirty Bomb": { id:"337" } 
+"Sh0rty's Surfboard": { id:"338" } 
+"Puzzle piece": { id:"339" } 
+"Hunny Pot": { id:"340" } 
+"Seductive Stethoscope": { id:"341" } 
+"Dollar Bill Collectible": { id:"342" } 
+"Backstage Pass": { id:"343" } 
+"Chemi's Magic Potion": { id:"344" } 
+"Pack of Trojans": { id:"345" } 
+"Pair of High Heels": { id:"346" } 
+"Thong": { id:"347" } 
+"Hazmat Suit": { id:"348" } 
+"Flea Collar": { id:"349" } 
+"Dunkin's Donut": { id:"350" } 
+"Amazon Doll": { id:"351" } 
+"BBQ Smoker": { id:"352" } 
+"Bag of Cheetos": { id:"353" } 
+"Motorbike": { id:"354" } 
+"Citrus Squeezer": { id:"355" } 
+"Superman Shades": { id:"356" } 
+"Kevlar Helmet": { id:"357" } 
+"Raw Ivory": { id:"358" } 
+"Fine Chisel": { id:"359" } 
+"Ivory Walking Cane": { id:"360" } 
+"Neumune Tablet": { id:"361" } 
+"Mr Torn Crown '08": { id:"362" } 
+"Ms Torn Crown '08": { id:"363" } 
+"Box of Grenades": { id:"364" } 
+"Box of Medical Supplies": { id:"365" } 
+"Erotic DVD": { id:"366" } 
+"Feathery Hotel Coupon": { id:"367" } 
+"Lawyer Business Card": { id:"368" } 
+"Lottery Voucher": { id:"369" } 
+"Drug Pack": { id:"370" } 
+"Dark Doll": { id:"371" } 
+"Empty Box": { id:"372" } 
+"Parcel": { id:"373" } 
+"Birthday Present": { id:"374" } 
+"Present": { id:"375" } 
+"Christmas Present": { id:"376" } 
+"Birthday Wrapping Paper": { id:"377" } 
+"Generic Wrapping Paper": { id:"378" } 
+"Christmas Wrapping Paper": { id:"379" } 
+"Small Explosive Device": { id:"380" } 
+"Gold Laptop": { id:"381" } 
+"Gold Plated AK-47": { id:"382" } 
+"Platinum PDA": { id:"383" } 
+"Camel Plushie": { id:"384" } 
+"Tribulus Omanense": { id:"385" } 
+"Sports Sneakers": { id:"386" } 
+"Handbag": { id:"387" } 
+"Pink Mac-10": { id:"388" } 
+"Mr Torn Crown '09": { id:"389" } 
+"Ms Torn Crown '09": { id:"390" } 
+"Macana": { id:"391" } 
+"Pepper Spray": { id:"392" } 
+"Slingshot": { id:"393" } 
+"Brick": { id:"394" } 
+"Metal Nunchakus": { id:"395" } 
+"Business Class Ticket": { id:"396" } 
+"Flail": { id:"397" } 
+"Swiss Army SG 550": { id:"398" } 
+"ArmaLite M-15A4 Rifle": { id:"399" } 
+"Guandao": { id:"400" } 
+"Lead Pipe": { id:"401" } 
+"Ice Pick": { id:"402" } 
+"Box of Tissues": { id:"403" } 
+"Bandana": { id:"404" } 
+"Loaf of Bread": { id:"405" } 
+"Afro Comb": { id:"406" } 
+"Compass": { id:"407" } 
+"Sextant": { id:"408" } 
+"Yucca Plant": { id:"409" } 
+"Fire Hydrant": { id:"410" } 
+"Model Space Ship": { id:"411" } 
+"Sports Shades": { id:"412" } 
+"Mountie Hat": { id:"413" } 
+"Proda Sunglasses": { id:"414" } 
+"Ship in a Bottle": { id:"415" } 
+"Paper Weight": { id:"416" } 
+"RS232 Cable": { id:"417" } 
+"Tailors Dummy": { id:"418" } 
+"Small Suitcase": { id:"419" } 
+"Medium Suitcase": { id:"420" } 
+"Large Suitcase": { id:"421" } 
+"Vanity Hand Mirror": { id:"422" } 
+"Poker Chip": { id:"423" } 
+"Rabbit Foot": { id:"424" } 
+"Voodoo Doll": { id:"425" } 
+"Bottle of Tequila": { id:"426" } 
+"Sumo Doll": { id:"427" } 
+"Casino Pass": { id:"428" } 
+"Chopsticks": { id:"429" } 
+"Coconut Bra": { id:"430" } 
+"Dart Board": { id:"431" } 
+"Crazy Straw": { id:"432" } 
+"Sensu": { id:"433" } 
+"Yakitori Lantern": { id:"434" } 
+"Dozen White Roses": { id:"435" } 
+"Snowboard": { id:"436" } 
+"Glow Stick": { id:"437" } 
+"Cricket Bat": { id:"438" } 
+"Frying Pan": { id:"439" } 
+"Pillow": { id:"440" } 
+"Khinkeh P0rnStar Doll": { id:"441" } 
+"Blow-Up Doll": { id:"442" } 
+"Strawberry Milkshake": { id:"443" } 
+"Breadfan Doll": { id:"444" } 
+"Chaos Man": { id:"445" } 
+"Karate Man": { id:"446" } 
+"Burmese Flag": { id:"447" } 
+"Bl0ndie's Dictionary": { id:"448" } 
+"Hydroponic Grow Tent": { id:"449" } 
+"Leopard Coin": { id:"450" } 
+"Florin Coin": { id:"451" } 
+"Gold Noble Coin": { id:"452" } 
+"Ganesha Sculpture": { id:"453" } 
+"Vairocana Buddha Sculpture": { id:"454" } 
+"Quran Script : Ibn Masud": { id:"455" } 
+"Quran Script : Ubay Ibn Kab": { id:"456" } 
+"Quran Script : Ali": { id:"457" } 
+"Shabti Sculpture": { id:"458" } 
+"Egyptian Amulet": { id:"459" } 
+"White Senet Pawn": { id:"460" } 
+"Black Senet Pawn": { id:"461" } 
+"Senet Board": { id:"462" } 
+"Epinephrine": { id:"463" } 
+"Melatonin": { id:"464" } 
+"Serotonin": { id:"465" } 
+"Snow Globe '09": { id:"466" } 
+"Dancing Santa Claus '09": { id:"467" } 
+"Christmas Stocking '09": { id:"468" } 
+"Santa's Elf '09": { id:"469" } 
+"Christmas Card '09": { id:"470" } 
+"Admin Portrait '09": { id:"471" } 
+"Blue Easter Egg": { id:"472" } 
+"Green Easter Egg": { id:"473" } 
+"Red Easter Egg": { id:"474" } 
+"Yellow Easter Egg": { id:"475" } 
+"White Easter Egg": { id:"476" } 
+"Black Easter Egg": { id:"477" } 
+"Gold Easter Egg": { id:"478" } 
+"Metal Dog Tag": { id:"479" } 
+"Bronze Dog Tag": { id:"480" } 
+"Silver Dog Tag": { id:"481" } 
+"Gold Dog Tag": { id:"482" } 
+"MP5k": { id:"483" } 
+"AK74u": { id:"484" } 
+"Skorpion": { id:"485" } 
+"TMP": { id:"486" } 
+"Thompson": { id:"487" } 
+"MP 40": { id:"488" } 
+"Luger": { id:"489" } 
+"Blunderbuss": { id:"490" } 
+"Zombie Brain": { id:"491" } 
+"Human Head": { id:"492" } 
+"Medal of Honor": { id:"493" } 
+"Citroen Saxo": { id:"494" } 
+"Classic Mini": { id:"495" } 
+"Fiat Punto": { id:"496" } 
+"Nissan Micra": { id:"497" } 
+"Peugeot 106": { id:"498" } 
+"Renault Clio": { id:"499" } 
+"Vauxhall Corsa": { id:"500" } 
+"Volvo 850": { id:"501" } 
+"Alfa Romeo 156": { id:"502" } 
+"BMW X5": { id:"503" } 
+"Seat Leon Cupra": { id:"504" } 
+"Vauxhall Astra GSI": { id:"505" } 
+"Volkswagen Golf GTI": { id:"506" } 
+"Audi S3": { id:"507" } 
+"Ford Focus RS": { id:"508" } 
+"Honda S2000": { id:"509" } 
+"Mini Cooper S": { id:"510" } 
+"Sierra Cosworth": { id:"511" } 
+"Lotus Exige": { id:"512" } 
+"Mitsubishi Evo X": { id:"513" } 
+"Porsche 911 GT3": { id:"514" } 
+"Subaru Impreza STI": { id:"515" } 
+"TVR Sagaris": { id:"516" } 
+"Aston Martin One-77": { id:"517" } 
+"Audi R8": { id:"518" } 
+"Bugatti Veyron": { id:"519" } 
+"Ferrari 458": { id:"520" } 
+"Lamborghini Gallardo": { id:"521" } 
+"Lexus LFA": { id:"522" } 
+"Mercedes SLR": { id:"523" } 
+"Nissan GT-R": { id:"524" } 
+"Mr Torn Crown '10": { id:"525" } 
+"Ms Torn Crown '10": { id:"526" } 
+"Bag of Candy Kisses": { id:"527" } 
+"Bag of Tootsie Rolls": { id:"528" } 
+"Bag of Chocolate Truffles": { id:"529" } 
+"Can of Munster": { id:"530" } 
+"Bottle of Pumpkin Brew": { id:"531" } 
+"Can of Red Cow": { id:"532" } 
+"Can of Taurine Elite": { id:"533" } 
+"Witch's Cauldron": { id:"534" } 
+"Electronic Pumpkin": { id:"535" } 
+"Jack O Lantern Lamp": { id:"536" } 
+"Spooky Paper Weight": { id:"537" } 
+"Medieval Helmet": { id:"538" } 
+"Blood Spattered Sickle": { id:"539" } 
+"Cauldron": { id:"540" } 
+"Bottle of Stinky Swamp Punch": { id:"541" } 
+"Bottle of Wicked Witch": { id:"542" } 
+"Deputy Star": { id:"543" } 
+"Wind Proof Lighter": { id:"544" } 
+"Dual TMPs": { id:"545" } 
+"Dual Bushmasters": { id:"546" } 
+"Dual MP5s": { id:"547" } 
+"Dual P90s": { id:"548" } 
+"Dual Uzis": { id:"549" } 
+"Bottle of Kandy Kane": { id:"550" } 
+"Bottle of Minty Mayhem": { id:"551" } 
+"Bottle of Mistletoe Madness": { id:"552" } 
+"Can of Santa Shooters": { id:"553" } 
+"Can of Rockstar Rudolph": { id:"554" } 
+"Can of X-MASS": { id:"555" } 
+"Bag of Reindeer Droppings": { id:"556" } 
+"Advent Calendar": { id:"557" } 
+"Santa's Snot": { id:"558" } 
+"Polar Bear Toy": { id:"559" } 
+"Fruitcake": { id:"560" } 
+"Book of Carols": { id:"561" } 
+"Sweater": { id:"562" } 
+"Gift Card": { id:"563" } 
+"Pair of Glasses": { id:"564" } 
+"High-Speed Drive": { id:"565" } 
+"Mountain Bike": { id:"566" } 
+"Cut-Throat Razor": { id:"567" } 
+"Slim Crowbar": { id:"568" } 
+"Balaclava": { id:"569" } 
+"Advanced Driving Tactics Manual": { id:"570" } 
+"Ergonomic Keyboard": { id:"571" } 
+"Tracking Device": { id:"572" } 
+"Screwdriver": { id:"573" } 
+"Fanny Pack": { id:"574" } 
+"Tumble Dryer": { id:"575" } 
+"Chloroform": { id:"576" } 
+"Heavy Duty Padlock": { id:"577" } 
+"Duct Tape": { id:"578" } 
+"Wireless Dongle": { id:"579" } 
+"Horse's Head": { id:"580" } 
+"Book": { id:"581" } 
+"Tin Foil Hat": { id:"582" } 
+"Brown Easter Egg": { id:"583" } 
+"Orange Easter Egg": { id:"584" } 
+"Pink Easter Egg": { id:"585" } 
+"Jawbreaker": { id:"586" } 
+"Bag of Sherbet": { id:"587" } 
+"Goodie Bag": { id:"588" } 
+"Undefined": { id:"589" } 
+"Undefined 2": { id:"590" } 
+"Undefined 3": { id:"591" } 
+"Undefined 4": { id:"592" } 
+"Mr Torn Crown '11": { id:"593" } 
+"Ms Torn Crown '11": { id:"594" } 
+"Pile of Vomit": { id:"595" } 
+"Rusty Dog Tag": { id:"596" } 
+"Gold Nugget": { id:"597" } 
+"Witch's Hat": { id:"598" } 
+"Golden Broomstick": { id:"599" } 
+"Devil's Pitchfork": { id:"600" } 
+"Christmas Lights": { id:"601" } 
+"Gingerbread Man": { id:"602" } 
+"Golden Wreath": { id:"603" } 
+"Pair of Ice Skates": { id:"604" } 
+"Diamond Icicle": { id:"605" } 
+"Santa Boots": { id:"606" } 
+"Santa Gloves": { id:"607" } 
+"Santa Hat": { id:"608" } 
+"Santa Jacket": { id:"609" } 
+"Santa Trousers": { id:"610" } 
+"Snowball": { id:"611" } 
+"Tavor TAR-21": { id:"612" } 
+"Harpoon": { id:"613" } 
+"Diamond Bladed Knife": { id:"614" } 
+"Naval Cutlass Sword": { id:"615" } 
+"Trout": { id:"616" } 
+"Banana Orchid": { id:"617" } 
+"Stingray Plushie": { id:"618" } 
+"Steel Drum": { id:"619" } 
+"Nodding Turtle": { id:"620" } 
+"Snorkel": { id:"621" } 
+"Flippers": { id:"622" } 
+"Speedo": { id:"623" } 
+"Bikini": { id:"624" } 
+"Wetsuit": { id:"625" } 
+"Diving Gloves": { id:"626" } 
+"Dog Poop": { id:"627" } 
+"Stink Bombs": { id:"628" } 
+"Toilet Paper": { id:"629" } 
+"Mr Torn Crown '12": { id:"630" } 
+"Ms Torn Crown '12": { id:"631" } 
+"Petrified Humerus": { id:"632" } 
+"Latex Gloves": { id:"633" } 
+"Bag of Bloody Eyeballs": { id:"634" } 
+"Straitjacket": { id:"635" } 
+"Cinnamon Ornament": { id:"636" } 
+"Christmas Express": { id:"637" } 
+"Bottle of Christmas Cocktail": { id:"638" } 
+"Golden Candy Cane": { id:"639" } 
+"Kevlar Gloves": { id:"640" } 
+"WWII Helmet": { id:"641" } 
+"Motorcycle Helmet": { id:"642" } 
+"Construction Helmet": { id:"643" } 
+"Welding Helmet": { id:"644" } 
+"Safety Boots": { id:"645" } 
+"Hiking Boots": { id:"646" } 
+"Leather Helmet": { id:"647" } 
+"Leather Pants": { id:"648" } 
+"Leather Boots": { id:"649" } 
+"Leather Gloves": { id:"650" } 
+"Combat Helmet": { id:"651" } 
+"Combat Pants": { id:"652" } 
+"Combat Boots": { id:"653" } 
+"Combat Gloves": { id:"654" } 
+"Riot Helmet": { id:"655" } 
+"Riot Body": { id:"656" } 
+"Riot Pants": { id:"657" } 
+"Riot Boots": { id:"658" } 
+"Riot Gloves": { id:"659" } 
+"Dune Helmet": { id:"660" } 
+"Dune Body": { id:"661" } 
+"Dune Pants": { id:"662" } 
+"Dune Boots": { id:"663" } 
+"Dune Gloves": { id:"664" } 
+"Assault Helmet": { id:"665" } 
+"Assault Body": { id:"666" } 
+"Assault Pants": { id:"667" } 
+"Assault Boots": { id:"668" } 
+"Assault Gloves": { id:"669" } 
+"Delta Gas Mask": { id:"670" } 
+"Delta Body": { id:"671" } 
+"Delta Pants": { id:"672" } 
+"Delta Boots": { id:"673" } 
+"Delta Gloves": { id:"674" } 
+"Marauder Face Mask": { id:"675" } 
+"Marauder Body": { id:"676" } 
+"Marauder Pants": { id:"677" } 
+"Marauder Boots": { id:"678" } 
+"Marauder Gloves": { id:"679" } 
+"EOD Helmet": { id:"680" } 
+"EOD Apron": { id:"681" } 
+"EOD Pants": { id:"682" } 
+"EOD Boots": { id:"683" } 
+"EOD Gloves": { id:"684" } 
+"Torn Bible": { id:"685" } 
+"Friendly Bot Guide": { id:"686" } 
+"Egotistical Bear": { id:"687" } 
+"Brewery Key": { id:"688" } 
+"Signed Jersey": { id:"689" } 
+"Mafia Kit": { id:"690" } 
+"Octopus Toy": { id:"691" } 
+"Bear Skin Rug": { id:"692" } 
+"Tractor Toy": { id:"693" } 
+"Mr Torn Crown '13": { id:"694" } 
+"Ms Torn Crown '13": { id:"695" } 
+"Piece of Cake": { id:"696" } 
+"Rotten Eggs": { id:"697" } 
+"Peg Leg": { id:"698" } 
+"Antidote": { id:"699" } 
+"Christmas Angel": { id:"700" } 
+"Eggnog": { id:"701" } 
+"Sprig of Holly": { id:"702" } 
+"Festive Socks": { id:"703" } 
+"Respo Hoodie": { id:"704" } 
+"Staff Haxx Button": { id:"705" } 
+"Birthday Cake '14": { id:"706" } 
+"Lump of Coal": { id:"707" } 
+"Gold Ribbon": { id:"708" } 
+"Silver Ribbon": { id:"709" } 
+"Bronze Ribbon": { id:"710" } 
+"Coin : Factions": { id:"711" } 
+"Coin : Casino": { id:"712" } 
+"Coin : Education": { id:"713" } 
+"Coin : Hospital": { id:"714" } 
+"Coin : Jail": { id:"715" } 
+"Coin : Travel Agency": { id:"716" } 
+"Coin : Companies": { id:"717" } 
+"Coin : Stock Exchange": { id:"718" } 
+"Coin : Church": { id:"719" } 
+"Coin : Auction House": { id:"720" } 
+"Coin : Race Track": { id:"721" } 
+"Coin : Museum": { id:"722" } 
+"Coin : Drugs": { id:"723" } 
+"Coin : Dump": { id:"724" } 
+"Coin : Estate Agents": { id:"725" } 
+"Scrooge's Top Hat": { id:"726" } 
+"Scrooge's Topcoat": { id:"727" } 
+"Scrooge's Trousers": { id:"728" } 
+"Scrooge's Boots": { id:"729" } 
+"Scrooge's Gloves": { id:"730" } 
+"Empty Blood Bag": { id:"731" } 
+"Blood Bag : A+": { id:"732" } 
+"Blood Bag : A-": { id:"733" } 
+"Blood Bag : B+": { id:"734" } 
+"Blood Bag : B-": { id:"735" } 
+"Blood Bag : AB+": { id:"736" } 
+"Blood Bag : AB-": { id:"737" } 
+"Blood Bag : O+": { id:"738" } 
+"Blood Bag : O-": { id:"739" } 
+"Mr Torn Crown": { id:"740" } 
+"Ms Torn Crown": { id:"741" } 
+"Molotov Cocktail": { id:"742" } 
+"Christmas Sweater '15": { id:"743" } 
+"Book : Brawn Over Brains": { id:"744" } 
+"Book : Time Is In The Mind": { id:"745" } 
+"Book : Keeping Your Face Handsome": { id:"746" } 
+"Book : A Job For Your Hands": { id:"747" } 
+"Book : Working 9 Til 5": { id:"748" } 
+"Book : Making Friends, Enemies, And Cakes": { id:"749" } 
+"Book : High School For Adults": { id:"750" } 
+"Book : Milk Yourself Sober": { id:"751" } 
+"Book : Fight Like An Asshole": { id:"752" } 
+"Book : Mind Over Matter": { id:"753" } 
+"Book : No Shame No Pain": { id:"754" } 
+"Book : Run Like The Wind": { id:"755" } 
+"Book : Weaseling Out Of Trouble": { id:"756" } 
+"Book : Get Hard Or Go Home": { id:"757" } 
+"Book : Gym Grunting - Shouting To Success": { id:"758" } 
+"Book : Self Defense In The Workplace": { id:"759" } 
+"Book : Speed 3 - The Rejected Script": { id:"760" } 
+"Book : Limbo Lovers 101": { id:"761" } 
+"Book : The Hamburglar's Guide To Crime": { id:"762" } 
+"Book : What Are Old Folk Good For Anyway?": { id:"763" } 
+"Book : Medical Degree Schmedical Degree": { id:"764" } 
+"Book : No More Soap On A Rope": { id:"765" } 
+"Book : Mailing Yourself Abroad": { id:"766" } 
+"Book : Smuggling For Beginners": { id:"767" } 
+"Book : Stealthy Stealing of Underwear": { id:"768" } 
+"Book : Shawshank Sure Ain't For Me!": { id:"769" } 
+"Book : Ignorance Is Bliss": { id:"770" } 
+"Book : Winking To Win": { id:"771" } 
+"Book : Finders Keepers": { id:"772" } 
+"Book : Hot Turkey": { id:"773" } 
+"Book : Higher Daddy, Higher!": { id:"774" } 
+"Book : The Real Dutch Courage": { id:"775" } 
+"Book : Because I'm Happy - The Pharrell Story": { id:"776" } 
+"Book : No More Sick Days": { id:"777" } 
+"Book : Duke - My Story": { id:"778" } 
+"Book : Self Control Is For Losers": { id:"779" } 
+"Book : Going Back For More": { id:"780" } 
+"Book : Get Drunk And Lose Dignity": { id:"781" } 
+"Book : Fuelling Your Way To Failure": { id:"782" } 
+"Book : Yes Please Diabetes": { id:"783" } 
+"Book : Ugly Energy": { id:"784" } 
+"Book : Memories And Mammaries": { id:"785" } 
+"Book : Brown-nosing The Boss": { id:"786" } 
+"Book : Running Away From Trouble": { id:"787" } 
+"Certificate of Awesome": { id:"788" } 
+"Certificate of Lame": { id:"789" } 
+"Plastic Sword": { id:"790" } 
+"Mediocre T-Shirt": { id:"791" } 
+"Penelope": { id:"792" } 
+"Cake Frosting": { id:"793" } 
+"Lock Picking Kit": { id:"794" } 
+"Special Fruitcake": { id:"795" } 
+"Felovax": { id:"796" } 
+"Zylkene": { id:"797" } 
+"Duke's Safe": { id:"798" } 
+"Duke's Selfies": { id:"799" } 
+"Duke's Poetry": { id:"800" } 
+"Duke's Dog's Ashes": { id:"801" } 
+"Duke's Will": { id:"802" } 
+"Duke's Gimp Mask": { id:"803" } 
+"Duke's Herpes Medication": { id:"804" } 
+"Duke's Hammer": { id:"805" } 
+"Old Lady Mask": { id:"806" } 
+"Exotic Gentleman Mask": { id:"807" } 
+"Ginger Kid Mask": { id:"808" } 
+"Young Lady Mask": { id:"809" } 
+"Moustache Man Mask": { id:"810" } 
+"Scarred Man Mask": { id:"811" } 
+"Psycho Clown Mask": { id:"812" } 
+"Nun Mask": { id:"813" } 
+"Tyrosine": { id:"814" } 
+"Keg of Beer": { id:"815" } 
+"Glass of Beer": { id:"816" } 
+"Six Pack of Alcohol": { id:"817" } 
+"Six Pack of Energy Drink": { id:"818" } 
+"Rosary Beads": { id:"819" } 
+"Piggy Bank": { id:"820" } 
+"Empty Vial": { id:"821" } 
+"Vial of Blood": { id:"822" } 
+"Vial of Urine": { id:"823" } 
+"Vial of Saliva": { id:"824" } 
+"Questionnaire ": { id:"825" } 
+"Agreement": { id:"826" } 
+"Perceptron : Calibrator": { id:"827" } 
+"Donald Trump Mask '16": { id:"828" } 
+"Yellow Snowman '16": { id:"829" } 
+"Nock Gun": { id:"830" } 
+"Beretta Pico": { id:"831" } 
+"Riding Crop": { id:"832" } 
+"Sand": { id:"833" } 
+"Sweatpants": { id:"834" } 
+"String Vest": { id:"835" } 
+"Black Oxfords": { id:"836" } 
+"Rheinmetall MG 3": { id:"837" } 
+"Homemade Pocket Shotgun": { id:"838" } 
+"Madball": { id:"839" } 
+"Nail Bomb": { id:"840" } 
+"Classic Fedora": { id:"841" } 
+"Pinstripe Suit Trousers": { id:"842" } 
+"Duster": { id:"843" } 
+"Tranquilizer Gun ": { id:"844" } 
+"Bolt Gun": { id:"845" } 
+"Scalpel": { id:"846" } 
+"Nerve Gas": { id:"847" } 
+"Kevlar Lab Coat": { id:"848" } 
+"Loupes": { id:"849" } 
+"Sledgehammer": { id:"850" } 
+"Wifebeater": { id:"851" } 
+"Metal Detector": { id:"852" } 
+"Graveyard Key": { id:"853" } 
+"Questionnaire : Completed": { id:"854" } 
+"Agreement : Signed": { id:"855" } 
+"Spray Can : Black": { id:"856" } 
+"Spray Can : Red": { id:"857" } 
+"Spray Can : Pink": { id:"858" } 
+"Spray Can : Purple": { id:"859" } 
+"Spray Can : Blue": { id:"860" } 
+"Spray Can : Green": { id:"861" } 
+"Spray Can : Yellow": { id:"862" } 
+"Spray Can : Orange": { id:"863" } 
+"Salt Shaker": { id:"864" } 
+"Poison Mistletoe": { id:"865" } 
+"Santa's List '17": { id:"866" } 
+"Soapbox": { id:"867" } 
+"Turkey Baster": { id:"868" } 
+"Elon Musk Mask '17": { id:"869" } 
+"Love Juice": { id:"870" } 
+"Bug Swatter": { id:"871" } 
+"Nothing": { id:"872" } 
+"Bottle of Green Stout": { id:"873" } 
+"Prototype": { id:"874" } 
+"Rotten Apple": { id:"875" } 
+"Festering Chicken": { id:"876" } 
+"Mouldy Pizza": { id:"877" } 
+"Smelly Cheese": { id:"878" } 
+"Sour Milk": { id:"879" } 
+"Stale Bread": { id:"880" } 
+"Spoiled Fish": { id:"881" } 
+"Insurance Policy ": { id:"882" } 
+"Bank Statement": { id:"883" } 
+"Car Battery": { id:"884" } 
+"Scrap Metal": { id:"885" } 
+"Torn City Times": { id:"886" } 
+"Karma! Magazine": { id:"887" } 
+"Umbrella": { id:"888" } 
+"Travel Mug": { id:"889" } 
+"Headphones": { id:"890" } 
+"Undefined": { id:"891" } 
+"Mix CD": { id:"892" } 
+"Lost and Found Office Key": { id:"893" } 
+"Cosmetics Case": { id:"894" } 
+"Phone Card": { id:"895" } 
+"Subway Season Ticket": { id:"896" } 
+"Bottle Cap": { id:"897" } 
+"Silver Coin": { id:"898" } 
+"Silver Bead": { id:"899" } 
+"Lucky Quarter": { id:"900" } 
+"Daffodil": { id:"901" } 
+"Bunch of Carnations": { id:"902" } 
+"White Lily": { id:"903" } 
+"Funeral Wreath": { id:"904" } 
+"Car Keys": { id:"905" } 
+"Handkerchief": { id:"906" } 
+"Candle": { id:"907" } 
+"Paper Bag": { id:"908" } 
+"Tin Can": { id:"909" } 
+"Betting Slip": { id:"910" } 
+"Fidget Spinner": { id:"911" } 
+"Majestic Moose": { id:"912" } 
+"Lego Wonder Woman": { id:"913" } 
+"CR7 Doll": { id:"914" } 
+"Stretch Armstrong Doll": { id:"915" } 
+"Beef Femur": { id:"916" } 
+"Snake's Fang": { id:"917" } 
+"Icey Igloo": { id:"918" } 
+"Federal Jail Key": { id:"919" } 
+"Halloween Basket": { id:"920" } 
+"Michael Myers Mask '18": { id:"921" } 
+"Toast Jesus '18": { id:"922" } 
+"Cheesus '18": { id:"923" } 
+"Bottle of Christmas Spirit": { id:"924" } 
+"Scammer in the Slammer '18": { id:"925" } 
+"Gronch Mask '18": { id:"926" } 
+"Baseball Cap": { id:"927" } 
+"Bermudas": { id:"928" } 
+"Blouse": { id:"929" } 
+"Boob Tube": { id:"930" } 
+"Bush Hat": { id:"931" } 
+"Camisole": { id:"932" } 
+"Capri Pants": { id:"933" } 
+"Cardigan": { id:"934" } 
+"Cork Hat": { id:"935" } 
+"Crop Top": { id:"936" } 
+"Fisherman Hat": { id:"937" } 
+"Gym Shorts": { id:"938" } 
+"Halterneck": { id:"939" } 
+"Raincoat": { id:"940" } 
+"Pantyhose": { id:"941" } 
+"Pencil Skirt": { id:"942" } 
+"Peplum Top": { id:"943" } 
+"Polo Shirt": { id:"944" } 
+"Poncho": { id:"945" } 
+"Puffer Vest": { id:"946" } 
+"Mackintosh": { id:"947" } 
+"Shorts": { id:"948" } 
+"Skirt": { id:"949" } 
+"Travel Socks": { id:"950" } 
+"Turtleneck": { id:"951" } 
+"Yoga Pants": { id:"952" } 
+"Bronze Racing Trophy": { id:"953" } 
+"Silver Racing Trophy": { id:"954" } 
+"Gold Racing Trophy": { id:"955" } 
+"Pack of Blank CDs : 250": { id:"956" } 
+"Pack of Blank CDs : 50": { id:"957" } 
+"Chest Harness": { id:"958" } 
+"Choker": { id:"959" } 
+"Fishnet Stockings": { id:"960" } 
+"Knee-high Boots": { id:"961" } 
+"Lingerie": { id:"962" } 
+"Mankini": { id:"963" } 
+"Mini Skirt": { id:"964" } 
+"Nipple Tassels": { id:"965" } 
+"Bowler Hat": { id:"966" } 
+"Fitted Shirt": { id:"967" } 
+"Bow Tie": { id:"968" } 
+"Neck Tie": { id:"969" } 
+"Waistcoat": { id:"970" } 
+"Blazer": { id:"971" } 
+"Suit Trousers": { id:"972" } 
+"Dress Shoes": { id:"973" } 
+"Smoking Jacket": { id:"974" } 
+"Monocle": { id:"975" } 
+"Bronze Microphone": { id:"976" } 
+"Silver Microphone": { id:"977" } 
+"Gold Microphone": { id:"978" } 
+"Paint Mask": { id:"979" } 
+"Ladder": { id:"980" } 
+"Wire Cutters": { id:"981" } 
+"Ripped Jeans": { id:"982" } 
+"Bandit Mask": { id:"983" } 
+"Bottle of Moonshine": { id:"984" } 
+"Can of Goose Juice": { id:"985" } 
+"Can of Damp Valley": { id:"986" } 
+"Can of Crocozade": { id:"987" } 
+"Fur Coat": { id:"988" } 
+"Fur Scarf": { id:"989" } 
+"Fur Hat": { id:"990" } 
+"Bow Shoes": { id:"991" } 
+"Dolly Shoes": { id:"992" } 
+"Crystal Bracelet": { id:"993" } 
+"Cocktail Ring": { id:"994" } 
+"Sun Hat": { id:"995" } 
+"Oversized Sunglasses": { id:"996" } 
+"Statement Necklace": { id:"997" } 
+"Floral Dress": { id:"998" } 
+"Shrug": { id:"1001" } 
+"Eye Patch": { id:"1002" } 
