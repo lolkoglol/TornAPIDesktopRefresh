@@ -12,6 +12,7 @@ namespace TornMainForm
     public class AppSettings
     {
         public string APIkey { get; set; }
+        public string UserInfoForeGround { get; set; }
 
         public static AppSettings loadSettings()
         {
@@ -20,6 +21,7 @@ namespace TornMainForm
                 StreamReader sr = new StreamReader(MainForm.Settings.SettingsFileName);
                 AppSettings a = JsonConvert.DeserializeObject<AppSettings>(sr.ReadToEnd());
                 MainForm.Settings.APIKey = a.APIkey;
+                MainForm.Settings.UserInfoForeGround = a.UserInfoForeGround;
                 sr.Close();
                 return a;
             }

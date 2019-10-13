@@ -9,6 +9,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
 
 namespace TornMainForm
@@ -25,6 +26,7 @@ namespace TornMainForm
         {
             MainForm.APIKey = TornAPIKey.Text; // api key assgined
         }
+
 
         private void ApiKeyLockcbx_CheckedChanged(object sender, EventArgs e)
         {
@@ -92,11 +94,17 @@ namespace TornMainForm
                     return strresulttest;
                 }
             }
+            public static void ChangeTabForeColour(TabPage NameofTab,ComboBox ComboBoxOfColours,string NameofColour)
+            {
+                if (ComboBoxOfColours.Text == NameofColour)
+                {
+                    NameofTab.ForeColor = Color.FromName(NameofColour);
+                }              
+
+            }
 
             public static DialogResult APIErrorChecks() //Function to check if api returns errors
             {
-
-
                 WebRequest RequestBasic = WebRequest.Create("https://api.torn.com/user/?selections=basic&" + MainForm.APIKey);
                 RequestBasic.Method = "GET";
                 HttpWebResponse ResponseBasic = null;
@@ -193,6 +201,7 @@ namespace TornMainForm
             public static JToken ParsedSettingsData = null;
             public static string SettingsFileName = Directory.GetCurrentDirectory() + "\\Settings.json";
             public static string ItemFileName = Directory.GetCurrentDirectory() + "\\Items.json";
+            public static string UserInfoForeGround = null;
             public static int StockButtonTimerLimit = 12;
             public static int ItemRefreshLimit = 12;
 
@@ -371,7 +380,19 @@ namespace TornMainForm
                             AcEvent = Regex.Replace(AcEvent, "sidracingtablograce", " ");
                             AcEvent = Regex.Replace(AcEvent, "http:www.torn.comjoblist.phppcorpinfoID", " ");
                             AcEvent = Regex.Replace(AcEvent, "http: www.torn.comjoblist.phppcorpinfoID", " ");
-                            AcEvent = AcEvent.Replace("view"," ");                            
+                            AcEvent = AcEvent.Replace("view"," ");
+                            AcEvent = AcEvent.Replace("View", " ");
+
+                            AcEvent = AcEvent.Replace("1stb", "1st ");
+                            AcEvent = AcEvent.Replace("2ndb", "2nd ");
+                            AcEvent = AcEvent.Replace("3rdb", "3rd ");
+                            AcEvent = AcEvent.Replace("4thb", " 4th");
+                            AcEvent = AcEvent.Replace("5thb", " 5th");
+                            AcEvent = AcEvent.Replace("6thb", "6th ");
+                            AcEvent = AcEvent.Replace("7thb", "7th ");
+                            AcEvent = AcEvent.Replace("8thb", "8th ");
+                            AcEvent = AcEvent.Replace("9thb", "9th ");
+                
 
                             AcEvent = Regex.Replace(AcEvent," [\\w]{ 1, 2}", " ");
                            // AcEvent = Regex.Replace(AcEvent, " [\\w]{ 18, 26}", " ");
@@ -397,7 +418,8 @@ namespace TornMainForm
                 if (UserData.TimerAble > 0)
                 {
                     Refreshtimer.Start();
-                }
+                        
+                    }
             }
             if (APIKey.Length != 16)
             {
@@ -483,11 +505,11 @@ namespace TornMainForm
                 StatusLinkProfileValuelbl.Visible = true;
 
             }
-
-            RefreshValuelbl.Text = Convert.ToString(Convert.ToInt32(RefreshValuelbl.Text) - 1); // decrease refresh value by 1 per timer tick which should be 1 second.
+            
+           RefreshValuelbl.Text = Convert.ToString(Convert.ToInt32(RefreshValuelbl.Text) - 1); // decrease refresh value by 1 per timer tick which should be 1 second.
 
             try
-            {
+            { // setting torn time
                 DateTime begginingoftime = new DateTime(1970, 01, 01);
 
                 var details = JObject.Parse(Convert.ToString(UserData.User));
@@ -709,6 +731,7 @@ namespace TornMainForm
             {
                 AppSettings f = new AppSettings();
                 f.APIkey = SettingsAPIKeyValuetxtbox.Text;
+                f.UserInfoForeGround = UserInfoTextColour.Text;
                 f.saveSettings();
             }
             catch (Exception)
@@ -721,10 +744,29 @@ namespace TornMainForm
         {
            
             AppSettings.loadSettings();
+            try
+            {           
             SettingsAPIKeyValuetxtbox.Text = Settings.APIKey.Trim(' ');
-            TornAPIKey.Text = Settings.APIKey.Trim(' '); 
+            TornAPIKey.Text = Settings.APIKey.Trim(' ');
             MainForm.APIKey = SettingsAPIKeyValuetxtbox.Text.Trim(' ');
-            ApiKeyLockcbx.Checked = true;
+                if (Settings.APIKey != "")
+                {
+                    ApiKeyLockcbx.Checked = true;
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                tabPage1.ForeColor = Color.FromName(Settings.UserInfoForeGround);
+            }
+            catch (Exception)
+            {
+                
+            }
+                     
             
             string Creator = "Creator: ";
             int CreatorLength = Creator.Length;
@@ -856,6 +898,19 @@ namespace TornMainForm
                 Settings.ItemRefreshLimit = 12;
                 LoadItemRefreshLimiter.Stop();
             }
+        }
+
+        private void SetUserInfoTextColourbtn_Click(object sender, EventArgs e)
+        {          
+            MyFunctions.ChangeTabForeColour(tabPage1, UserInfoTextColour, "Red");
+            MyFunctions.ChangeTabForeColour(tabPage1, UserInfoTextColour, "Black ");
+            MyFunctions.ChangeTabForeColour(tabPage1, UserInfoTextColour, "DeepSkyBlue");
+            MyFunctions.ChangeTabForeColour(tabPage1, UserInfoTextColour, "Blue");
+            MyFunctions.ChangeTabForeColour(tabPage1, UserInfoTextColour, "Purple");
+            MyFunctions.ChangeTabForeColour(tabPage1, UserInfoTextColour, "Indigo");
+            MyFunctions.ChangeTabForeColour(tabPage1, UserInfoTextColour, "Green");            
+            MyFunctions.ChangeTabForeColour(tabPage1, UserInfoTextColour, "Orange"); 
+            MyFunctions.ChangeTabForeColour(tabPage1, UserInfoTextColour, "HotPink");
         }
     }
     

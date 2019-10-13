@@ -88,6 +88,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.ItemSearchbtn = new System.Windows.Forms.Button();
             this.ItemCombobox = new System.Windows.Forms.ComboBox();
             this.GetItemNamesAndIdbtn = new System.Windows.Forms.Button();
@@ -135,6 +136,8 @@
             this.StockInfo29lbl = new System.Windows.Forms.Label();
             this.StockGetDatabtn = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.UserInfoTextColour = new System.Windows.Forms.ComboBox();
+            this.SetUserInfoTextColourbtn = new System.Windows.Forms.Button();
             this.Creatorlinklabel = new System.Windows.Forms.LinkLabel();
             this.SaveSettingsbtn = new System.Windows.Forms.Button();
             this.SettingsDescriptionlbl = new System.Windows.Forms.Label();
@@ -151,7 +154,6 @@
             this.TornCityTimelbl = new System.Windows.Forms.Label();
             this.StockActivateTimer = new System.Windows.Forms.Timer(this.components);
             this.FetchItemsTimer = new System.Windows.Forms.Timer(this.components);
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.StockInfoRefreshLimit = new System.Windows.Forms.Timer(this.components);
             this.LoadItemRefreshLimiter = new System.Windows.Forms.Timer(this.components);
             this.MainTabBar.SuspendLayout();
@@ -269,7 +271,7 @@
             this.tabPage1.Controls.Add(this.APIkeylbl);
             this.tabPage1.Controls.Add(this.ApiKeyLockcbx);
             this.tabPage1.Controls.Add(this.TornAPIKey);
-            this.tabPage1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.tabPage1.ForeColor = System.Drawing.Color.Black;
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -309,7 +311,7 @@
             // NewEventValuelbl
             // 
             this.NewEventValuelbl.AutoSize = true;
-            this.NewEventValuelbl.Location = new System.Drawing.Point(198, 287);
+            this.NewEventValuelbl.Location = new System.Drawing.Point(201, 287);
             this.NewEventValuelbl.Name = "NewEventValuelbl";
             this.NewEventValuelbl.Size = new System.Drawing.Size(71, 13);
             this.NewEventValuelbl.TabIndex = 56;
@@ -379,7 +381,7 @@
             // BoosterCdValuelbl
             // 
             this.BoosterCdValuelbl.AutoSize = true;
-            this.BoosterCdValuelbl.Location = new System.Drawing.Point(264, 198);
+            this.BoosterCdValuelbl.Location = new System.Drawing.Point(272, 199);
             this.BoosterCdValuelbl.Name = "BoosterCdValuelbl";
             this.BoosterCdValuelbl.Size = new System.Drawing.Size(24, 13);
             this.BoosterCdValuelbl.TabIndex = 49;
@@ -388,7 +390,7 @@
             // BoosterCdlbl
             // 
             this.BoosterCdlbl.AutoSize = true;
-            this.BoosterCdlbl.Location = new System.Drawing.Point(193, 198);
+            this.BoosterCdlbl.Location = new System.Drawing.Point(201, 199);
             this.BoosterCdlbl.Name = "BoosterCdlbl";
             this.BoosterCdlbl.Size = new System.Drawing.Size(64, 13);
             this.BoosterCdlbl.TabIndex = 48;
@@ -397,7 +399,7 @@
             // MedicalCooldownValue
             // 
             this.MedicalCooldownValue.AutoSize = true;
-            this.MedicalCooldownValue.Location = new System.Drawing.Point(263, 228);
+            this.MedicalCooldownValue.Location = new System.Drawing.Point(271, 229);
             this.MedicalCooldownValue.Name = "MedicalCooldownValue";
             this.MedicalCooldownValue.Size = new System.Drawing.Size(24, 13);
             this.MedicalCooldownValue.TabIndex = 47;
@@ -406,7 +408,7 @@
             // Medicallbl
             // 
             this.Medicallbl.AutoSize = true;
-            this.Medicallbl.Location = new System.Drawing.Point(192, 228);
+            this.Medicallbl.Location = new System.Drawing.Point(200, 229);
             this.Medicallbl.Name = "Medicallbl";
             this.Medicallbl.Size = new System.Drawing.Size(65, 13);
             this.Medicallbl.TabIndex = 46;
@@ -415,7 +417,7 @@
             // DrugCdlbl
             // 
             this.DrugCdlbl.AutoSize = true;
-            this.DrugCdlbl.Location = new System.Drawing.Point(193, 138);
+            this.DrugCdlbl.Location = new System.Drawing.Point(201, 139);
             this.DrugCdlbl.Name = "DrugCdlbl";
             this.DrugCdlbl.Size = new System.Drawing.Size(51, 13);
             this.DrugCdlbl.TabIndex = 45;
@@ -424,7 +426,7 @@
             // DrugCooldownValuelbl
             // 
             this.DrugCooldownValuelbl.AutoSize = true;
-            this.DrugCooldownValuelbl.Location = new System.Drawing.Point(264, 138);
+            this.DrugCooldownValuelbl.Location = new System.Drawing.Point(272, 139);
             this.DrugCooldownValuelbl.Name = "DrugCooldownValuelbl";
             this.DrugCooldownValuelbl.Size = new System.Drawing.Size(24, 13);
             this.DrugCooldownValuelbl.TabIndex = 44;
@@ -473,7 +475,7 @@
             // CoolDownValuelbl
             // 
             this.CoolDownValuelbl.AutoSize = true;
-            this.CoolDownValuelbl.Location = new System.Drawing.Point(264, 257);
+            this.CoolDownValuelbl.Location = new System.Drawing.Point(272, 258);
             this.CoolDownValuelbl.Name = "CoolDownValuelbl";
             this.CoolDownValuelbl.Size = new System.Drawing.Size(13, 13);
             this.CoolDownValuelbl.TabIndex = 39;
@@ -482,8 +484,7 @@
             // Cooldownlbl
             // 
             this.Cooldownlbl.AutoSize = true;
-            this.Cooldownlbl.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.Cooldownlbl.Location = new System.Drawing.Point(198, 257);
+            this.Cooldownlbl.Location = new System.Drawing.Point(200, 258);
             this.Cooldownlbl.Name = "Cooldownlbl";
             this.Cooldownlbl.Size = new System.Drawing.Size(60, 13);
             this.Cooldownlbl.TabIndex = 38;
@@ -519,20 +520,22 @@
             // ChainTimeOutValuelbl
             // 
             this.ChainTimeOutValuelbl.AutoSize = true;
+            this.ChainTimeOutValuelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChainTimeOutValuelbl.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.ChainTimeOutValuelbl.Location = new System.Drawing.Point(157, 257);
+            this.ChainTimeOutValuelbl.Location = new System.Drawing.Point(169, 258);
             this.ChainTimeOutValuelbl.Name = "ChainTimeOutValuelbl";
-            this.ChainTimeOutValuelbl.Size = new System.Drawing.Size(13, 13);
+            this.ChainTimeOutValuelbl.Size = new System.Drawing.Size(14, 13);
             this.ChainTimeOutValuelbl.TabIndex = 33;
             this.ChainTimeOutValuelbl.Text = "0";
             // 
             // ChainTimeoutlbl
             // 
             this.ChainTimeoutlbl.AutoSize = true;
+            this.ChainTimeoutlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChainTimeoutlbl.ForeColor = System.Drawing.Color.SaddleBrown;
             this.ChainTimeoutlbl.Location = new System.Drawing.Point(87, 258);
             this.ChainTimeoutlbl.Name = "ChainTimeoutlbl";
-            this.ChainTimeoutlbl.Size = new System.Drawing.Size(64, 13);
+            this.ChainTimeoutlbl.Size = new System.Drawing.Size(76, 13);
             this.ChainTimeoutlbl.TabIndex = 32;
             this.ChainTimeoutlbl.Text = "TimeOut in: ";
             // 
@@ -804,10 +807,20 @@
             this.tabPage3.Text = "ItemSearch";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox2.Location = new System.Drawing.Point(6, 137);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.ReadOnly = true;
+            this.richTextBox2.Size = new System.Drawing.Size(525, 168);
+            this.richTextBox2.TabIndex = 4;
+            this.richTextBox2.Text = "";
+            // 
             // ItemSearchbtn
             // 
             this.ItemSearchbtn.Enabled = false;
-            this.ItemSearchbtn.Location = new System.Drawing.Point(240, 126);
+            this.ItemSearchbtn.Location = new System.Drawing.Point(242, 108);
             this.ItemSearchbtn.Name = "ItemSearchbtn";
             this.ItemSearchbtn.Size = new System.Drawing.Size(75, 23);
             this.ItemSearchbtn.TabIndex = 3;
@@ -823,7 +836,7 @@
             this.ItemCombobox.FormattingEnabled = true;
             this.ItemCombobox.Items.AddRange(new object[] {
             "h"});
-            this.ItemCombobox.Location = new System.Drawing.Point(217, 72);
+            this.ItemCombobox.Location = new System.Drawing.Point(217, 67);
             this.ItemCombobox.Name = "ItemCombobox";
             this.ItemCombobox.Size = new System.Drawing.Size(121, 21);
             this.ItemCombobox.Sorted = true;
@@ -1270,9 +1283,9 @@
             // 
             // StockGetDatabtn
             // 
-            this.StockGetDatabtn.Location = new System.Drawing.Point(439, 282);
+            this.StockGetDatabtn.Location = new System.Drawing.Point(166, 282);
             this.StockGetDatabtn.Name = "StockGetDatabtn";
-            this.StockGetDatabtn.Size = new System.Drawing.Size(92, 23);
+            this.StockGetDatabtn.Size = new System.Drawing.Size(207, 23);
             this.StockGetDatabtn.TabIndex = 0;
             this.StockGetDatabtn.Text = "Get Stock Info";
             this.StockGetDatabtn.UseVisualStyleBackColor = true;
@@ -1280,6 +1293,8 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.UserInfoTextColour);
+            this.tabPage5.Controls.Add(this.SetUserInfoTextColourbtn);
             this.tabPage5.Controls.Add(this.Creatorlinklabel);
             this.tabPage5.Controls.Add(this.SaveSettingsbtn);
             this.tabPage5.Controls.Add(this.SettingsDescriptionlbl);
@@ -1296,6 +1311,36 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Settings";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // UserInfoTextColour
+            // 
+            this.UserInfoTextColour.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.UserInfoTextColour.FormattingEnabled = true;
+            this.UserInfoTextColour.Items.AddRange(new object[] {
+            "Black ",
+            "Blue",
+            "DeepSkyBlue",
+            "Green",
+            "HotPink",
+            "Indigo",
+            "Orange",
+            "Purple",
+            "Red"});
+            this.UserInfoTextColour.Location = new System.Drawing.Point(177, 228);
+            this.UserInfoTextColour.Name = "UserInfoTextColour";
+            this.UserInfoTextColour.Size = new System.Drawing.Size(121, 21);
+            this.UserInfoTextColour.Sorted = true;
+            this.UserInfoTextColour.TabIndex = 11;
+            // 
+            // SetUserInfoTextColourbtn
+            // 
+            this.SetUserInfoTextColourbtn.Location = new System.Drawing.Point(25, 228);
+            this.SetUserInfoTextColourbtn.Name = "SetUserInfoTextColourbtn";
+            this.SetUserInfoTextColourbtn.Size = new System.Drawing.Size(146, 23);
+            this.SetUserInfoTextColourbtn.TabIndex = 10;
+            this.SetUserInfoTextColourbtn.Text = "Set UserInfo Text Colour";
+            this.SetUserInfoTextColourbtn.UseVisualStyleBackColor = true;
+            this.SetUserInfoTextColourbtn.Click += new System.EventHandler(this.SetUserInfoTextColourbtn_Click);
             // 
             // Creatorlinklabel
             // 
@@ -1426,16 +1471,6 @@
             this.FetchItemsTimer.Interval = 250;
             this.FetchItemsTimer.Tick += new System.EventHandler(this.FetchItemsTimer_Tick);
             // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox2.Location = new System.Drawing.Point(6, 155);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(525, 150);
-            this.richTextBox2.TabIndex = 4;
-            this.richTextBox2.Text = "";
-            // 
             // StockInfoRefreshLimit
             // 
             this.StockInfoRefreshLimit.Interval = 1000;
@@ -1450,10 +1485,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(569, 361);
             this.Controls.Add(this.TornCityTimelbl);
             this.Controls.Add(this.MainTabBar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "TornAPIData";
@@ -1494,7 +1530,6 @@
         private System.Windows.Forms.Label APIkeylbl;
         private System.Windows.Forms.CheckBox ApiKeyLockcbx;
         private System.Windows.Forms.TabControl MainTabBar;
-        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label lvlValuelbl;
         private System.Windows.Forms.Label lvllbl;
@@ -1505,7 +1540,6 @@
         private System.Windows.Forms.Label IDValuelbl;
         private System.Windows.Forms.Label idlbl;
         private System.Windows.Forms.Label Statuslbl;
-        private System.Windows.Forms.Button GetDatabtn;
         private System.Windows.Forms.Label LifeValue;
         private System.Windows.Forms.Label Hplbl;
         private System.Windows.Forms.Label EnergyValuelbl;
@@ -1614,6 +1648,10 @@
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.Timer StockInfoRefreshLimit;
         private System.Windows.Forms.Timer LoadItemRefreshLimiter;
+        private System.Windows.Forms.ComboBox UserInfoTextColour;
+        private System.Windows.Forms.Button SetUserInfoTextColourbtn;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button GetDatabtn;
     }
 }
 
