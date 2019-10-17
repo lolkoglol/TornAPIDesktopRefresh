@@ -105,7 +105,7 @@ namespace TornMainForm
 
             public static DialogResult APIErrorChecks() //Function to check if api returns errors
             {
-                WebRequest RequestBasic = WebRequest.Create("https://api.torn.com/user/?selections=basic&" + MainForm.APIKey);
+                WebRequest RequestBasic = WebRequest.Create("https://api.torn.com/user/?selections=basic&key=" + MainForm.APIKey);
                 RequestBasic.Method = "GET";
                 HttpWebResponse ResponseBasic = null;
                 ResponseBasic = (HttpWebResponse)RequestBasic.GetResponse();
@@ -122,13 +122,9 @@ namespace TornMainForm
                     var sss = JObject.Parse(Convert.ToString(JJJ));
                     var aaa = JObject.Parse(Convert.ToString(sss["error"]));
                   //  var Error = JObject.Parse(Convert.ToString(aaa["error"]));
-
-                    return MessageBox.Show(Convert.ToString(aaa));
-                    
+                    return MessageBox.Show(Convert.ToString(aaa));                   
 
                 }
-
-
             }
 
             public static void TimerCountdownWithTicks(JToken JsonFrom, Label YourLabal, string JsonStringdataname)
@@ -265,6 +261,7 @@ namespace TornMainForm
             public static string ChainCooldowns = null;
             public static JToken travel = null;
             public static JToken Events = null;
+            public static string Educationtimeleft = null;
 
             public static long TimerAble = 0; // when timerable is > 0 the refreshtimer will automate itself. when an exception occurs value is put to 0 which turns timer off.
             public static string StatusLink = null;
@@ -296,10 +293,13 @@ namespace TornMainForm
                 OneSecondtimer.Start();
                 GetDatabtn.Text = Convert.ToString(ButtonLimittimer.Interval / 1000);
 
-                UserData.Basic = MyFunctions.FetchUserData(1, "basic,profile,bars,money,cooldowns,notifications,travel,events", UserData.Basic); // Fields to fetch
+                UserData.Basic = MyFunctions.FetchUserData(1, "basic,profile,bars,money,cooldowns,notifications,travel,events,education", UserData.Basic); // Fields to fetch
 
                 UserData.User = JObject.Parse(UserData.Basic); // parse to fetchable jtoken data.
                 var details = JObject.Parse(UserData.Basic); // makes json string data callable. 
+                     
+                    UserData.Educationtimeleft = Convert.ToString(details["education_timeleft"]);
+                   
 
                 lvlValuelbl.Text = UserData.SetValue(UserData.Basic, UserData.level, "level");
                 GenderValuelbl.Text = UserData.SetValue(UserData.Basic, UserData.gender, "gender");
@@ -329,6 +329,8 @@ namespace TornMainForm
                 CityBankValuelbl.Text = "Money in Bank: " + Convert.ToString("$" + String.Format("{0:n0}", UserData.Bank["amount"]));
                 CoolDownValuelbl.Text = Convert.ToString(UserData.Chainjson["cooldown"]);
                 UserData.DBMCooldowns = details["cooldowns"];
+
+                    
              
                 UserData.Notifications = details["notifications"];
                 NewEventValuelbl.Text = "New Events [" + Convert.ToString(UserData.Notifications["events"]) + "]";
@@ -372,7 +374,7 @@ namespace TornMainForm
                            
                             AcEvent = Regex.Replace(AcEvent, "XID", " ");
                             AcEvent = Regex.Replace(AcEvent, @"[^0-9a-zA-Z:,. ]+", "");
-
+                            //removal of links
                             AcEvent = Regex.Replace(AcEvent, "http:www.torn.comprofiles.php?", " ");
                             AcEvent = Regex.Replace(AcEvent, "http:www.torn.comstockexchange.php", " ");
                             AcEvent = Regex.Replace(AcEvent, "http:www.torn.comloader.php", " ");
@@ -380,7 +382,10 @@ namespace TornMainForm
                             AcEvent = Regex.Replace(AcEvent, "sidracingtablograce", " ");
                             AcEvent = Regex.Replace(AcEvent, "http:www.torn.comjoblist.phppcorpinfoID", " ");
                             AcEvent = Regex.Replace(AcEvent, "http: www.torn.comjoblist.phppcorpinfoID", " ");
-                            AcEvent = AcEvent.Replace("view"," ");
+                            AcEvent = Regex.Replace(AcEvent, "http:www.torn.combank.php", " ");                      
+
+
+                        AcEvent = AcEvent.Replace("view"," ");
                             AcEvent = AcEvent.Replace("View", " ");
 
                             AcEvent = AcEvent.Replace("1stb", "1st ");
@@ -391,11 +396,16 @@ namespace TornMainForm
                             AcEvent = AcEvent.Replace("6thb", "6th ");
                             AcEvent = AcEvent.Replace("7thb", "7th ");
                             AcEvent = AcEvent.Replace("8thb", "8th ");
-                            AcEvent = AcEvent.Replace("9thb", "9th ");
-                
+                            AcEvent = AcEvent.Replace("9thb", "9th "); 
+                                 AcEvent = AcEvent.Replace("classh", " ");
 
-                            AcEvent = Regex.Replace(AcEvent," [\\w]{ 1, 2}", " ");
-                           // AcEvent = Regex.Replace(AcEvent, " [\\w]{ 18, 26}", " ");
+                            AcEvent = AcEvent.Replace(" a ", " ");
+                            AcEvent = AcEvent.Replace("  ", " ");
+
+
+                            AcEvent = Regex.Replace(AcEvent," [\\w]{ 0, 2}", " ");
+                        
+                            // AcEvent = Regex.Replace(AcEvent, " [\\w]{ 18, 26}", " ");
                             AcEvent = AcEvent.TrimStart(' ');
                          
                             EventEvent.Add(AcEvent);
@@ -481,6 +491,20 @@ namespace TornMainForm
             MyFunctions.TimerCountdownWithTicks(UserData.DBMCooldowns, BoosterCdValuelbl, "booster");
             MyFunctions.TimerCountdownWithTicks(UserData.Chainjson, CoolDownValuelbl, "cooldown");
             MyFunctions.TimerCountdownWithTicks(UserData.Bank, BankTimeLeftValuelbl, "time_left");
+                    
+            
+            if (Convert.ToInt32(UserData.Educationtimeleft) > 1)
+            {
+                EducationLengthlbl.Visible = true;
+                EducationLengthValuelbl.Visible = true;
+                TimeSpan TimeTick = new TimeSpan();
+                int f  = Convert.ToInt32(UserData.Educationtimeleft) - 1;
+                string TickDown = Convert.ToString(Convert.ToInt32(UserData.Educationtimeleft) - 1);
+                TimeTick = TimeSpan.FromSeconds(Convert.ToInt32(TickDown));
+                EducationLengthValuelbl.Text = String.Format(Convert.ToString(TimeTick), "MM:ss");
+            }
+
+
             if (Convert.ToInt32(UserData.travel["time_left"]) > 1 )
             {
                 MyFunctions.TimerCountdownWithTicks(UserData.travel, TravelTimeValuelbl, "time_left");
@@ -503,7 +527,6 @@ namespace TornMainForm
                 StatusLinkProfileValuelbl.Text = statusend;
                
                 StatusLinkProfileValuelbl.Visible = true;
-
             }
             
            RefreshValuelbl.Text = Convert.ToString(Convert.ToInt32(RefreshValuelbl.Text) - 1); // decrease refresh value by 1 per timer tick which should be 1 second.
@@ -517,7 +540,6 @@ namespace TornMainForm
                 TimeSpan torntime = TimeSpan.FromSeconds(Convert.ToUInt64(TornData.TornTime) + 1);
                 begginingoftime = begginingoftime + torntime;
                 TornCityTimelbl.Text = Convert.ToString("TCT: " + begginingoftime);
-
             }
             catch (Exception)
             {
@@ -596,7 +618,6 @@ namespace TornMainForm
                    MessageBox.Show("Error Report:300");
                }
 
-
           }).Start();
             //  throw new Exception();    
             try
@@ -610,26 +631,7 @@ namespace TornMainForm
                 MessageBox.Show("Error Report:100. message superduperpoor if this continues");
             }
                
-        }
-
-        //FileReadToFromBrowseButton
-        private void BrowseFileToReadAndSavebtn_Click(object sender, EventArgs e)
-        {
-            using (var FileReadToFromBrowseButton = new FolderBrowserDialog())
-            {
-                DialogResult result = FileReadToFromBrowseButton.ShowDialog();
-
-                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(FileReadToFromBrowseButton.SelectedPath))
-                {                                     
-
-                }
-                FileToReadtoAndSaveTotxtbox.Text = FileReadToFromBrowseButton.SelectedPath;
-                FileReadWriteLocations.FileToSaveItemList = FileToReadtoAndSaveTotxtbox.Text;
-            }
-            //FileToReadtoAndSaveTotxtbox.Text = FileReadToFromBrowseButton.SelectedPath;
-          //  FileReadWriteLocations.FileToSaveItemList = FileToReadtoAndSaveTotxtbox.Text;
-        }   
-      
+        }             
 
         private void GetItemNamesAndIdbtn_Click(object sender, EventArgs e)
         {
@@ -643,13 +645,14 @@ namespace TornMainForm
                 {
                     MessageBox.Show("API problem: 200");
                 }
-                
+                TornData.ReadytoFetchitems = false;
+
                 //  This area was used to create a file containing all items and id's of them.
                 //TODO Write feature to fetch item circulation and name by using the Files Name which fetchs ID then fetching circulation.
-                try
-               {
-                
-                if (File.Exists(Settings.ItemFileName) == false )// create file if it does not exsist
+                     try
+                    {
+
+                if (MainForm.APIKey != "" & MainForm.APIKey.Length == 16)// create file if it does not exsist
                     {
                         MyFunctions.AddJsonDataToDictionary(TornData.ItemsIdAndName, "items", "name", TornData.TornJsonFetchedInfo, 1003); //fetch items and add to dict
                         TornData.ItemIdList = TornData.ItemsIdAndName.Keys.ToList();
@@ -674,20 +677,21 @@ namespace TornMainForm
                     
                     File.AppendAllText(Settings.ItemFileName, Convert.ToString(acd));
                 }
-                if (File.Exists(Settings.ItemFileName) == true & TornData.ItemLoaded == false)
-                {
+                if (File.Exists(Settings.ItemFileName) == true & TornData.ItemLoaded == false) 
+                    {
                     MyFunctions.AddJsonDataToDictionary(TornData.ItemsIdAndName, "items", "name", TornData.TornJsonFetchedInfo, 1003);
                     TornData.NameThenIDofItems = File.ReadAllText(Settings.ItemFileName);
-                    TornData.TornItemNames = Convert.ToString(JObject.Parse(TornData.NameThenIDofItems));                 
+                                      
+                    // TornData.TornItemNames = Convert.ToString(JObject.Parse(TornData.NameThenIDofItems));                 
                     TornData.ItemIdList = TornData.ItemsIdAndName.Keys.ToList();
-                    TornData.ItemNamesList = TornData.ItemsIdAndName.Values.ToList();
-                                                                           
+                    TornData.ItemNamesList = TornData.ItemsIdAndName.Values.ToList();                  
+
                 }
              }
-               catch (Exception)
-                {
-                   MessageBox.Show("Is your executable in a file you have read and write permissions?");
-                }
+              catch (Exception)
+               {
+                  MessageBox.Show("Is your executable in a file you have read and write permissions?, api key correct?");
+               }
                 TornData.ReadytoFetchitems = true;
 
               
@@ -696,19 +700,22 @@ namespace TornMainForm
 
             if (TornData.ReadytoFetchitems == false)
             {
-                Thread.Sleep(2500);
+                Thread.Sleep(6000);
             }
 
-            if (TornData.ReadytoFetchitems == true & TornData.ItemLoaded == false)
+            if (TornData.ReadytoFetchitems == true) // & TornData.ItemLoaded == false
             {
                 foreach (var item in TornData.ItemNamesList)
                 {
                     ItemCombobox.Items.Add(item);
                 }
+                
                 ItemCombobox.Enabled = true;
                 ItemSearchbtn.Enabled = true;
                 TornData.ItemLoaded = true;
                 LoadItemRefreshLimiter.Start();
+                TornData.ReadytoFetchitems = false;
+
             }
             LoadItemRefreshLimiter.Start();
         }
@@ -758,15 +765,14 @@ namespace TornMainForm
             {
 
             }
-            try
+            try //if colour does not exsist nothing trycatch will prevent error alert
             {
-                tabPage1.ForeColor = Color.FromName(Settings.UserInfoForeGround);
+                tabPage1.ForeColor = Color.FromName(Settings.UserInfoForeGround); 
             }
             catch (Exception)
             {
                 
-            }
-                     
+            }                     
             
             string Creator = "Creator: ";
             int CreatorLength = Creator.Length;
@@ -899,7 +905,7 @@ namespace TornMainForm
                 LoadItemRefreshLimiter.Stop();
             }
         }
-
+        // to add colors add the function below and add the colour to the combo box item collection on the Form1.design settings menu
         private void SetUserInfoTextColourbtn_Click(object sender, EventArgs e)
         {          
             MyFunctions.ChangeTabForeColour(tabPage1, UserInfoTextColour, "Red");

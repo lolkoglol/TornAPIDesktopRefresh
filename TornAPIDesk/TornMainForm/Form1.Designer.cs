@@ -144,9 +144,6 @@
             this.SettingsAPIkeylbl = new System.Windows.Forms.Label();
             this.SettingsAPILockchkbox = new System.Windows.Forms.CheckBox();
             this.SettingsAPIKeyValuetxtbox = new System.Windows.Forms.TextBox();
-            this.BrowseFileToReadAndSavebtn = new System.Windows.Forms.Button();
-            this.FileToReadtoAndSaveTotxtbox = new System.Windows.Forms.TextBox();
-            this.FileToSaveAndReadItemNameAndId = new System.Windows.Forms.Label();
             this.Refreshtimer = new System.Windows.Forms.Timer(this.components);
             this.ButtonLimittimer = new System.Windows.Forms.Timer(this.components);
             this.OneSecondtimer = new System.Windows.Forms.Timer(this.components);
@@ -156,6 +153,8 @@
             this.FetchItemsTimer = new System.Windows.Forms.Timer(this.components);
             this.StockInfoRefreshLimit = new System.Windows.Forms.Timer(this.components);
             this.LoadItemRefreshLimiter = new System.Windows.Forms.Timer(this.components);
+            this.EducationLengthlbl = new System.Windows.Forms.Label();
+            this.EducationLengthValuelbl = new System.Windows.Forms.Label();
             this.MainTabBar.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -178,7 +177,7 @@
             this.TornAPIKey.Location = new System.Drawing.Point(79, 15);
             this.TornAPIKey.MaxLength = 16;
             this.TornAPIKey.Name = "TornAPIKey";
-            this.TornAPIKey.Size = new System.Drawing.Size(362, 20);
+            this.TornAPIKey.Size = new System.Drawing.Size(404, 20);
             this.TornAPIKey.TabIndex = 0;
             this.TornAPIKey.TextChanged += new System.EventHandler(this.TornAPIKey_TextChanged);
             // 
@@ -194,7 +193,7 @@
             // ApiKeyLockcbx
             // 
             this.ApiKeyLockcbx.AutoSize = true;
-            this.ApiKeyLockcbx.Location = new System.Drawing.Point(447, 18);
+            this.ApiKeyLockcbx.Location = new System.Drawing.Point(508, 17);
             this.ApiKeyLockcbx.Name = "ApiKeyLockcbx";
             this.ApiKeyLockcbx.Size = new System.Drawing.Size(70, 17);
             this.ApiKeyLockcbx.TabIndex = 2;
@@ -212,12 +211,14 @@
             this.MainTabBar.Location = new System.Drawing.Point(12, 11);
             this.MainTabBar.Name = "MainTabBar";
             this.MainTabBar.SelectedIndex = 0;
-            this.MainTabBar.Size = new System.Drawing.Size(545, 337);
+            this.MainTabBar.Size = new System.Drawing.Size(626, 391);
             this.MainTabBar.TabIndex = 3;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.EducationLengthValuelbl);
+            this.tabPage1.Controls.Add(this.EducationLengthlbl);
             this.tabPage1.Controls.Add(this.Traveltimelbl);
             this.tabPage1.Controls.Add(this.TravelTimeValuelbl);
             this.tabPage1.Controls.Add(this.NewMessagesValuelbl);
@@ -275,14 +276,14 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(537, 311);
+            this.tabPage1.Size = new System.Drawing.Size(618, 365);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "UserInfo";
             // 
             // Traveltimelbl
             // 
             this.Traveltimelbl.AutoSize = true;
-            this.Traveltimelbl.Location = new System.Drawing.Point(316, 38);
+            this.Traveltimelbl.Location = new System.Drawing.Point(379, 35);
             this.Traveltimelbl.Name = "Traveltimelbl";
             this.Traveltimelbl.Size = new System.Drawing.Size(86, 13);
             this.Traveltimelbl.TabIndex = 59;
@@ -292,7 +293,7 @@
             // TravelTimeValuelbl
             // 
             this.TravelTimeValuelbl.AutoSize = true;
-            this.TravelTimeValuelbl.Location = new System.Drawing.Point(408, 38);
+            this.TravelTimeValuelbl.Location = new System.Drawing.Point(471, 35);
             this.TravelTimeValuelbl.Name = "TravelTimeValuelbl";
             this.TravelTimeValuelbl.Size = new System.Drawing.Size(35, 13);
             this.TravelTimeValuelbl.TabIndex = 58;
@@ -302,7 +303,7 @@
             // NewMessagesValuelbl
             // 
             this.NewMessagesValuelbl.AutoSize = true;
-            this.NewMessagesValuelbl.Location = new System.Drawing.Point(87, 288);
+            this.NewMessagesValuelbl.Location = new System.Drawing.Point(76, 336);
             this.NewMessagesValuelbl.Name = "NewMessagesValuelbl";
             this.NewMessagesValuelbl.Size = new System.Drawing.Size(80, 13);
             this.NewMessagesValuelbl.TabIndex = 57;
@@ -311,7 +312,7 @@
             // NewEventValuelbl
             // 
             this.NewEventValuelbl.AutoSize = true;
-            this.NewEventValuelbl.Location = new System.Drawing.Point(201, 287);
+            this.NewEventValuelbl.Location = new System.Drawing.Point(198, 335);
             this.NewEventValuelbl.Name = "NewEventValuelbl";
             this.NewEventValuelbl.Size = new System.Drawing.Size(71, 13);
             this.NewEventValuelbl.TabIndex = 56;
@@ -321,7 +322,7 @@
             // 
             this.APILengthWarning.AutoSize = true;
             this.APILengthWarning.ForeColor = System.Drawing.Color.Red;
-            this.APILengthWarning.Location = new System.Drawing.Point(79, 42);
+            this.APILengthWarning.Location = new System.Drawing.Point(240, 17);
             this.APILengthWarning.Name = "APILengthWarning";
             this.APILengthWarning.Size = new System.Drawing.Size(184, 13);
             this.APILengthWarning.TabIndex = 55;
@@ -331,7 +332,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(337, 250);
+            this.label1.Location = new System.Drawing.Point(444, 251);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 54;
@@ -340,7 +341,7 @@
             // BankTimeLeftValuelbl
             // 
             this.BankTimeLeftValuelbl.AutoSize = true;
-            this.BankTimeLeftValuelbl.Location = new System.Drawing.Point(427, 250);
+            this.BankTimeLeftValuelbl.Location = new System.Drawing.Point(534, 251);
             this.BankTimeLeftValuelbl.Name = "BankTimeLeftValuelbl";
             this.BankTimeLeftValuelbl.Size = new System.Drawing.Size(26, 13);
             this.BankTimeLeftValuelbl.TabIndex = 53;
@@ -349,7 +350,7 @@
             // CityBankValuelbl
             // 
             this.CityBankValuelbl.AutoSize = true;
-            this.CityBankValuelbl.Location = new System.Drawing.Point(337, 220);
+            this.CityBankValuelbl.Location = new System.Drawing.Point(444, 221);
             this.CityBankValuelbl.Name = "CityBankValuelbl";
             this.CityBankValuelbl.Size = new System.Drawing.Size(52, 13);
             this.CityBankValuelbl.TabIndex = 52;
@@ -358,7 +359,7 @@
             // CaymanbankValuelbl
             // 
             this.CaymanbankValuelbl.AutoSize = true;
-            this.CaymanbankValuelbl.Location = new System.Drawing.Point(337, 190);
+            this.CaymanbankValuelbl.Location = new System.Drawing.Point(444, 191);
             this.CaymanbankValuelbl.Name = "CaymanbankValuelbl";
             this.CaymanbankValuelbl.Size = new System.Drawing.Size(72, 13);
             this.CaymanbankValuelbl.TabIndex = 51;
@@ -368,7 +369,7 @@
             // 
             this.StatusLinkProfileValuelbl.AutoSize = true;
             this.StatusLinkProfileValuelbl.LinkColor = System.Drawing.Color.Blue;
-            this.StatusLinkProfileValuelbl.Location = new System.Drawing.Point(398, 82);
+            this.StatusLinkProfileValuelbl.Location = new System.Drawing.Point(461, 79);
             this.StatusLinkProfileValuelbl.Name = "StatusLinkProfileValuelbl";
             this.StatusLinkProfileValuelbl.Size = new System.Drawing.Size(55, 13);
             this.StatusLinkProfileValuelbl.TabIndex = 50;
@@ -381,7 +382,7 @@
             // BoosterCdValuelbl
             // 
             this.BoosterCdValuelbl.AutoSize = true;
-            this.BoosterCdValuelbl.Location = new System.Drawing.Point(272, 199);
+            this.BoosterCdValuelbl.Location = new System.Drawing.Point(315, 210);
             this.BoosterCdValuelbl.Name = "BoosterCdValuelbl";
             this.BoosterCdValuelbl.Size = new System.Drawing.Size(24, 13);
             this.BoosterCdValuelbl.TabIndex = 49;
@@ -390,7 +391,7 @@
             // BoosterCdlbl
             // 
             this.BoosterCdlbl.AutoSize = true;
-            this.BoosterCdlbl.Location = new System.Drawing.Point(201, 199);
+            this.BoosterCdlbl.Location = new System.Drawing.Point(244, 210);
             this.BoosterCdlbl.Name = "BoosterCdlbl";
             this.BoosterCdlbl.Size = new System.Drawing.Size(64, 13);
             this.BoosterCdlbl.TabIndex = 48;
@@ -399,7 +400,7 @@
             // MedicalCooldownValue
             // 
             this.MedicalCooldownValue.AutoSize = true;
-            this.MedicalCooldownValue.Location = new System.Drawing.Point(271, 229);
+            this.MedicalCooldownValue.Location = new System.Drawing.Point(314, 240);
             this.MedicalCooldownValue.Name = "MedicalCooldownValue";
             this.MedicalCooldownValue.Size = new System.Drawing.Size(24, 13);
             this.MedicalCooldownValue.TabIndex = 47;
@@ -408,7 +409,7 @@
             // Medicallbl
             // 
             this.Medicallbl.AutoSize = true;
-            this.Medicallbl.Location = new System.Drawing.Point(200, 229);
+            this.Medicallbl.Location = new System.Drawing.Point(243, 240);
             this.Medicallbl.Name = "Medicallbl";
             this.Medicallbl.Size = new System.Drawing.Size(65, 13);
             this.Medicallbl.TabIndex = 46;
@@ -417,7 +418,7 @@
             // DrugCdlbl
             // 
             this.DrugCdlbl.AutoSize = true;
-            this.DrugCdlbl.Location = new System.Drawing.Point(201, 139);
+            this.DrugCdlbl.Location = new System.Drawing.Point(244, 150);
             this.DrugCdlbl.Name = "DrugCdlbl";
             this.DrugCdlbl.Size = new System.Drawing.Size(51, 13);
             this.DrugCdlbl.TabIndex = 45;
@@ -426,7 +427,7 @@
             // DrugCooldownValuelbl
             // 
             this.DrugCooldownValuelbl.AutoSize = true;
-            this.DrugCooldownValuelbl.Location = new System.Drawing.Point(272, 139);
+            this.DrugCooldownValuelbl.Location = new System.Drawing.Point(315, 150);
             this.DrugCooldownValuelbl.Name = "DrugCooldownValuelbl";
             this.DrugCooldownValuelbl.Size = new System.Drawing.Size(24, 13);
             this.DrugCooldownValuelbl.TabIndex = 44;
@@ -436,7 +437,7 @@
             // 
             this.HappyTickValuelbl.AutoSize = true;
             this.HappyTickValuelbl.ForeColor = System.Drawing.Color.DarkOrange;
-            this.HappyTickValuelbl.Location = new System.Drawing.Point(125, 198);
+            this.HappyTickValuelbl.Location = new System.Drawing.Point(132, 209);
             this.HappyTickValuelbl.Name = "HappyTickValuelbl";
             this.HappyTickValuelbl.Size = new System.Drawing.Size(26, 13);
             this.HappyTickValuelbl.TabIndex = 43;
@@ -446,7 +447,7 @@
             // 
             this.LifeTickValuelbl.AutoSize = true;
             this.LifeTickValuelbl.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.LifeTickValuelbl.Location = new System.Drawing.Point(125, 228);
+            this.LifeTickValuelbl.Location = new System.Drawing.Point(132, 239);
             this.LifeTickValuelbl.Name = "LifeTickValuelbl";
             this.LifeTickValuelbl.Size = new System.Drawing.Size(26, 13);
             this.LifeTickValuelbl.TabIndex = 42;
@@ -456,7 +457,7 @@
             // 
             this.NerveTimerValuelbl.AutoSize = true;
             this.NerveTimerValuelbl.ForeColor = System.Drawing.Color.Red;
-            this.NerveTimerValuelbl.Location = new System.Drawing.Point(125, 168);
+            this.NerveTimerValuelbl.Location = new System.Drawing.Point(132, 179);
             this.NerveTimerValuelbl.Name = "NerveTimerValuelbl";
             this.NerveTimerValuelbl.Size = new System.Drawing.Size(26, 13);
             this.NerveTimerValuelbl.TabIndex = 41;
@@ -466,7 +467,7 @@
             // 
             this.EnergyIncrementlbl.AutoSize = true;
             this.EnergyIncrementlbl.ForeColor = System.Drawing.Color.Green;
-            this.EnergyIncrementlbl.Location = new System.Drawing.Point(125, 138);
+            this.EnergyIncrementlbl.Location = new System.Drawing.Point(132, 149);
             this.EnergyIncrementlbl.Name = "EnergyIncrementlbl";
             this.EnergyIncrementlbl.Size = new System.Drawing.Size(26, 13);
             this.EnergyIncrementlbl.TabIndex = 40;
@@ -475,7 +476,7 @@
             // CoolDownValuelbl
             // 
             this.CoolDownValuelbl.AutoSize = true;
-            this.CoolDownValuelbl.Location = new System.Drawing.Point(272, 258);
+            this.CoolDownValuelbl.Location = new System.Drawing.Point(315, 269);
             this.CoolDownValuelbl.Name = "CoolDownValuelbl";
             this.CoolDownValuelbl.Size = new System.Drawing.Size(13, 13);
             this.CoolDownValuelbl.TabIndex = 39;
@@ -484,7 +485,7 @@
             // Cooldownlbl
             // 
             this.Cooldownlbl.AutoSize = true;
-            this.Cooldownlbl.Location = new System.Drawing.Point(200, 258);
+            this.Cooldownlbl.Location = new System.Drawing.Point(244, 272);
             this.Cooldownlbl.Name = "Cooldownlbl";
             this.Cooldownlbl.Size = new System.Drawing.Size(60, 13);
             this.Cooldownlbl.TabIndex = 38;
@@ -493,7 +494,7 @@
             // MoneyInVaultlbl
             // 
             this.MoneyInVaultlbl.AutoSize = true;
-            this.MoneyInVaultlbl.Location = new System.Drawing.Point(337, 160);
+            this.MoneyInVaultlbl.Location = new System.Drawing.Point(444, 161);
             this.MoneyInVaultlbl.Name = "MoneyInVaultlbl";
             this.MoneyInVaultlbl.Size = new System.Drawing.Size(77, 13);
             this.MoneyInVaultlbl.TabIndex = 37;
@@ -502,7 +503,7 @@
             // MoneyOnHandlbl
             // 
             this.MoneyOnHandlbl.AutoSize = true;
-            this.MoneyOnHandlbl.Location = new System.Drawing.Point(337, 130);
+            this.MoneyOnHandlbl.Location = new System.Drawing.Point(444, 131);
             this.MoneyOnHandlbl.Name = "MoneyOnHandlbl";
             this.MoneyOnHandlbl.Size = new System.Drawing.Size(84, 13);
             this.MoneyOnHandlbl.TabIndex = 36;
@@ -511,7 +512,7 @@
             // PointsValuelbl
             // 
             this.PointsValuelbl.AutoSize = true;
-            this.PointsValuelbl.Location = new System.Drawing.Point(337, 102);
+            this.PointsValuelbl.Location = new System.Drawing.Point(444, 103);
             this.PointsValuelbl.Name = "PointsValuelbl";
             this.PointsValuelbl.Size = new System.Drawing.Size(39, 13);
             this.PointsValuelbl.TabIndex = 35;
@@ -522,7 +523,7 @@
             this.ChainTimeOutValuelbl.AutoSize = true;
             this.ChainTimeOutValuelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChainTimeOutValuelbl.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.ChainTimeOutValuelbl.Location = new System.Drawing.Point(169, 258);
+            this.ChainTimeOutValuelbl.Location = new System.Drawing.Point(176, 269);
             this.ChainTimeOutValuelbl.Name = "ChainTimeOutValuelbl";
             this.ChainTimeOutValuelbl.Size = new System.Drawing.Size(14, 13);
             this.ChainTimeOutValuelbl.TabIndex = 33;
@@ -533,7 +534,7 @@
             this.ChainTimeoutlbl.AutoSize = true;
             this.ChainTimeoutlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChainTimeoutlbl.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.ChainTimeoutlbl.Location = new System.Drawing.Point(87, 258);
+            this.ChainTimeoutlbl.Location = new System.Drawing.Point(94, 269);
             this.ChainTimeoutlbl.Name = "ChainTimeoutlbl";
             this.ChainTimeoutlbl.Size = new System.Drawing.Size(76, 13);
             this.ChainTimeoutlbl.TabIndex = 32;
@@ -542,7 +543,7 @@
             // refreshlbll
             // 
             this.refreshlbll.AutoSize = true;
-            this.refreshlbll.Location = new System.Drawing.Point(337, 287);
+            this.refreshlbll.Location = new System.Drawing.Point(444, 288);
             this.refreshlbll.Name = "refreshlbll";
             this.refreshlbll.Size = new System.Drawing.Size(55, 13);
             this.refreshlbll.TabIndex = 31;
@@ -551,7 +552,7 @@
             // RefreshValuelbl
             // 
             this.RefreshValuelbl.AutoSize = true;
-            this.RefreshValuelbl.Location = new System.Drawing.Point(398, 288);
+            this.RefreshValuelbl.Location = new System.Drawing.Point(505, 289);
             this.RefreshValuelbl.Name = "RefreshValuelbl";
             this.RefreshValuelbl.Size = new System.Drawing.Size(13, 13);
             this.RefreshValuelbl.TabIndex = 30;
@@ -561,7 +562,7 @@
             // 
             this.VisitTornlbl.AutoSize = true;
             this.VisitTornlbl.LinkColor = System.Drawing.Color.Blue;
-            this.VisitTornlbl.Location = new System.Drawing.Point(18, 287);
+            this.VisitTornlbl.Location = new System.Drawing.Point(7, 335);
             this.VisitTornlbl.Name = "VisitTornlbl";
             this.VisitTornlbl.Size = new System.Drawing.Size(48, 13);
             this.VisitTornlbl.TabIndex = 29;
@@ -575,7 +576,7 @@
             this.ChainValuelbl.AutoSize = true;
             this.ChainValuelbl.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChainValuelbl.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.ChainValuelbl.Location = new System.Drawing.Point(50, 258);
+            this.ChainValuelbl.Location = new System.Drawing.Point(47, 269);
             this.ChainValuelbl.Name = "ChainValuelbl";
             this.ChainValuelbl.Size = new System.Drawing.Size(30, 16);
             this.ChainValuelbl.TabIndex = 24;
@@ -586,7 +587,7 @@
             this.Chainlbl.AutoSize = true;
             this.Chainlbl.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Chainlbl.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.Chainlbl.Location = new System.Drawing.Point(6, 258);
+            this.Chainlbl.Location = new System.Drawing.Point(3, 269);
             this.Chainlbl.Name = "Chainlbl";
             this.Chainlbl.Size = new System.Drawing.Size(41, 16);
             this.Chainlbl.TabIndex = 23;
@@ -597,7 +598,7 @@
             this.HappyValuelbl.AutoSize = true;
             this.HappyValuelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HappyValuelbl.ForeColor = System.Drawing.Color.DarkOrange;
-            this.HappyValuelbl.Location = new System.Drawing.Point(50, 198);
+            this.HappyValuelbl.Location = new System.Drawing.Point(47, 209);
             this.HappyValuelbl.Name = "HappyValuelbl";
             this.HappyValuelbl.Size = new System.Drawing.Size(30, 13);
             this.HappyValuelbl.TabIndex = 22;
@@ -608,7 +609,7 @@
             this.Happylbl.AutoSize = true;
             this.Happylbl.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Happylbl.ForeColor = System.Drawing.Color.DarkOrange;
-            this.Happylbl.Location = new System.Drawing.Point(6, 198);
+            this.Happylbl.Location = new System.Drawing.Point(3, 209);
             this.Happylbl.Name = "Happylbl";
             this.Happylbl.Size = new System.Drawing.Size(46, 16);
             this.Happylbl.TabIndex = 21;
@@ -620,7 +621,7 @@
             this.NerveValuelbl.BackColor = System.Drawing.Color.White;
             this.NerveValuelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NerveValuelbl.ForeColor = System.Drawing.Color.Red;
-            this.NerveValuelbl.Location = new System.Drawing.Point(50, 168);
+            this.NerveValuelbl.Location = new System.Drawing.Point(47, 179);
             this.NerveValuelbl.Name = "NerveValuelbl";
             this.NerveValuelbl.Size = new System.Drawing.Size(30, 13);
             this.NerveValuelbl.TabIndex = 20;
@@ -631,7 +632,7 @@
             this.Nervelbl.AutoSize = true;
             this.Nervelbl.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nervelbl.ForeColor = System.Drawing.Color.Red;
-            this.Nervelbl.Location = new System.Drawing.Point(6, 168);
+            this.Nervelbl.Location = new System.Drawing.Point(3, 179);
             this.Nervelbl.Name = "Nervelbl";
             this.Nervelbl.Size = new System.Drawing.Size(46, 16);
             this.Nervelbl.TabIndex = 19;
@@ -642,7 +643,7 @@
             this.EnergyValuelbl.AutoSize = true;
             this.EnergyValuelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EnergyValuelbl.ForeColor = System.Drawing.Color.Green;
-            this.EnergyValuelbl.Location = new System.Drawing.Point(50, 138);
+            this.EnergyValuelbl.Location = new System.Drawing.Point(47, 149);
             this.EnergyValuelbl.Name = "EnergyValuelbl";
             this.EnergyValuelbl.Size = new System.Drawing.Size(30, 13);
             this.EnergyValuelbl.TabIndex = 18;
@@ -653,7 +654,7 @@
             this.Energylbl.AutoSize = true;
             this.Energylbl.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Energylbl.ForeColor = System.Drawing.Color.Green;
-            this.Energylbl.Location = new System.Drawing.Point(6, 138);
+            this.Energylbl.Location = new System.Drawing.Point(3, 149);
             this.Energylbl.Name = "Energylbl";
             this.Energylbl.Size = new System.Drawing.Size(51, 16);
             this.Energylbl.TabIndex = 17;
@@ -664,7 +665,7 @@
             this.LifeValue.AutoSize = true;
             this.LifeValue.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LifeValue.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.LifeValue.Location = new System.Drawing.Point(50, 228);
+            this.LifeValue.Location = new System.Drawing.Point(47, 239);
             this.LifeValue.Name = "LifeValue";
             this.LifeValue.Size = new System.Drawing.Size(30, 16);
             this.LifeValue.TabIndex = 16;
@@ -675,7 +676,7 @@
             this.Hplbl.AutoSize = true;
             this.Hplbl.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Hplbl.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.Hplbl.Location = new System.Drawing.Point(6, 228);
+            this.Hplbl.Location = new System.Drawing.Point(3, 239);
             this.Hplbl.Name = "Hplbl";
             this.Hplbl.Size = new System.Drawing.Size(30, 16);
             this.Hplbl.TabIndex = 15;
@@ -685,7 +686,7 @@
             // 
             this.Statuslbl.AutoSize = true;
             this.Statuslbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Statuslbl.Location = new System.Drawing.Point(316, 51);
+            this.Statuslbl.Location = new System.Drawing.Point(379, 48);
             this.Statuslbl.Name = "Statuslbl";
             this.Statuslbl.Size = new System.Drawing.Size(51, 16);
             this.Statuslbl.TabIndex = 13;
@@ -765,7 +766,7 @@
             // 
             // GetDatabtn
             // 
-            this.GetDatabtn.Location = new System.Drawing.Point(442, 282);
+            this.GetDatabtn.Location = new System.Drawing.Point(527, 336);
             this.GetDatabtn.Name = "GetDatabtn";
             this.GetDatabtn.Size = new System.Drawing.Size(75, 23);
             this.GetDatabtn.TabIndex = 4;
@@ -779,7 +780,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(537, 311);
+            this.tabPage2.Size = new System.Drawing.Size(618, 365);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Events";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -789,7 +790,7 @@
             this.richTextBox1.Location = new System.Drawing.Point(6, 6);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(525, 299);
+            this.richTextBox1.Size = new System.Drawing.Size(606, 353);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -802,7 +803,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(537, 311);
+            this.tabPage3.Size = new System.Drawing.Size(618, 365);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "ItemSearch";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -813,14 +814,14 @@
             this.richTextBox2.Location = new System.Drawing.Point(6, 137);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(525, 168);
+            this.richTextBox2.Size = new System.Drawing.Size(606, 225);
             this.richTextBox2.TabIndex = 4;
             this.richTextBox2.Text = "";
             // 
             // ItemSearchbtn
             // 
             this.ItemSearchbtn.Enabled = false;
-            this.ItemSearchbtn.Location = new System.Drawing.Point(242, 108);
+            this.ItemSearchbtn.Location = new System.Drawing.Point(276, 105);
             this.ItemSearchbtn.Name = "ItemSearchbtn";
             this.ItemSearchbtn.Size = new System.Drawing.Size(75, 23);
             this.ItemSearchbtn.TabIndex = 3;
@@ -834,9 +835,7 @@
             this.ItemCombobox.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.ItemCombobox.Enabled = false;
             this.ItemCombobox.FormattingEnabled = true;
-            this.ItemCombobox.Items.AddRange(new object[] {
-            "h"});
-            this.ItemCombobox.Location = new System.Drawing.Point(217, 67);
+            this.ItemCombobox.Location = new System.Drawing.Point(251, 64);
             this.ItemCombobox.Name = "ItemCombobox";
             this.ItemCombobox.Size = new System.Drawing.Size(121, 21);
             this.ItemCombobox.Sorted = true;
@@ -845,7 +844,7 @@
             // 
             // GetItemNamesAndIdbtn
             // 
-            this.GetItemNamesAndIdbtn.Location = new System.Drawing.Point(180, 20);
+            this.GetItemNamesAndIdbtn.Location = new System.Drawing.Point(214, 17);
             this.GetItemNamesAndIdbtn.Name = "GetItemNamesAndIdbtn";
             this.GetItemNamesAndIdbtn.Size = new System.Drawing.Size(193, 23);
             this.GetItemNamesAndIdbtn.TabIndex = 0;
@@ -860,7 +859,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(537, 311);
+            this.tabPage4.Size = new System.Drawing.Size(618, 365);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Stock Info";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -878,7 +877,7 @@
             this.TCStockExchangetab.Location = new System.Drawing.Point(6, 6);
             this.TCStockExchangetab.Name = "TCStockExchangetab";
             this.TCStockExchangetab.SelectedIndex = 0;
-            this.TCStockExchangetab.Size = new System.Drawing.Size(525, 270);
+            this.TCStockExchangetab.Size = new System.Drawing.Size(606, 324);
             this.TCStockExchangetab.TabIndex = 1;
             // 
             // tabPage6
@@ -890,7 +889,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(517, 244);
+            this.tabPage6.Size = new System.Drawing.Size(598, 298);
             this.tabPage6.TabIndex = 0;
             this.tabPage6.Text = "Page 1";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -940,7 +939,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(517, 244);
+            this.tabPage7.Size = new System.Drawing.Size(598, 298);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "Page 2";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1240,7 +1239,7 @@
             this.tabPage13.Location = new System.Drawing.Point(4, 22);
             this.tabPage13.Name = "tabPage13";
             this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage13.Size = new System.Drawing.Size(517, 244);
+            this.tabPage13.Size = new System.Drawing.Size(598, 298);
             this.tabPage13.TabIndex = 7;
             this.tabPage13.Text = "Page 8";
             this.tabPage13.UseVisualStyleBackColor = true;
@@ -1283,7 +1282,7 @@
             // 
             // StockGetDatabtn
             // 
-            this.StockGetDatabtn.Location = new System.Drawing.Point(166, 282);
+            this.StockGetDatabtn.Location = new System.Drawing.Point(222, 336);
             this.StockGetDatabtn.Name = "StockGetDatabtn";
             this.StockGetDatabtn.Size = new System.Drawing.Size(207, 23);
             this.StockGetDatabtn.TabIndex = 0;
@@ -1301,13 +1300,10 @@
             this.tabPage5.Controls.Add(this.SettingsAPIkeylbl);
             this.tabPage5.Controls.Add(this.SettingsAPILockchkbox);
             this.tabPage5.Controls.Add(this.SettingsAPIKeyValuetxtbox);
-            this.tabPage5.Controls.Add(this.BrowseFileToReadAndSavebtn);
-            this.tabPage5.Controls.Add(this.FileToReadtoAndSaveTotxtbox);
-            this.tabPage5.Controls.Add(this.FileToSaveAndReadItemNameAndId);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(537, 311);
+            this.tabPage5.Size = new System.Drawing.Size(618, 365);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Settings";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1345,7 +1341,7 @@
             // Creatorlinklabel
             // 
             this.Creatorlinklabel.AutoSize = true;
-            this.Creatorlinklabel.Location = new System.Drawing.Point(6, 287);
+            this.Creatorlinklabel.Location = new System.Drawing.Point(6, 349);
             this.Creatorlinklabel.Name = "Creatorlinklabel";
             this.Creatorlinklabel.Size = new System.Drawing.Size(242, 13);
             this.Creatorlinklabel.TabIndex = 9;
@@ -1355,7 +1351,7 @@
             // 
             // SaveSettingsbtn
             // 
-            this.SaveSettingsbtn.Location = new System.Drawing.Point(226, 282);
+            this.SaveSettingsbtn.Location = new System.Drawing.Point(273, 336);
             this.SaveSettingsbtn.Name = "SaveSettingsbtn";
             this.SaveSettingsbtn.Size = new System.Drawing.Size(112, 23);
             this.SaveSettingsbtn.TabIndex = 7;
@@ -1386,7 +1382,7 @@
             this.SettingsAPILockchkbox.AutoSize = true;
             this.SettingsAPILockchkbox.Checked = true;
             this.SettingsAPILockchkbox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.SettingsAPILockchkbox.Location = new System.Drawing.Point(449, 159);
+            this.SettingsAPILockchkbox.Location = new System.Drawing.Point(530, 159);
             this.SettingsAPILockchkbox.Name = "SettingsAPILockchkbox";
             this.SettingsAPILockchkbox.Size = new System.Drawing.Size(70, 17);
             this.SettingsAPILockchkbox.TabIndex = 5;
@@ -1399,38 +1395,8 @@
             this.SettingsAPIKeyValuetxtbox.Location = new System.Drawing.Point(81, 156);
             this.SettingsAPIKeyValuetxtbox.MaxLength = 16;
             this.SettingsAPIKeyValuetxtbox.Name = "SettingsAPIKeyValuetxtbox";
-            this.SettingsAPIKeyValuetxtbox.Size = new System.Drawing.Size(362, 20);
+            this.SettingsAPIKeyValuetxtbox.Size = new System.Drawing.Size(443, 20);
             this.SettingsAPIKeyValuetxtbox.TabIndex = 3;
-            // 
-            // BrowseFileToReadAndSavebtn
-            // 
-            this.BrowseFileToReadAndSavebtn.Location = new System.Drawing.Point(430, 105);
-            this.BrowseFileToReadAndSavebtn.Name = "BrowseFileToReadAndSavebtn";
-            this.BrowseFileToReadAndSavebtn.Size = new System.Drawing.Size(75, 23);
-            this.BrowseFileToReadAndSavebtn.TabIndex = 2;
-            this.BrowseFileToReadAndSavebtn.Text = "Browse";
-            this.BrowseFileToReadAndSavebtn.UseVisualStyleBackColor = true;
-            this.BrowseFileToReadAndSavebtn.Visible = false;
-            this.BrowseFileToReadAndSavebtn.Click += new System.EventHandler(this.BrowseFileToReadAndSavebtn_Click);
-            // 
-            // FileToReadtoAndSaveTotxtbox
-            // 
-            this.FileToReadtoAndSaveTotxtbox.Location = new System.Drawing.Point(177, 105);
-            this.FileToReadtoAndSaveTotxtbox.Name = "FileToReadtoAndSaveTotxtbox";
-            this.FileToReadtoAndSaveTotxtbox.ReadOnly = true;
-            this.FileToReadtoAndSaveTotxtbox.Size = new System.Drawing.Size(236, 20);
-            this.FileToReadtoAndSaveTotxtbox.TabIndex = 1;
-            this.FileToReadtoAndSaveTotxtbox.Visible = false;
-            // 
-            // FileToSaveAndReadItemNameAndId
-            // 
-            this.FileToSaveAndReadItemNameAndId.AutoSize = true;
-            this.FileToSaveAndReadItemNameAndId.Location = new System.Drawing.Point(5, 108);
-            this.FileToSaveAndReadItemNameAndId.Name = "FileToSaveAndReadItemNameAndId";
-            this.FileToSaveAndReadItemNameAndId.Size = new System.Drawing.Size(166, 13);
-            this.FileToSaveAndReadItemNameAndId.TabIndex = 0;
-            this.FileToSaveAndReadItemNameAndId.Text = "File location to save and load files";
-            this.FileToSaveAndReadItemNameAndId.Visible = false;
             // 
             // Refreshtimer
             // 
@@ -1481,12 +1447,32 @@
             this.LoadItemRefreshLimiter.Interval = 1000;
             this.LoadItemRefreshLimiter.Tick += new System.EventHandler(this.LoadItemRefreshLimiter_Tick);
             // 
+            // EducationLengthlbl
+            // 
+            this.EducationLengthlbl.AutoSize = true;
+            this.EducationLengthlbl.Location = new System.Drawing.Point(316, 335);
+            this.EducationLengthlbl.Name = "EducationLengthlbl";
+            this.EducationLengthlbl.Size = new System.Drawing.Size(87, 13);
+            this.EducationLengthlbl.TabIndex = 60;
+            this.EducationLengthlbl.Text = "Education length";
+            this.EducationLengthlbl.Visible = false;
+            // 
+            // EducationLengthValuelbl
+            // 
+            this.EducationLengthValuelbl.AutoSize = true;
+            this.EducationLengthValuelbl.Location = new System.Drawing.Point(411, 335);
+            this.EducationLengthValuelbl.Name = "EducationLengthValuelbl";
+            this.EducationLengthValuelbl.Size = new System.Drawing.Size(13, 13);
+            this.EducationLengthValuelbl.TabIndex = 61;
+            this.EducationLengthValuelbl.Text = "0";
+            this.EducationLengthValuelbl.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(569, 361);
+            this.ClientSize = new System.Drawing.Size(650, 414);
             this.Controls.Add(this.TornCityTimelbl);
             this.Controls.Add(this.MainTabBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1587,9 +1573,6 @@
         private System.Windows.Forms.Label NewEventValuelbl;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.Button BrowseFileToReadAndSavebtn;
-        private System.Windows.Forms.TextBox FileToReadtoAndSaveTotxtbox;
-        private System.Windows.Forms.Label FileToSaveAndReadItemNameAndId;
         private System.Windows.Forms.Button GetItemNamesAndIdbtn;
         private System.Windows.Forms.Label SettingsAPIkeylbl;
         private System.Windows.Forms.CheckBox SettingsAPILockchkbox;
@@ -1652,6 +1635,8 @@
         private System.Windows.Forms.Button SetUserInfoTextColourbtn;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button GetDatabtn;
+        private System.Windows.Forms.Label EducationLengthValuelbl;
+        private System.Windows.Forms.Label EducationLengthlbl;
     }
 }
 
