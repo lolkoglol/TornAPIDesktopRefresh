@@ -35,6 +35,8 @@
             this.ApiKeyLockcbx = new System.Windows.Forms.CheckBox();
             this.MainTabBar = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.EducationLengthValuelbl = new System.Windows.Forms.Label();
+            this.EducationLengthlbl = new System.Windows.Forms.Label();
             this.Traveltimelbl = new System.Windows.Forms.Label();
             this.TravelTimeValuelbl = new System.Windows.Forms.Label();
             this.NewMessagesValuelbl = new System.Windows.Forms.Label();
@@ -153,8 +155,6 @@
             this.FetchItemsTimer = new System.Windows.Forms.Timer(this.components);
             this.StockInfoRefreshLimit = new System.Windows.Forms.Timer(this.components);
             this.LoadItemRefreshLimiter = new System.Windows.Forms.Timer(this.components);
-            this.EducationLengthlbl = new System.Windows.Forms.Label();
-            this.EducationLengthValuelbl = new System.Windows.Forms.Label();
             this.MainTabBar.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -279,6 +279,26 @@
             this.tabPage1.Size = new System.Drawing.Size(618, 365);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "UserInfo";
+            // 
+            // EducationLengthValuelbl
+            // 
+            this.EducationLengthValuelbl.AutoSize = true;
+            this.EducationLengthValuelbl.Location = new System.Drawing.Point(411, 335);
+            this.EducationLengthValuelbl.Name = "EducationLengthValuelbl";
+            this.EducationLengthValuelbl.Size = new System.Drawing.Size(13, 13);
+            this.EducationLengthValuelbl.TabIndex = 61;
+            this.EducationLengthValuelbl.Text = "0";
+            this.EducationLengthValuelbl.Visible = false;
+            // 
+            // EducationLengthlbl
+            // 
+            this.EducationLengthlbl.AutoSize = true;
+            this.EducationLengthlbl.Location = new System.Drawing.Point(316, 335);
+            this.EducationLengthlbl.Name = "EducationLengthlbl";
+            this.EducationLengthlbl.Size = new System.Drawing.Size(87, 13);
+            this.EducationLengthlbl.TabIndex = 60;
+            this.EducationLengthlbl.Text = "Education length";
+            this.EducationLengthlbl.Visible = false;
             // 
             // Traveltimelbl
             // 
@@ -832,7 +852,7 @@
             // ItemCombobox
             // 
             this.ItemCombobox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.ItemCombobox.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.ItemCombobox.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ItemCombobox.Enabled = false;
             this.ItemCombobox.FormattingEnabled = true;
             this.ItemCombobox.Location = new System.Drawing.Point(251, 64);
@@ -840,7 +860,6 @@
             this.ItemCombobox.Size = new System.Drawing.Size(121, 21);
             this.ItemCombobox.Sorted = true;
             this.ItemCombobox.TabIndex = 1;
-            this.ItemCombobox.UseWaitCursor = true;
             // 
             // GetItemNamesAndIdbtn
             // 
@@ -989,7 +1008,7 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(517, 244);
+            this.tabPage8.Size = new System.Drawing.Size(598, 298);
             this.tabPage8.TabIndex = 2;
             this.tabPage8.Text = "Page 3";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -1039,7 +1058,7 @@
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(517, 244);
+            this.tabPage9.Size = new System.Drawing.Size(598, 298);
             this.tabPage9.TabIndex = 3;
             this.tabPage9.Text = "Page 4";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -1089,7 +1108,7 @@
             this.tabPage10.Location = new System.Drawing.Point(4, 22);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(517, 244);
+            this.tabPage10.Size = new System.Drawing.Size(598, 298);
             this.tabPage10.TabIndex = 4;
             this.tabPage10.Text = "Page 5";
             this.tabPage10.UseVisualStyleBackColor = true;
@@ -1139,7 +1158,7 @@
             this.tabPage11.Location = new System.Drawing.Point(4, 22);
             this.tabPage11.Name = "tabPage11";
             this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage11.Size = new System.Drawing.Size(517, 244);
+            this.tabPage11.Size = new System.Drawing.Size(598, 298);
             this.tabPage11.TabIndex = 5;
             this.tabPage11.Text = "Page 6";
             this.tabPage11.UseVisualStyleBackColor = true;
@@ -1189,7 +1208,7 @@
             this.tabPage12.Location = new System.Drawing.Point(4, 22);
             this.tabPage12.Name = "tabPage12";
             this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage12.Size = new System.Drawing.Size(517, 244);
+            this.tabPage12.Size = new System.Drawing.Size(598, 298);
             this.tabPage12.TabIndex = 6;
             this.tabPage12.Text = "Page 7";
             this.tabPage12.UseVisualStyleBackColor = true;
@@ -1446,26 +1465,6 @@
             // 
             this.LoadItemRefreshLimiter.Interval = 1000;
             this.LoadItemRefreshLimiter.Tick += new System.EventHandler(this.LoadItemRefreshLimiter_Tick);
-            // 
-            // EducationLengthlbl
-            // 
-            this.EducationLengthlbl.AutoSize = true;
-            this.EducationLengthlbl.Location = new System.Drawing.Point(316, 335);
-            this.EducationLengthlbl.Name = "EducationLengthlbl";
-            this.EducationLengthlbl.Size = new System.Drawing.Size(87, 13);
-            this.EducationLengthlbl.TabIndex = 60;
-            this.EducationLengthlbl.Text = "Education length";
-            this.EducationLengthlbl.Visible = false;
-            // 
-            // EducationLengthValuelbl
-            // 
-            this.EducationLengthValuelbl.AutoSize = true;
-            this.EducationLengthValuelbl.Location = new System.Drawing.Point(411, 335);
-            this.EducationLengthValuelbl.Name = "EducationLengthValuelbl";
-            this.EducationLengthValuelbl.Size = new System.Drawing.Size(13, 13);
-            this.EducationLengthValuelbl.TabIndex = 61;
-            this.EducationLengthValuelbl.Text = "0";
-            this.EducationLengthValuelbl.Visible = false;
             // 
             // MainForm
             // 

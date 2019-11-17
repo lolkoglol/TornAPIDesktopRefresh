@@ -288,7 +288,7 @@ namespace TornMainForm
                 APILengthWarning.Visible = false; // turn off API warning label 
 
                 ButtonLimittimer.Start();
-                GetDatabtn.Enabled = false;
+                GetDatabtn.Enabled = false; // makes button non clickable
 
                 OneSecondtimer.Start();
                 GetDatabtn.Text = Convert.ToString(ButtonLimittimer.Interval / 1000);
@@ -399,9 +399,20 @@ namespace TornMainForm
                             AcEvent = AcEvent.Replace("9thb", "9th "); 
                                  AcEvent = AcEvent.Replace("classh", " ");
 
+                            AcEvent = AcEvent.Replace("sid", " sid ");
+                            AcEvent = AcEvent.Replace(" sid", " ");
+                            AcEvent = AcEvent.Replace("steplogID", "ID: ");
+                            AcEvent = AcEvent.Replace("attackLogID", " attackLogID: ");
+                            AcEvent = AcEvent.Replace("ID", " ID: ");
                             AcEvent = AcEvent.Replace(" a ", " ");
                             AcEvent = AcEvent.Replace("  ", " ");
 
+                            if (item.Contains("the") & item.Contains("details") & item.Contains("here"))
+                            {
+                                AcEvent = AcEvent.Replace("the", "");
+                                AcEvent = AcEvent.Replace("details", "");
+                                AcEvent = AcEvent.Replace("here", "");
+                            }
 
                             AcEvent = Regex.Replace(AcEvent," [\\w]{ 0, 2}", " ");
                         
@@ -446,7 +457,8 @@ namespace TornMainForm
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Error: 400");               
+                    Refreshtimer.Stop();
+                    MessageBox.Show("Error: Api did not work. Try again in 30 Seconds");               
                 }
                 OneSecondtimeTwo.Stop();
                 UserData.TimerAble = 0; // when timerable is > 0 the refreshtimer will automate itself. when an exception occurs value is put to 0 which turns timer off. value is increased by button press
@@ -528,6 +540,7 @@ namespace TornMainForm
                
                 StatusLinkProfileValuelbl.Visible = true;
             }
+            
             
            RefreshValuelbl.Text = Convert.ToString(Convert.ToInt32(RefreshValuelbl.Text) - 1); // decrease refresh value by 1 per timer tick which should be 1 second.
 
@@ -635,6 +648,7 @@ namespace TornMainForm
 
         private void GetItemNamesAndIdbtn_Click(object sender, EventArgs e)
         {
+            ItemCombobox.Items.Clear();
             new Thread(() =>
             {
                 try
@@ -679,7 +693,7 @@ namespace TornMainForm
                 }
                 if (File.Exists(Settings.ItemFileName) == true & TornData.ItemLoaded == false) 
                     {
-                    MyFunctions.AddJsonDataToDictionary(TornData.ItemsIdAndName, "items", "name", TornData.TornJsonFetchedInfo, 1003);
+                    MyFunctions.AddJsonDataToDictionary(TornData.ItemsIdAndName, "items", "name", TornData.TornJsonFetchedInfo, 1025);
                     TornData.NameThenIDofItems = File.ReadAllText(Settings.ItemFileName);
                                       
                     // TornData.TornItemNames = Convert.ToString(JObject.Parse(TornData.NameThenIDofItems));                 
@@ -808,8 +822,7 @@ namespace TornMainForm
             StockInfo26lbl.Text = TornData.Stock25;            StockInfo27lbl.Text = TornData.Stock26;            StockInfo28lbl.Text = TornData.Stock27;
             StockInfo29lbl.Text = TornData.Stock28;            StockInfo30lbl.Text = TornData.Stock29;            StockInfo31lbl.Text = TornData.Stock30;
 
-            TornData.StockTimerActive = false; // change value so timer does not re active.     
-                        
+            TornData.StockTimerActive = false; // change value so timer does not re active.                             
         }
 
         private void FetchItemsTimer_Tick(object sender, EventArgs e)
