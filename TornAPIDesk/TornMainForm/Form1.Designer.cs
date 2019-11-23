@@ -1479,7 +1479,7 @@
             // DukeLootNamelbl
             // 
             this.DukeLootNamelbl.AutoSize = true;
-            this.DukeLootNamelbl.Location = new System.Drawing.Point(6, 116);
+            this.DukeLootNamelbl.Location = new System.Drawing.Point(3, 116);
             this.DukeLootNamelbl.Name = "DukeLootNamelbl";
             this.DukeLootNamelbl.Size = new System.Drawing.Size(90, 13);
             this.DukeLootNamelbl.TabIndex = 62;
@@ -1488,7 +1488,7 @@
             // LeslieNamelbl
             // 
             this.LeslieNamelbl.AutoSize = true;
-            this.LeslieNamelbl.Location = new System.Drawing.Point(184, 116);
+            this.LeslieNamelbl.Location = new System.Drawing.Point(198, 116);
             this.LeslieNamelbl.Name = "LeslieNamelbl";
             this.LeslieNamelbl.Size = new System.Drawing.Size(85, 13);
             this.LeslieNamelbl.TabIndex = 63;
@@ -1507,7 +1507,7 @@
             // DukeTimerlbl
             // 
             this.DukeTimerlbl.AutoSize = true;
-            this.DukeTimerlbl.Location = new System.Drawing.Point(102, 116);
+            this.DukeTimerlbl.Location = new System.Drawing.Point(109, 116);
             this.DukeTimerlbl.Name = "DukeTimerlbl";
             this.DukeTimerlbl.Size = new System.Drawing.Size(49, 13);
             this.DukeTimerlbl.TabIndex = 64;
@@ -1516,7 +1516,7 @@
             // LeslieTimerValuelbl
             // 
             this.LeslieTimerValuelbl.AutoSize = true;
-            this.LeslieTimerValuelbl.Location = new System.Drawing.Point(275, 116);
+            this.LeslieTimerValuelbl.Location = new System.Drawing.Point(314, 116);
             this.LeslieTimerValuelbl.Name = "LeslieTimerValuelbl";
             this.LeslieTimerValuelbl.Size = new System.Drawing.Size(49, 13);
             this.LeslieTimerValuelbl.TabIndex = 65;

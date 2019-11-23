@@ -988,8 +988,7 @@ namespace TornMainForm
 
             try
             {
-
-          
+                          
 
             MyFunctions.TimerCountdownWithTicks(YataDataClass.DukeDataForlevel4, DukeTimerlbl, "due");               
                     
@@ -997,12 +996,9 @@ namespace TornMainForm
             }
             catch (Exception)
             {
-
-                throw;
+                
             }
-
-
-
+            
         }
 
         private void RefreshTrueDataForLoots_Tick(object sender, EventArgs e)
