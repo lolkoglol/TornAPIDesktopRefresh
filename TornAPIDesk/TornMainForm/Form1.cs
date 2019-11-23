@@ -49,6 +49,7 @@ namespace TornMainForm
         {
             /// <summary>
             /// switch options: 1 = user , 2 = property , 3 = faction , 4 = company , 5 = market , 6 = torn. fields = The api options (children) from the switch description option.
+            /// 7 = Yata loot timers data
             /// </summary>
             /// <param name="switchOption"></param>
             /// <param name="feilds"></param>
@@ -75,6 +76,9 @@ namespace TornMainForm
                         break;
                     case 6:
                         test = test = string.Format("https://api.torn.com/torn/?selections=" + fields + "&key=" + MainForm.APIKey);
+                        break;
+                    case 7:
+                        test = string.Format("https://yata.alwaysdata.net/loot/timings/");                       
                         break;
                 }
 
@@ -185,6 +189,23 @@ namespace TornMainForm
                        + " forecast: " + ForeCast[index] + Environment.NewLine +  " Demand: " + Demand[index];
                 return Output;
             }
+        }
+
+        public class  YataDataClass
+        {
+             public static  string YataTimers = null;
+            public static JObject yataObject = null;
+
+            public static JToken DukeData = null;
+            public static JToken DukeTimingsForLevels = null;
+            public static JToken DukeDataForlevel4 = null;
+            public static JToken DukeTimerForlevel4 = null;
+
+            public static JToken LeslieData = null;
+            public static JToken LeslieTimingsForLevels = null;
+            public static JToken LeslieDataForlevel4 = null;
+            public static JToken LeslieTimerForlevel4 = null;
+          
         }
 
         public class FileReadWriteLocations
@@ -801,6 +822,36 @@ namespace TornMainForm
             {
                 SettingsAPIKeyValuetxtbox.ReadOnly = false;
             }
+
+            
+                YataDataClass.YataTimers = MyFunctions.FetchUserData(7, null, YataDataClass.YataTimers);
+
+            // fetch data 
+            try
+            {            
+                YataDataClass.yataObject = JObject.Parse(YataDataClass.YataTimers);
+                YataDataClass.DukeData = YataDataClass.yataObject["4"];
+                YataDataClass.DukeTimingsForLevels = YataDataClass.DukeData["timings"];
+                YataDataClass.DukeDataForlevel4 = YataDataClass.DukeTimingsForLevels["4"];
+                YataDataClass.DukeTimingsForLevels = YataDataClass.DukeDataForlevel4["due"];
+                YataDataClass.LeslieData = YataDataClass.yataObject["15"];
+                YataDataClass.LeslieTimingsForLevels = YataDataClass.LeslieData["timings"];
+                YataDataClass.LeslieDataForlevel4 = YataDataClass.LeslieTimingsForLevels["4"];
+                YataDataClass.LeslieTimerForlevel4 = YataDataClass.LeslieDataForlevel4["due"];
+
+
+            //start timers
+            RefreshTrueDataForLoots.Start();
+            }
+            catch (Exception)
+            {
+
+                
+            }
+            LeslieDukeTimersCountDown.Start();
+               
+           
+         
         }
         
         private void Creatorlinklabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -930,6 +981,55 @@ namespace TornMainForm
             MyFunctions.ChangeTabForeColour(tabPage1, UserInfoTextColour, "Green");            
             MyFunctions.ChangeTabForeColour(tabPage1, UserInfoTextColour, "Orange"); 
             MyFunctions.ChangeTabForeColour(tabPage1, UserInfoTextColour, "HotPink");
+        }
+
+        private void LeslieDukeTimers_Tick(object sender, EventArgs e)
+        {
+
+            try
+            {
+
+          
+
+            MyFunctions.TimerCountdownWithTicks(YataDataClass.DukeDataForlevel4, DukeTimerlbl, "due");               
+                    
+            MyFunctions.TimerCountdownWithTicks(YataDataClass.LeslieDataForlevel4, LeslieTimerValuelbl, "due");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+
+
+        }
+
+        private void RefreshTrueDataForLoots_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+
+            YataDataClass.YataTimers = MyFunctions.FetchUserData(7, null, YataDataClass.YataTimers);
+
+
+            YataDataClass.yataObject = JObject.Parse(YataDataClass.YataTimers);
+            YataDataClass.DukeData = YataDataClass.yataObject["4"];
+            YataDataClass.DukeTimingsForLevels = YataDataClass.DukeData["timings"];
+            YataDataClass.DukeDataForlevel4 = YataDataClass.DukeTimingsForLevels["4"];
+            YataDataClass.DukeTimingsForLevels = YataDataClass.DukeDataForlevel4["due"];
+
+            YataDataClass.LeslieData = YataDataClass.yataObject["15"];
+            YataDataClass.LeslieTimingsForLevels = YataDataClass.LeslieData["timings"];
+            YataDataClass.LeslieDataForlevel4 = YataDataClass.LeslieTimingsForLevels["4"];
+            YataDataClass.LeslieTimerForlevel4 = YataDataClass.LeslieDataForlevel4["due"];
+
+            }
+            catch (Exception)
+            {
+                
+            }
+            
         }
     }
     

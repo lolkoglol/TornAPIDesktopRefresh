@@ -155,6 +155,12 @@
             this.FetchItemsTimer = new System.Windows.Forms.Timer(this.components);
             this.StockInfoRefreshLimit = new System.Windows.Forms.Timer(this.components);
             this.LoadItemRefreshLimiter = new System.Windows.Forms.Timer(this.components);
+            this.DukeLootNamelbl = new System.Windows.Forms.Label();
+            this.LeslieNamelbl = new System.Windows.Forms.Label();
+            this.LeslieDukeTimersCountDown = new System.Windows.Forms.Timer(this.components);
+            this.RefreshTrueDataForLoots = new System.Windows.Forms.Timer(this.components);
+            this.DukeTimerlbl = new System.Windows.Forms.Label();
+            this.LeslieTimerValuelbl = new System.Windows.Forms.Label();
             this.MainTabBar.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -217,6 +223,10 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.LeslieTimerValuelbl);
+            this.tabPage1.Controls.Add(this.DukeTimerlbl);
+            this.tabPage1.Controls.Add(this.LeslieNamelbl);
+            this.tabPage1.Controls.Add(this.DukeLootNamelbl);
             this.tabPage1.Controls.Add(this.EducationLengthValuelbl);
             this.tabPage1.Controls.Add(this.EducationLengthlbl);
             this.tabPage1.Controls.Add(this.Traveltimelbl);
@@ -1466,12 +1476,58 @@
             this.LoadItemRefreshLimiter.Interval = 1000;
             this.LoadItemRefreshLimiter.Tick += new System.EventHandler(this.LoadItemRefreshLimiter_Tick);
             // 
+            // DukeLootNamelbl
+            // 
+            this.DukeLootNamelbl.AutoSize = true;
+            this.DukeLootNamelbl.Location = new System.Drawing.Point(6, 116);
+            this.DukeLootNamelbl.Name = "DukeLootNamelbl";
+            this.DukeLootNamelbl.Size = new System.Drawing.Size(90, 13);
+            this.DukeLootNamelbl.TabIndex = 62;
+            this.DukeLootNamelbl.Text = "Duke Loot 4 In  : ";
+            // 
+            // LeslieNamelbl
+            // 
+            this.LeslieNamelbl.AutoSize = true;
+            this.LeslieNamelbl.Location = new System.Drawing.Point(184, 116);
+            this.LeslieNamelbl.Name = "LeslieNamelbl";
+            this.LeslieNamelbl.Size = new System.Drawing.Size(85, 13);
+            this.LeslieNamelbl.TabIndex = 63;
+            this.LeslieNamelbl.Text = "Leslie Loot 4 In: ";
+            // 
+            // LeslieDukeTimersCountDown
+            // 
+            this.LeslieDukeTimersCountDown.Interval = 1000;
+            this.LeslieDukeTimersCountDown.Tick += new System.EventHandler(this.LeslieDukeTimers_Tick);
+            // 
+            // RefreshTrueDataForLoots
+            // 
+            this.RefreshTrueDataForLoots.Interval = 30000;
+            this.RefreshTrueDataForLoots.Tick += new System.EventHandler(this.RefreshTrueDataForLoots_Tick);
+            // 
+            // DukeTimerlbl
+            // 
+            this.DukeTimerlbl.AutoSize = true;
+            this.DukeTimerlbl.Location = new System.Drawing.Point(102, 116);
+            this.DukeTimerlbl.Name = "DukeTimerlbl";
+            this.DukeTimerlbl.Size = new System.Drawing.Size(49, 13);
+            this.DukeTimerlbl.TabIndex = 64;
+            this.DukeTimerlbl.Text = "00;00;00";
+            // 
+            // LeslieTimerValuelbl
+            // 
+            this.LeslieTimerValuelbl.AutoSize = true;
+            this.LeslieTimerValuelbl.Location = new System.Drawing.Point(275, 116);
+            this.LeslieTimerValuelbl.Name = "LeslieTimerValuelbl";
+            this.LeslieTimerValuelbl.Size = new System.Drawing.Size(49, 13);
+            this.LeslieTimerValuelbl.TabIndex = 65;
+            this.LeslieTimerValuelbl.Text = "00:00:00";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(650, 414);
+            this.ClientSize = new System.Drawing.Size(645, 408);
             this.Controls.Add(this.TornCityTimelbl);
             this.Controls.Add(this.MainTabBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1636,6 +1692,12 @@
         private System.Windows.Forms.Button GetDatabtn;
         private System.Windows.Forms.Label EducationLengthValuelbl;
         private System.Windows.Forms.Label EducationLengthlbl;
+        private System.Windows.Forms.Label LeslieNamelbl;
+        private System.Windows.Forms.Label DukeLootNamelbl;
+        private System.Windows.Forms.Timer LeslieDukeTimersCountDown;
+        private System.Windows.Forms.Timer RefreshTrueDataForLoots;
+        private System.Windows.Forms.Label LeslieTimerValuelbl;
+        private System.Windows.Forms.Label DukeTimerlbl;
     }
 }
 
