@@ -993,10 +993,11 @@ namespace TornMainForm
             MyFunctions.TimerCountdownWithTicks(YataDataClass.DukeDataForlevel4, DukeTimerlbl, "due");               
                     
             MyFunctions.TimerCountdownWithTicks(YataDataClass.LeslieDataForlevel4, LeslieTimerValuelbl, "due");
+
             }
             catch (Exception)
             {
-                
+                LeslieDukeTimersCountDown.Stop();
             }
             
         }
@@ -1019,6 +1020,8 @@ namespace TornMainForm
             YataDataClass.LeslieTimingsForLevels = YataDataClass.LeslieData["timings"];
             YataDataClass.LeslieDataForlevel4 = YataDataClass.LeslieTimingsForLevels["4"];
             YataDataClass.LeslieTimerForlevel4 = YataDataClass.LeslieDataForlevel4["due"];
+
+                LeslieDukeTimersCountDown.Start();
 
             }
             catch (Exception)
