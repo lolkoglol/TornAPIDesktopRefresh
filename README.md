@@ -25,4 +25,4 @@ Setting page allows you to save your api so you dont have to re-enter on app sta
 <img src= "https://github.com/lolkoglol/TornAPIDesktopRefresh/blob/master/Settings.png" alt = "api4"/>
 
 
-
+ 
