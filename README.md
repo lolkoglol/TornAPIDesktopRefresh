@@ -8,7 +8,7 @@ To use this app place items.json, Newtonsoft.Json.dll, Newtonsoft.Json.xml, Sett
 This is a Desktop application so you don't need to share your api key with anyone else.
 
 # Purpose
- 
+  
 This is a desktop application that uses your Torn API key to fetch information about your account and updates it periodically to keep you up to date on typical information such as; cooldowns, energy timers, bank money, status and other in game features.
 
 An item search page is featured so you see the effect, market price, buy price, sale price, description and quantity of the item in circulation.
