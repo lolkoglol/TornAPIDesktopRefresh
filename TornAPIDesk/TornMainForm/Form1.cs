@@ -822,7 +822,6 @@ namespace TornMainForm
             {
                 SettingsAPIKeyValuetxtbox.ReadOnly = false;
             }
-
             
                 YataDataClass.YataTimers = MyFunctions.FetchUserData(7, null, YataDataClass.YataTimers);
 
@@ -845,11 +844,9 @@ namespace TornMainForm
             }
             catch (Exception)
             {
-
                 
             }
-            LeslieDukeTimersCountDown.Start();
-               
+            LeslieDukeTimersCountDown.Start();              
            
          
         }

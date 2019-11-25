@@ -329,7 +329,7 @@
             // EducationLengthValuelbl
             // 
             this.EducationLengthValuelbl.AutoSize = true;
-            this.EducationLengthValuelbl.Location = new System.Drawing.Point(411, 335);
+            this.EducationLengthValuelbl.Location = new System.Drawing.Point(539, 294);
             this.EducationLengthValuelbl.Name = "EducationLengthValuelbl";
             this.EducationLengthValuelbl.Size = new System.Drawing.Size(13, 13);
             this.EducationLengthValuelbl.TabIndex = 61;
@@ -339,11 +339,11 @@
             // EducationLengthlbl
             // 
             this.EducationLengthlbl.AutoSize = true;
-            this.EducationLengthlbl.Location = new System.Drawing.Point(316, 335);
+            this.EducationLengthlbl.Location = new System.Drawing.Point(444, 294);
             this.EducationLengthlbl.Name = "EducationLengthlbl";
-            this.EducationLengthlbl.Size = new System.Drawing.Size(87, 13);
+            this.EducationLengthlbl.Size = new System.Drawing.Size(90, 13);
             this.EducationLengthlbl.TabIndex = 60;
-            this.EducationLengthlbl.Text = "Education length";
+            this.EducationLengthlbl.Text = "Education length:";
             this.EducationLengthlbl.Visible = false;
             // 
             // Traveltimelbl
@@ -398,7 +398,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(444, 251);
+            this.label1.Location = new System.Drawing.Point(444, 264);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 54;
@@ -407,7 +407,7 @@
             // BankTimeLeftValuelbl
             // 
             this.BankTimeLeftValuelbl.AutoSize = true;
-            this.BankTimeLeftValuelbl.Location = new System.Drawing.Point(534, 251);
+            this.BankTimeLeftValuelbl.Location = new System.Drawing.Point(534, 264);
             this.BankTimeLeftValuelbl.Name = "BankTimeLeftValuelbl";
             this.BankTimeLeftValuelbl.Size = new System.Drawing.Size(26, 13);
             this.BankTimeLeftValuelbl.TabIndex = 53;
@@ -416,20 +416,20 @@
             // CityBankValuelbl
             // 
             this.CityBankValuelbl.AutoSize = true;
-            this.CityBankValuelbl.Location = new System.Drawing.Point(444, 221);
+            this.CityBankValuelbl.Location = new System.Drawing.Point(444, 234);
             this.CityBankValuelbl.Name = "CityBankValuelbl";
-            this.CityBankValuelbl.Size = new System.Drawing.Size(52, 13);
+            this.CityBankValuelbl.Size = new System.Drawing.Size(55, 13);
             this.CityBankValuelbl.TabIndex = 52;
-            this.CityBankValuelbl.Text = "City Bank";
+            this.CityBankValuelbl.Text = "City Bank:";
             // 
             // CaymanbankValuelbl
             // 
             this.CaymanbankValuelbl.AutoSize = true;
-            this.CaymanbankValuelbl.Location = new System.Drawing.Point(444, 191);
+            this.CaymanbankValuelbl.Location = new System.Drawing.Point(444, 204);
             this.CaymanbankValuelbl.Name = "CaymanbankValuelbl";
-            this.CaymanbankValuelbl.Size = new System.Drawing.Size(72, 13);
+            this.CaymanbankValuelbl.Size = new System.Drawing.Size(75, 13);
             this.CaymanbankValuelbl.TabIndex = 51;
-            this.CaymanbankValuelbl.Text = "Cayman bank";
+            this.CaymanbankValuelbl.Text = "Cayman bank:";
             // 
             // StatusLinkProfileValuelbl
             // 
@@ -542,7 +542,7 @@
             // CoolDownValuelbl
             // 
             this.CoolDownValuelbl.AutoSize = true;
-            this.CoolDownValuelbl.Location = new System.Drawing.Point(315, 269);
+            this.CoolDownValuelbl.Location = new System.Drawing.Point(315, 272);
             this.CoolDownValuelbl.Name = "CoolDownValuelbl";
             this.CoolDownValuelbl.Size = new System.Drawing.Size(13, 13);
             this.CoolDownValuelbl.TabIndex = 39;
@@ -560,25 +560,25 @@
             // MoneyInVaultlbl
             // 
             this.MoneyInVaultlbl.AutoSize = true;
-            this.MoneyInVaultlbl.Location = new System.Drawing.Point(444, 161);
+            this.MoneyInVaultlbl.Location = new System.Drawing.Point(444, 174);
             this.MoneyInVaultlbl.Name = "MoneyInVaultlbl";
-            this.MoneyInVaultlbl.Size = new System.Drawing.Size(77, 13);
+            this.MoneyInVaultlbl.Size = new System.Drawing.Size(80, 13);
             this.MoneyInVaultlbl.TabIndex = 37;
-            this.MoneyInVaultlbl.Text = "Money in Vault";
+            this.MoneyInVaultlbl.Text = "Money in Vault:";
             // 
             // MoneyOnHandlbl
             // 
             this.MoneyOnHandlbl.AutoSize = true;
-            this.MoneyOnHandlbl.Location = new System.Drawing.Point(444, 131);
+            this.MoneyOnHandlbl.Location = new System.Drawing.Point(444, 144);
             this.MoneyOnHandlbl.Name = "MoneyOnHandlbl";
             this.MoneyOnHandlbl.Size = new System.Drawing.Size(84, 13);
             this.MoneyOnHandlbl.TabIndex = 36;
-            this.MoneyOnHandlbl.Text = "Money on hand ";
+            this.MoneyOnHandlbl.Text = "Money on hand:";
             // 
             // PointsValuelbl
             // 
             this.PointsValuelbl.AutoSize = true;
-            this.PointsValuelbl.Location = new System.Drawing.Point(444, 103);
+            this.PointsValuelbl.Location = new System.Drawing.Point(444, 116);
             this.PointsValuelbl.Name = "PointsValuelbl";
             this.PointsValuelbl.Size = new System.Drawing.Size(39, 13);
             this.PointsValuelbl.TabIndex = 35;
@@ -609,16 +609,16 @@
             // refreshlbll
             // 
             this.refreshlbll.AutoSize = true;
-            this.refreshlbll.Location = new System.Drawing.Point(444, 288);
+            this.refreshlbll.Location = new System.Drawing.Point(369, 335);
             this.refreshlbll.Name = "refreshlbll";
-            this.refreshlbll.Size = new System.Drawing.Size(55, 13);
+            this.refreshlbll.Size = new System.Drawing.Size(80, 13);
             this.refreshlbll.TabIndex = 31;
-            this.refreshlbll.Text = "Refresh in";
+            this.refreshlbll.Text = "AutoRefresh in:";
             // 
             // RefreshValuelbl
             // 
             this.RefreshValuelbl.AutoSize = true;
-            this.RefreshValuelbl.Location = new System.Drawing.Point(505, 289);
+            this.RefreshValuelbl.Location = new System.Drawing.Point(455, 335);
             this.RefreshValuelbl.Name = "RefreshValuelbl";
             this.RefreshValuelbl.Size = new System.Drawing.Size(13, 13);
             this.RefreshValuelbl.TabIndex = 30;
@@ -832,11 +832,13 @@
             // 
             // GetDatabtn
             // 
-            this.GetDatabtn.Location = new System.Drawing.Point(527, 336);
+            this.GetDatabtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GetDatabtn.ForeColor = System.Drawing.Color.Black;
+            this.GetDatabtn.Location = new System.Drawing.Point(484, 325);
             this.GetDatabtn.Name = "GetDatabtn";
-            this.GetDatabtn.Size = new System.Drawing.Size(75, 23);
+            this.GetDatabtn.Size = new System.Drawing.Size(128, 34);
             this.GetDatabtn.TabIndex = 4;
-            this.GetDatabtn.Text = "GetData";
+            this.GetDatabtn.Text = "Get API Data";
             this.GetDatabtn.UseVisualStyleBackColor = true;
             this.GetDatabtn.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -1526,12 +1528,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(645, 408);
             this.Controls.Add(this.TornCityTimelbl);
             this.Controls.Add(this.MainTabBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "TornAPIData";
             this.Load += new System.EventHandler(this.MainForm_Load);
