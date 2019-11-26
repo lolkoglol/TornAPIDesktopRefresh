@@ -406,7 +406,7 @@ namespace TornMainForm
                             AcEvent = Regex.Replace(AcEvent, "http:www.torn.combank.php", " ");                      
 
 
-                        AcEvent = AcEvent.Replace("view"," ");
+                            AcEvent = AcEvent.Replace("view"," ");
                             AcEvent = AcEvent.Replace("View", " ");
 
                             AcEvent = AcEvent.Replace("1stb", "1st ");
@@ -418,7 +418,7 @@ namespace TornMainForm
                             AcEvent = AcEvent.Replace("7thb", "7th ");
                             AcEvent = AcEvent.Replace("8thb", "8th ");
                             AcEvent = AcEvent.Replace("9thb", "9th "); 
-                                 AcEvent = AcEvent.Replace("classh", " ");
+                            AcEvent = AcEvent.Replace("classh", " ");
 
                             AcEvent = AcEvent.Replace("sid", " sid ");
                             AcEvent = AcEvent.Replace(" sid", " ");
@@ -445,7 +445,6 @@ namespace TornMainForm
                         }
                         catch (Exception)
                         {
-
                             continue;
                         }
         }                              
@@ -552,16 +551,32 @@ namespace TornMainForm
 
             if (Statuslbl.Text.Contains('<')) // shortens status attacking info to link to attackers profile.
             {
+                try
+                {              
                 string statusBegin = Statuslbl.Text.Split('<')[0];
                 string statusend = Statuslbl.Text.Split('\\')[1];
-                Statuslbl.Text = statusBegin;
+                Statuslbl.Text = statusBegin + ": ";
 
                 UserData.StatusLink = "https://www.torn.com/" + statusend;
                 StatusLinkProfileValuelbl.Text = statusend;
                
                 StatusLinkProfileValuelbl.Visible = true;
-            }
-            
+                }
+                catch (Exception)
+                {
+                    try
+                    {
+                        string statusBegin = Statuslbl.Text.Split('<')[0];
+                        string statusend = Statuslbl.Text.Replace('\\',' ');
+                        Statuslbl.Text = statusBegin + "Someone";                      
+                       
+                    }
+                    catch (Exception)
+                    {
+                        
+                    }                    
+                }
+            }            
             
            RefreshValuelbl.Text = Convert.ToString(Convert.ToInt32(RefreshValuelbl.Text) - 1); // decrease refresh value by 1 per timer tick which should be 1 second.
 
@@ -984,8 +999,7 @@ namespace TornMainForm
         {
 
             try
-            {
-                          
+            {                          
 
             MyFunctions.TimerCountdownWithTicks(YataDataClass.DukeDataForlevel4, DukeTimerlbl, "due");               
                     
@@ -999,7 +1013,7 @@ namespace TornMainForm
             
         }
 
-        private void RefreshTrueDataForLoots_Tick(object sender, EventArgs e)
+        private void RefreshTrueDataForLoots_Tick(object sender, EventArgs e) // gets the loot data every tick to updata to its real time incase timers become to quick / slow
         {
             try
             {

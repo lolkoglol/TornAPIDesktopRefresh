@@ -329,7 +329,7 @@
             // EducationLengthValuelbl
             // 
             this.EducationLengthValuelbl.AutoSize = true;
-            this.EducationLengthValuelbl.Location = new System.Drawing.Point(539, 294);
+            this.EducationLengthValuelbl.Location = new System.Drawing.Point(539, 300);
             this.EducationLengthValuelbl.Name = "EducationLengthValuelbl";
             this.EducationLengthValuelbl.Size = new System.Drawing.Size(13, 13);
             this.EducationLengthValuelbl.TabIndex = 61;
@@ -339,7 +339,7 @@
             // EducationLengthlbl
             // 
             this.EducationLengthlbl.AutoSize = true;
-            this.EducationLengthlbl.Location = new System.Drawing.Point(444, 294);
+            this.EducationLengthlbl.Location = new System.Drawing.Point(443, 300);
             this.EducationLengthlbl.Name = "EducationLengthlbl";
             this.EducationLengthlbl.Size = new System.Drawing.Size(90, 13);
             this.EducationLengthlbl.TabIndex = 60;
@@ -398,7 +398,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(444, 264);
+            this.label1.Location = new System.Drawing.Point(443, 272);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 54;
@@ -407,7 +407,7 @@
             // BankTimeLeftValuelbl
             // 
             this.BankTimeLeftValuelbl.AutoSize = true;
-            this.BankTimeLeftValuelbl.Location = new System.Drawing.Point(534, 264);
+            this.BankTimeLeftValuelbl.Location = new System.Drawing.Point(530, 270);
             this.BankTimeLeftValuelbl.Name = "BankTimeLeftValuelbl";
             this.BankTimeLeftValuelbl.Size = new System.Drawing.Size(26, 13);
             this.BankTimeLeftValuelbl.TabIndex = 53;
@@ -416,7 +416,7 @@
             // CityBankValuelbl
             // 
             this.CityBankValuelbl.AutoSize = true;
-            this.CityBankValuelbl.Location = new System.Drawing.Point(444, 234);
+            this.CityBankValuelbl.Location = new System.Drawing.Point(443, 242);
             this.CityBankValuelbl.Name = "CityBankValuelbl";
             this.CityBankValuelbl.Size = new System.Drawing.Size(55, 13);
             this.CityBankValuelbl.TabIndex = 52;
@@ -425,7 +425,7 @@
             // CaymanbankValuelbl
             // 
             this.CaymanbankValuelbl.AutoSize = true;
-            this.CaymanbankValuelbl.Location = new System.Drawing.Point(444, 204);
+            this.CaymanbankValuelbl.Location = new System.Drawing.Point(443, 212);
             this.CaymanbankValuelbl.Name = "CaymanbankValuelbl";
             this.CaymanbankValuelbl.Size = new System.Drawing.Size(75, 13);
             this.CaymanbankValuelbl.TabIndex = 51;
@@ -435,7 +435,7 @@
             // 
             this.StatusLinkProfileValuelbl.AutoSize = true;
             this.StatusLinkProfileValuelbl.LinkColor = System.Drawing.Color.Blue;
-            this.StatusLinkProfileValuelbl.Location = new System.Drawing.Point(461, 79);
+            this.StatusLinkProfileValuelbl.Location = new System.Drawing.Point(497, 89);
             this.StatusLinkProfileValuelbl.Name = "StatusLinkProfileValuelbl";
             this.StatusLinkProfileValuelbl.Size = new System.Drawing.Size(55, 13);
             this.StatusLinkProfileValuelbl.TabIndex = 50;
@@ -560,7 +560,7 @@
             // MoneyInVaultlbl
             // 
             this.MoneyInVaultlbl.AutoSize = true;
-            this.MoneyInVaultlbl.Location = new System.Drawing.Point(444, 174);
+            this.MoneyInVaultlbl.Location = new System.Drawing.Point(443, 182);
             this.MoneyInVaultlbl.Name = "MoneyInVaultlbl";
             this.MoneyInVaultlbl.Size = new System.Drawing.Size(80, 13);
             this.MoneyInVaultlbl.TabIndex = 37;
@@ -569,7 +569,7 @@
             // MoneyOnHandlbl
             // 
             this.MoneyOnHandlbl.AutoSize = true;
-            this.MoneyOnHandlbl.Location = new System.Drawing.Point(444, 144);
+            this.MoneyOnHandlbl.Location = new System.Drawing.Point(443, 152);
             this.MoneyOnHandlbl.Name = "MoneyOnHandlbl";
             this.MoneyOnHandlbl.Size = new System.Drawing.Size(84, 13);
             this.MoneyOnHandlbl.TabIndex = 36;
@@ -578,7 +578,7 @@
             // PointsValuelbl
             // 
             this.PointsValuelbl.AutoSize = true;
-            this.PointsValuelbl.Location = new System.Drawing.Point(444, 116);
+            this.PointsValuelbl.Location = new System.Drawing.Point(443, 116);
             this.PointsValuelbl.Name = "PointsValuelbl";
             this.PointsValuelbl.Size = new System.Drawing.Size(39, 13);
             this.PointsValuelbl.TabIndex = 35;
@@ -752,7 +752,7 @@
             // 
             this.Statuslbl.AutoSize = true;
             this.Statuslbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Statuslbl.Location = new System.Drawing.Point(379, 48);
+            this.Statuslbl.Location = new System.Drawing.Point(379, 55);
             this.Statuslbl.Name = "Statuslbl";
             this.Statuslbl.Size = new System.Drawing.Size(51, 16);
             this.Statuslbl.TabIndex = 13;
@@ -1530,7 +1530,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(645, 408);
+            this.ClientSize = new System.Drawing.Size(642, 408);
             this.Controls.Add(this.TornCityTimelbl);
             this.Controls.Add(this.MainTabBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
