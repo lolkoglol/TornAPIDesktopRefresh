@@ -37,8 +37,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.LeslieTimerValuelbl = new System.Windows.Forms.Label();
             this.DukeTimerlbl = new System.Windows.Forms.Label();
-            this.LeslieNamelbl = new System.Windows.Forms.Label();
-            this.DukeLootNamelbl = new System.Windows.Forms.Label();
             this.EducationLengthValuelbl = new System.Windows.Forms.Label();
             this.EducationLengthlbl = new System.Windows.Forms.Label();
             this.Traveltimelbl = new System.Windows.Forms.Label();
@@ -161,6 +159,8 @@
             this.LoadItemRefreshLimiter = new System.Windows.Forms.Timer(this.components);
             this.LeslieDukeTimersCountDown = new System.Windows.Forms.Timer(this.components);
             this.RefreshTrueDataForLoots = new System.Windows.Forms.Timer(this.components);
+            this.LeslieLinkLootlbl = new System.Windows.Forms.LinkLabel();
+            this.Dukelootlinklabel = new System.Windows.Forms.LinkLabel();
             this.MainTabBar.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -223,10 +223,10 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.Dukelootlinklabel);
+            this.tabPage1.Controls.Add(this.LeslieLinkLootlbl);
             this.tabPage1.Controls.Add(this.LeslieTimerValuelbl);
             this.tabPage1.Controls.Add(this.DukeTimerlbl);
-            this.tabPage1.Controls.Add(this.LeslieNamelbl);
-            this.tabPage1.Controls.Add(this.DukeLootNamelbl);
             this.tabPage1.Controls.Add(this.EducationLengthValuelbl);
             this.tabPage1.Controls.Add(this.EducationLengthlbl);
             this.tabPage1.Controls.Add(this.Traveltimelbl);
@@ -293,7 +293,7 @@
             // LeslieTimerValuelbl
             // 
             this.LeslieTimerValuelbl.AutoSize = true;
-            this.LeslieTimerValuelbl.Location = new System.Drawing.Point(314, 116);
+            this.LeslieTimerValuelbl.Location = new System.Drawing.Point(315, 116);
             this.LeslieTimerValuelbl.Name = "LeslieTimerValuelbl";
             this.LeslieTimerValuelbl.Size = new System.Drawing.Size(49, 13);
             this.LeslieTimerValuelbl.TabIndex = 65;
@@ -308,28 +308,10 @@
             this.DukeTimerlbl.TabIndex = 64;
             this.DukeTimerlbl.Text = "00;00;00";
             // 
-            // LeslieNamelbl
-            // 
-            this.LeslieNamelbl.AutoSize = true;
-            this.LeslieNamelbl.Location = new System.Drawing.Point(210, 116);
-            this.LeslieNamelbl.Name = "LeslieNamelbl";
-            this.LeslieNamelbl.Size = new System.Drawing.Size(85, 13);
-            this.LeslieNamelbl.TabIndex = 63;
-            this.LeslieNamelbl.Text = "Leslie Loot 4 In: ";
-            // 
-            // DukeLootNamelbl
-            // 
-            this.DukeLootNamelbl.AutoSize = true;
-            this.DukeLootNamelbl.Location = new System.Drawing.Point(3, 116);
-            this.DukeLootNamelbl.Name = "DukeLootNamelbl";
-            this.DukeLootNamelbl.Size = new System.Drawing.Size(84, 13);
-            this.DukeLootNamelbl.TabIndex = 62;
-            this.DukeLootNamelbl.Text = "Duke Loot 4 In: ";
-            // 
             // EducationLengthValuelbl
             // 
             this.EducationLengthValuelbl.AutoSize = true;
-            this.EducationLengthValuelbl.Location = new System.Drawing.Point(539, 300);
+            this.EducationLengthValuelbl.Location = new System.Drawing.Point(539, 299);
             this.EducationLengthValuelbl.Name = "EducationLengthValuelbl";
             this.EducationLengthValuelbl.Size = new System.Drawing.Size(13, 13);
             this.EducationLengthValuelbl.TabIndex = 61;
@@ -339,7 +321,7 @@
             // EducationLengthlbl
             // 
             this.EducationLengthlbl.AutoSize = true;
-            this.EducationLengthlbl.Location = new System.Drawing.Point(443, 300);
+            this.EducationLengthlbl.Location = new System.Drawing.Point(443, 299);
             this.EducationLengthlbl.Name = "EducationLengthlbl";
             this.EducationLengthlbl.Size = new System.Drawing.Size(90, 13);
             this.EducationLengthlbl.TabIndex = 60;
@@ -398,7 +380,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(443, 272);
+            this.label1.Location = new System.Drawing.Point(443, 269);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 54;
@@ -407,7 +389,7 @@
             // BankTimeLeftValuelbl
             // 
             this.BankTimeLeftValuelbl.AutoSize = true;
-            this.BankTimeLeftValuelbl.Location = new System.Drawing.Point(530, 270);
+            this.BankTimeLeftValuelbl.Location = new System.Drawing.Point(530, 269);
             this.BankTimeLeftValuelbl.Name = "BankTimeLeftValuelbl";
             this.BankTimeLeftValuelbl.Size = new System.Drawing.Size(26, 13);
             this.BankTimeLeftValuelbl.TabIndex = 53;
@@ -416,7 +398,7 @@
             // CityBankValuelbl
             // 
             this.CityBankValuelbl.AutoSize = true;
-            this.CityBankValuelbl.Location = new System.Drawing.Point(443, 242);
+            this.CityBankValuelbl.Location = new System.Drawing.Point(443, 239);
             this.CityBankValuelbl.Name = "CityBankValuelbl";
             this.CityBankValuelbl.Size = new System.Drawing.Size(55, 13);
             this.CityBankValuelbl.TabIndex = 52;
@@ -425,7 +407,7 @@
             // CaymanbankValuelbl
             // 
             this.CaymanbankValuelbl.AutoSize = true;
-            this.CaymanbankValuelbl.Location = new System.Drawing.Point(443, 212);
+            this.CaymanbankValuelbl.Location = new System.Drawing.Point(443, 209);
             this.CaymanbankValuelbl.Name = "CaymanbankValuelbl";
             this.CaymanbankValuelbl.Size = new System.Drawing.Size(75, 13);
             this.CaymanbankValuelbl.TabIndex = 51;
@@ -448,7 +430,7 @@
             // BoosterCdValuelbl
             // 
             this.BoosterCdValuelbl.AutoSize = true;
-            this.BoosterCdValuelbl.Location = new System.Drawing.Point(315, 210);
+            this.BoosterCdValuelbl.Location = new System.Drawing.Point(315, 209);
             this.BoosterCdValuelbl.Name = "BoosterCdValuelbl";
             this.BoosterCdValuelbl.Size = new System.Drawing.Size(24, 13);
             this.BoosterCdValuelbl.TabIndex = 49;
@@ -457,7 +439,7 @@
             // BoosterCdlbl
             // 
             this.BoosterCdlbl.AutoSize = true;
-            this.BoosterCdlbl.Location = new System.Drawing.Point(244, 210);
+            this.BoosterCdlbl.Location = new System.Drawing.Point(240, 209);
             this.BoosterCdlbl.Name = "BoosterCdlbl";
             this.BoosterCdlbl.Size = new System.Drawing.Size(64, 13);
             this.BoosterCdlbl.TabIndex = 48;
@@ -466,7 +448,7 @@
             // MedicalCooldownValue
             // 
             this.MedicalCooldownValue.AutoSize = true;
-            this.MedicalCooldownValue.Location = new System.Drawing.Point(314, 240);
+            this.MedicalCooldownValue.Location = new System.Drawing.Point(315, 239);
             this.MedicalCooldownValue.Name = "MedicalCooldownValue";
             this.MedicalCooldownValue.Size = new System.Drawing.Size(24, 13);
             this.MedicalCooldownValue.TabIndex = 47;
@@ -475,7 +457,7 @@
             // Medicallbl
             // 
             this.Medicallbl.AutoSize = true;
-            this.Medicallbl.Location = new System.Drawing.Point(243, 240);
+            this.Medicallbl.Location = new System.Drawing.Point(240, 239);
             this.Medicallbl.Name = "Medicallbl";
             this.Medicallbl.Size = new System.Drawing.Size(65, 13);
             this.Medicallbl.TabIndex = 46;
@@ -484,7 +466,7 @@
             // DrugCdlbl
             // 
             this.DrugCdlbl.AutoSize = true;
-            this.DrugCdlbl.Location = new System.Drawing.Point(244, 150);
+            this.DrugCdlbl.Location = new System.Drawing.Point(240, 149);
             this.DrugCdlbl.Name = "DrugCdlbl";
             this.DrugCdlbl.Size = new System.Drawing.Size(51, 13);
             this.DrugCdlbl.TabIndex = 45;
@@ -493,7 +475,7 @@
             // DrugCooldownValuelbl
             // 
             this.DrugCooldownValuelbl.AutoSize = true;
-            this.DrugCooldownValuelbl.Location = new System.Drawing.Point(315, 150);
+            this.DrugCooldownValuelbl.Location = new System.Drawing.Point(315, 149);
             this.DrugCooldownValuelbl.Name = "DrugCooldownValuelbl";
             this.DrugCooldownValuelbl.Size = new System.Drawing.Size(24, 13);
             this.DrugCooldownValuelbl.TabIndex = 44;
@@ -542,7 +524,7 @@
             // CoolDownValuelbl
             // 
             this.CoolDownValuelbl.AutoSize = true;
-            this.CoolDownValuelbl.Location = new System.Drawing.Point(315, 272);
+            this.CoolDownValuelbl.Location = new System.Drawing.Point(315, 269);
             this.CoolDownValuelbl.Name = "CoolDownValuelbl";
             this.CoolDownValuelbl.Size = new System.Drawing.Size(13, 13);
             this.CoolDownValuelbl.TabIndex = 39;
@@ -551,16 +533,16 @@
             // Cooldownlbl
             // 
             this.Cooldownlbl.AutoSize = true;
-            this.Cooldownlbl.Location = new System.Drawing.Point(244, 272);
+            this.Cooldownlbl.Location = new System.Drawing.Point(240, 269);
             this.Cooldownlbl.Name = "Cooldownlbl";
-            this.Cooldownlbl.Size = new System.Drawing.Size(60, 13);
+            this.Cooldownlbl.Size = new System.Drawing.Size(57, 13);
             this.Cooldownlbl.TabIndex = 38;
-            this.Cooldownlbl.Text = "Cooldown: ";
+            this.Cooldownlbl.Text = "Cooldown:";
             // 
             // MoneyInVaultlbl
             // 
             this.MoneyInVaultlbl.AutoSize = true;
-            this.MoneyInVaultlbl.Location = new System.Drawing.Point(443, 182);
+            this.MoneyInVaultlbl.Location = new System.Drawing.Point(443, 179);
             this.MoneyInVaultlbl.Name = "MoneyInVaultlbl";
             this.MoneyInVaultlbl.Size = new System.Drawing.Size(80, 13);
             this.MoneyInVaultlbl.TabIndex = 37;
@@ -569,7 +551,7 @@
             // MoneyOnHandlbl
             // 
             this.MoneyOnHandlbl.AutoSize = true;
-            this.MoneyOnHandlbl.Location = new System.Drawing.Point(443, 152);
+            this.MoneyOnHandlbl.Location = new System.Drawing.Point(443, 149);
             this.MoneyOnHandlbl.Name = "MoneyOnHandlbl";
             this.MoneyOnHandlbl.Size = new System.Drawing.Size(84, 13);
             this.MoneyOnHandlbl.TabIndex = 36;
@@ -802,6 +784,7 @@
             this.GenderValuelbl.Size = new System.Drawing.Size(27, 13);
             this.GenderValuelbl.TabIndex = 8;
             this.GenderValuelbl.Text = "N/A";
+            this.GenderValuelbl.Visible = false;
             // 
             // genderlbl
             // 
@@ -811,6 +794,7 @@
             this.genderlbl.Size = new System.Drawing.Size(48, 13);
             this.genderlbl.TabIndex = 7;
             this.genderlbl.Text = "Gender: ";
+            this.genderlbl.Visible = false;
             // 
             // lvlValuelbl
             // 
@@ -1524,6 +1508,28 @@
             this.RefreshTrueDataForLoots.Interval = 30000;
             this.RefreshTrueDataForLoots.Tick += new System.EventHandler(this.RefreshTrueDataForLoots_Tick);
             // 
+            // LeslieLinkLootlbl
+            // 
+            this.LeslieLinkLootlbl.AutoSize = true;
+            this.LeslieLinkLootlbl.Location = new System.Drawing.Point(240, 116);
+            this.LeslieLinkLootlbl.Name = "LeslieLinkLootlbl";
+            this.LeslieLinkLootlbl.Size = new System.Drawing.Size(70, 13);
+            this.LeslieLinkLootlbl.TabIndex = 66;
+            this.LeslieLinkLootlbl.TabStop = true;
+            this.LeslieLinkLootlbl.Text = "Leslie Loot 4:";
+            this.LeslieLinkLootlbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // Dukelootlinklabel
+            // 
+            this.Dukelootlinklabel.AutoSize = true;
+            this.Dukelootlinklabel.Location = new System.Drawing.Point(3, 116);
+            this.Dukelootlinklabel.Name = "Dukelootlinklabel";
+            this.Dukelootlinklabel.Size = new System.Drawing.Size(69, 13);
+            this.Dukelootlinklabel.TabIndex = 67;
+            this.Dukelootlinklabel.TabStop = true;
+            this.Dukelootlinklabel.Text = "Duke Loot 4:";
+            this.Dukelootlinklabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1696,12 +1702,12 @@
         private System.Windows.Forms.Button GetDatabtn;
         private System.Windows.Forms.Label EducationLengthValuelbl;
         private System.Windows.Forms.Label EducationLengthlbl;
-        private System.Windows.Forms.Label LeslieNamelbl;
-        private System.Windows.Forms.Label DukeLootNamelbl;
         private System.Windows.Forms.Timer LeslieDukeTimersCountDown;
         private System.Windows.Forms.Timer RefreshTrueDataForLoots;
         private System.Windows.Forms.Label LeslieTimerValuelbl;
         private System.Windows.Forms.Label DukeTimerlbl;
+        private System.Windows.Forms.LinkLabel Dukelootlinklabel;
+        private System.Windows.Forms.LinkLabel LeslieLinkLootlbl;
     }
 }
 

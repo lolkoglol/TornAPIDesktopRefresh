@@ -194,7 +194,7 @@ namespace TornMainForm
         public class  YataDataClass
         {
              public static  string YataTimers = null;
-            public static JObject yataObject = null;
+            public static JObject LootTimers = null;
 
             public static JToken DukeData = null;
             public static JToken DukeTimingsForLevels = null;
@@ -843,16 +843,15 @@ namespace TornMainForm
             // fetch data 
             try
             {            
-                YataDataClass.yataObject = JObject.Parse(YataDataClass.YataTimers);
-                YataDataClass.DukeData = YataDataClass.yataObject["4"];
+                YataDataClass.LootTimers = JObject.Parse(YataDataClass.YataTimers);
+                YataDataClass.DukeData = YataDataClass.LootTimers["4"];
                 YataDataClass.DukeTimingsForLevels = YataDataClass.DukeData["timings"];
                 YataDataClass.DukeDataForlevel4 = YataDataClass.DukeTimingsForLevels["4"];
                 YataDataClass.DukeTimingsForLevels = YataDataClass.DukeDataForlevel4["due"];
-                YataDataClass.LeslieData = YataDataClass.yataObject["15"];
+                YataDataClass.LeslieData = YataDataClass.LootTimers["15"];
                 YataDataClass.LeslieTimingsForLevels = YataDataClass.LeslieData["timings"];
                 YataDataClass.LeslieDataForlevel4 = YataDataClass.LeslieTimingsForLevels["4"];
                 YataDataClass.LeslieTimerForlevel4 = YataDataClass.LeslieDataForlevel4["due"];
-
 
             //start timers
             RefreshTrueDataForLoots.Start();
@@ -861,8 +860,7 @@ namespace TornMainForm
             {
                 
             }
-            LeslieDukeTimersCountDown.Start();              
-           
+            LeslieDukeTimersCountDown.Start();          
          
         }
         
@@ -895,8 +893,7 @@ namespace TornMainForm
                 ItemCombobox.Items.Add(item);
             }            
 
-            FetchItemsTimer.Stop();
-           
+            FetchItemsTimer.Stop();           
         }
 
         private void ItemSearchbtn_Click(object sender, EventArgs e)
@@ -1020,14 +1017,13 @@ namespace TornMainForm
 
             YataDataClass.YataTimers = MyFunctions.FetchUserData(7, null, YataDataClass.YataTimers);
 
-
-            YataDataClass.yataObject = JObject.Parse(YataDataClass.YataTimers);
-            YataDataClass.DukeData = YataDataClass.yataObject["4"];
+            YataDataClass.LootTimers = JObject.Parse(YataDataClass.YataTimers);
+            YataDataClass.DukeData = YataDataClass.LootTimers["4"];
             YataDataClass.DukeTimingsForLevels = YataDataClass.DukeData["timings"];
             YataDataClass.DukeDataForlevel4 = YataDataClass.DukeTimingsForLevels["4"];
             YataDataClass.DukeTimingsForLevels = YataDataClass.DukeDataForlevel4["due"];
 
-            YataDataClass.LeslieData = YataDataClass.yataObject["15"];
+            YataDataClass.LeslieData = YataDataClass.LootTimers["15"];
             YataDataClass.LeslieTimingsForLevels = YataDataClass.LeslieData["timings"];
             YataDataClass.LeslieDataForlevel4 = YataDataClass.LeslieTimingsForLevels["4"];
             YataDataClass.LeslieTimerForlevel4 = YataDataClass.LeslieDataForlevel4["due"];
@@ -1038,8 +1034,17 @@ namespace TornMainForm
             catch (Exception)
             {
                 
-            }
-            
+            }            
+        }               
+        
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.torn.com/profiles.php?XID=15#/");
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.torn.com/profiles.php?XID=4#/");
         }
     }
     
