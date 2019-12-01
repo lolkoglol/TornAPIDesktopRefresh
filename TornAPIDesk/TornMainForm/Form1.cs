@@ -133,6 +133,8 @@ namespace TornMainForm
 
             public static void TimerCountdownWithTicks(JToken JsonFrom, Label YourLabal, string JsonStringdataname)
             {
+                try
+                {
                 if (Convert.ToInt32(JsonFrom[JsonStringdataname]) > 1)
                 {
                     TimeSpan TimeTick = new TimeSpan();
@@ -140,6 +142,12 @@ namespace TornMainForm
                     string TickDown = Convert.ToString(Convert.ToInt32(JsonFrom[JsonStringdataname]) - 1);
                     TimeTick = TimeSpan.FromSeconds(Convert.ToInt32(TickDown));
                     YourLabal.Text = String.Format(Convert.ToString(TimeTick), "MM:ss");
+                    }
+                }
+                catch (Exception)
+                {
+
+                    
                 }
             }
             /// <summary>
@@ -205,7 +213,12 @@ namespace TornMainForm
             public static JToken LeslieTimingsForLevels = null;
             public static JToken LeslieDataForlevel4 = null;
             public static JToken LeslieTimerForlevel4 = null;
-          
+
+            public static JToken ScroogeData = null;
+            public static JToken ScroogeTimingsForLevels = null;
+            public static JToken ScroogeDataForlevel4 = null;
+            public static JToken ScroogeTimerForlevel4 = null;
+
         }
 
         public class FileReadWriteLocations
@@ -300,15 +313,16 @@ namespace TornMainForm
         {
               try
               {
-            if (UserData.TimerAble == 0) // stops timer if exception occured. although if api is fixed within its interval will continue as normal or untill clicked again.
+                
+                if (UserData.TimerAble == 0) // stops timer if exception occured. although if api is fixed within its interval will continue as normal or untill clicked again.
             {
                 Refreshtimer.Stop();
             }
             if (APIKey.Length == 16)
             {
                 APILengthWarning.Visible = false; // turn off API warning label 
-
-                ButtonLimittimer.Start();
+                    RefreshValuelbl.ForeColor = Color.FromName("green");
+                    ButtonLimittimer.Start();
                 GetDatabtn.Enabled = false; // makes button non clickable
 
                 OneSecondtimer.Start();
@@ -322,8 +336,8 @@ namespace TornMainForm
                     UserData.Educationtimeleft = Convert.ToString(details["education_timeleft"]);
                    
 
-                lvlValuelbl.Text = UserData.SetValue(UserData.Basic, UserData.level, "level");
-                GenderValuelbl.Text = UserData.SetValue(UserData.Basic, UserData.gender, "gender");
+           //     lvlValuelbl.Text = UserData.SetValue(UserData.Basic, UserData.level, "level");
+             //   GenderValuelbl.Text = UserData.SetValue(UserData.Basic, UserData.gender, "gender");
                 NameValuelbl.Text = Convert.ToString(details["name"]);
                 IDValuelbl.Text = Convert.ToString(details["player_id"]);
                 TornData.TornTime = Convert.ToString(details["server_time"]);
@@ -403,11 +417,15 @@ namespace TornMainForm
                             AcEvent = Regex.Replace(AcEvent, "sidracingtablograce", " ");
                             AcEvent = Regex.Replace(AcEvent, "http:www.torn.comjoblist.phppcorpinfoID", " ");
                             AcEvent = Regex.Replace(AcEvent, "http: www.torn.comjoblist.phppcorpinfoID", " ");
-                            AcEvent = Regex.Replace(AcEvent, "http:www.torn.combank.php", " ");                      
+                            AcEvent = Regex.Replace(AcEvent, "http:www.torn.combank.php", " ");
+                            AcEvent = AcEvent.Replace("http:www.torn.comtrade.phpstep", " ");
+
 
 
                             AcEvent = AcEvent.Replace("view"," ");
                             AcEvent = AcEvent.Replace("View", " ");
+                            AcEvent = AcEvent.Replace("Please click here to continue", " "); 
+
 
                             AcEvent = AcEvent.Replace("1stb", "1st ");
                             AcEvent = AcEvent.Replace("2ndb", "2nd ");
@@ -420,12 +438,16 @@ namespace TornMainForm
                             AcEvent = AcEvent.Replace("9thb", "9th "); 
                             AcEvent = AcEvent.Replace("classh", " ");
 
+
+
                             AcEvent = AcEvent.Replace("sid", " sid ");
                             AcEvent = AcEvent.Replace(" sid", " ");
                             AcEvent = AcEvent.Replace("steplogID", "ID: ");
                             AcEvent = AcEvent.Replace("attackLogID", " attackLogID: ");
                             AcEvent = AcEvent.Replace("ID", " ID: ");
                             AcEvent = AcEvent.Replace(" a ", " ");
+                            AcEvent = AcEvent.Replace("    ", " ");
+                            AcEvent = AcEvent.Replace("   ", " ");
                             AcEvent = AcEvent.Replace("  ", " ");
 
                             if (item.Contains("the") & item.Contains("details") & item.Contains("here"))
@@ -474,6 +496,7 @@ namespace TornMainForm
                 {
                                    
                 MyFunctions.APIErrorChecks();
+                    Refreshtimer.Stop();
                 }
                 catch (Exception)
                 {
@@ -523,8 +546,10 @@ namespace TornMainForm
             MyFunctions.TimerCountdownWithTicks(UserData.DBMCooldowns, BoosterCdValuelbl, "booster");
             MyFunctions.TimerCountdownWithTicks(UserData.Chainjson, CoolDownValuelbl, "cooldown");
             MyFunctions.TimerCountdownWithTicks(UserData.Bank, BankTimeLeftValuelbl, "time_left");
-                    
-            
+
+            try
+            {
+
             if (Convert.ToInt32(UserData.Educationtimeleft) > 1)
             {
                 EducationLengthlbl.Visible = true;
@@ -536,6 +561,12 @@ namespace TornMainForm
                 EducationLengthValuelbl.Text = String.Format(Convert.ToString(TimeTick), "MM:ss");
             }
 
+            }
+            catch (Exception)
+            {
+
+           
+            }
 
             if (Convert.ToInt32(UserData.travel["time_left"]) > 1 )
             {
@@ -576,10 +607,18 @@ namespace TornMainForm
                         
                     }                    
                 }
-            }            
+            }
+            try
+            {
+
             
            RefreshValuelbl.Text = Convert.ToString(Convert.ToInt32(RefreshValuelbl.Text) - 1); // decrease refresh value by 1 per timer tick which should be 1 second.
+            }
+            catch (Exception)
+            {
 
+                
+            }
             try
             { // setting torn time
                 DateTime begginingoftime = new DateTime(1970, 01, 01);
@@ -840,14 +879,21 @@ namespace TornMainForm
             
                 YataDataClass.YataTimers = MyFunctions.FetchUserData(7, null, YataDataClass.YataTimers);
 
-            // fetch data 
+            // fetch api data for npc loot timings
             try
             {            
                 YataDataClass.LootTimers = JObject.Parse(YataDataClass.YataTimers);
+
                 YataDataClass.DukeData = YataDataClass.LootTimers["4"];
                 YataDataClass.DukeTimingsForLevels = YataDataClass.DukeData["timings"];
                 YataDataClass.DukeDataForlevel4 = YataDataClass.DukeTimingsForLevels["4"];
                 YataDataClass.DukeTimingsForLevels = YataDataClass.DukeDataForlevel4["due"];
+
+                YataDataClass.ScroogeData = YataDataClass.LootTimers["10"];
+                YataDataClass.ScroogeTimingsForLevels = YataDataClass.ScroogeData["timings"];
+                YataDataClass.ScroogeDataForlevel4 = YataDataClass.ScroogeTimingsForLevels["4"];
+                YataDataClass.ScroogeTimerForlevel4 = YataDataClass.ScroogeDataForlevel4["due"];
+
                 YataDataClass.LeslieData = YataDataClass.LootTimers["15"];
                 YataDataClass.LeslieTimingsForLevels = YataDataClass.LeslieData["timings"];
                 YataDataClass.LeslieDataForlevel4 = YataDataClass.LeslieTimingsForLevels["4"];
@@ -1002,6 +1048,8 @@ namespace TornMainForm
                     
             MyFunctions.TimerCountdownWithTicks(YataDataClass.LeslieDataForlevel4, LeslieTimerValuelbl, "due");
 
+            MyFunctions.TimerCountdownWithTicks(YataDataClass.ScroogeDataForlevel4, ScroogeTimertolvl4lbl, "due");
+
             }
             catch (Exception)
             {
@@ -1023,6 +1071,12 @@ namespace TornMainForm
             YataDataClass.DukeDataForlevel4 = YataDataClass.DukeTimingsForLevels["4"];
             YataDataClass.DukeTimingsForLevels = YataDataClass.DukeDataForlevel4["due"];
 
+            YataDataClass.ScroogeData = YataDataClass.LootTimers["10"];
+            YataDataClass.ScroogeTimingsForLevels = YataDataClass.ScroogeData["timings"];
+            YataDataClass.ScroogeDataForlevel4 = YataDataClass.ScroogeTimingsForLevels["4"];
+            YataDataClass.ScroogeTimingsForLevels = YataDataClass.ScroogeTimerForlevel4["due"];
+            
+
             YataDataClass.LeslieData = YataDataClass.LootTimers["15"];
             YataDataClass.LeslieTimingsForLevels = YataDataClass.LeslieData["timings"];
             YataDataClass.LeslieDataForlevel4 = YataDataClass.LeslieTimingsForLevels["4"];
@@ -1039,12 +1093,25 @@ namespace TornMainForm
         
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.torn.com/profiles.php?XID=15#/");
+            System.Diagnostics.Process.Start("https://www.torn.com/loader.php?sid=attack&user2ID=15");
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.torn.com/profiles.php?XID=4#/");
+            System.Diagnostics.Process.Start("https://www.torn.com/loader.php?sid=attack&user2ID=4");
+        }
+
+        private void StopRefreshingbtn_Click(object sender, EventArgs e)
+        {
+
+            Refreshtimer.Stop();
+            RefreshValuelbl.ForeColor = Color.FromName("red");
+            RefreshValuelbl.Text = "Paused";
+        }
+
+        private void Scroogenamelbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.torn.com/loader.php?sid=attack&user2ID=10");
         }
     }
     

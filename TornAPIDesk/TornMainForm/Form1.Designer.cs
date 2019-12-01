@@ -35,6 +35,8 @@
             this.ApiKeyLockcbx = new System.Windows.Forms.CheckBox();
             this.MainTabBar = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Dukelootlinklabel = new System.Windows.Forms.LinkLabel();
+            this.LeslieLinkLootlbl = new System.Windows.Forms.LinkLabel();
             this.LeslieTimerValuelbl = new System.Windows.Forms.Label();
             this.DukeTimerlbl = new System.Windows.Forms.Label();
             this.EducationLengthValuelbl = new System.Windows.Forms.Label();
@@ -84,10 +86,6 @@
             this.idlbl = new System.Windows.Forms.Label();
             this.NameValuelbl = new System.Windows.Forms.Label();
             this.Namelbl = new System.Windows.Forms.Label();
-            this.GenderValuelbl = new System.Windows.Forms.Label();
-            this.genderlbl = new System.Windows.Forms.Label();
-            this.lvlValuelbl = new System.Windows.Forms.Label();
-            this.lvllbl = new System.Windows.Forms.Label();
             this.GetDatabtn = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -159,8 +157,9 @@
             this.LoadItemRefreshLimiter = new System.Windows.Forms.Timer(this.components);
             this.LeslieDukeTimersCountDown = new System.Windows.Forms.Timer(this.components);
             this.RefreshTrueDataForLoots = new System.Windows.Forms.Timer(this.components);
-            this.LeslieLinkLootlbl = new System.Windows.Forms.LinkLabel();
-            this.Dukelootlinklabel = new System.Windows.Forms.LinkLabel();
+            this.StopRefreshingbtn = new System.Windows.Forms.Button();
+            this.Scroogenamelbl = new System.Windows.Forms.LinkLabel();
+            this.ScroogeTimertolvl4lbl = new System.Windows.Forms.Label();
             this.MainTabBar.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -223,6 +222,9 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.Scroogenamelbl);
+            this.tabPage1.Controls.Add(this.ScroogeTimertolvl4lbl);
+            this.tabPage1.Controls.Add(this.StopRefreshingbtn);
             this.tabPage1.Controls.Add(this.Dukelootlinklabel);
             this.tabPage1.Controls.Add(this.LeslieLinkLootlbl);
             this.tabPage1.Controls.Add(this.LeslieTimerValuelbl);
@@ -274,10 +276,6 @@
             this.tabPage1.Controls.Add(this.idlbl);
             this.tabPage1.Controls.Add(this.NameValuelbl);
             this.tabPage1.Controls.Add(this.Namelbl);
-            this.tabPage1.Controls.Add(this.GenderValuelbl);
-            this.tabPage1.Controls.Add(this.genderlbl);
-            this.tabPage1.Controls.Add(this.lvlValuelbl);
-            this.tabPage1.Controls.Add(this.lvllbl);
             this.tabPage1.Controls.Add(this.GetDatabtn);
             this.tabPage1.Controls.Add(this.APIkeylbl);
             this.tabPage1.Controls.Add(this.ApiKeyLockcbx);
@@ -290,10 +288,32 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "UserInfo";
             // 
+            // Dukelootlinklabel
+            // 
+            this.Dukelootlinklabel.AutoSize = true;
+            this.Dukelootlinklabel.Location = new System.Drawing.Point(3, 119);
+            this.Dukelootlinklabel.Name = "Dukelootlinklabel";
+            this.Dukelootlinklabel.Size = new System.Drawing.Size(69, 13);
+            this.Dukelootlinklabel.TabIndex = 67;
+            this.Dukelootlinklabel.TabStop = true;
+            this.Dukelootlinklabel.Text = "Duke Loot 4:";
+            this.Dukelootlinklabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
+            // LeslieLinkLootlbl
+            // 
+            this.LeslieLinkLootlbl.AutoSize = true;
+            this.LeslieLinkLootlbl.Location = new System.Drawing.Point(240, 89);
+            this.LeslieLinkLootlbl.Name = "LeslieLinkLootlbl";
+            this.LeslieLinkLootlbl.Size = new System.Drawing.Size(70, 13);
+            this.LeslieLinkLootlbl.TabIndex = 66;
+            this.LeslieLinkLootlbl.TabStop = true;
+            this.LeslieLinkLootlbl.Text = "Leslie Loot 4:";
+            this.LeslieLinkLootlbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // LeslieTimerValuelbl
             // 
             this.LeslieTimerValuelbl.AutoSize = true;
-            this.LeslieTimerValuelbl.Location = new System.Drawing.Point(315, 116);
+            this.LeslieTimerValuelbl.Location = new System.Drawing.Point(315, 89);
             this.LeslieTimerValuelbl.Name = "LeslieTimerValuelbl";
             this.LeslieTimerValuelbl.Size = new System.Drawing.Size(49, 13);
             this.LeslieTimerValuelbl.TabIndex = 65;
@@ -302,7 +322,7 @@
             // DukeTimerlbl
             // 
             this.DukeTimerlbl.AutoSize = true;
-            this.DukeTimerlbl.Location = new System.Drawing.Point(132, 116);
+            this.DukeTimerlbl.Location = new System.Drawing.Point(132, 119);
             this.DukeTimerlbl.Name = "DukeTimerlbl";
             this.DukeTimerlbl.Size = new System.Drawing.Size(49, 13);
             this.DukeTimerlbl.TabIndex = 64;
@@ -351,7 +371,7 @@
             // NewMessagesValuelbl
             // 
             this.NewMessagesValuelbl.AutoSize = true;
-            this.NewMessagesValuelbl.Location = new System.Drawing.Point(76, 336);
+            this.NewMessagesValuelbl.Location = new System.Drawing.Point(70, 335);
             this.NewMessagesValuelbl.Name = "NewMessagesValuelbl";
             this.NewMessagesValuelbl.Size = new System.Drawing.Size(80, 13);
             this.NewMessagesValuelbl.TabIndex = 57;
@@ -360,7 +380,7 @@
             // NewEventValuelbl
             // 
             this.NewEventValuelbl.AutoSize = true;
-            this.NewEventValuelbl.Location = new System.Drawing.Point(198, 335);
+            this.NewEventValuelbl.Location = new System.Drawing.Point(170, 335);
             this.NewEventValuelbl.Name = "NewEventValuelbl";
             this.NewEventValuelbl.Size = new System.Drawing.Size(71, 13);
             this.NewEventValuelbl.TabIndex = 56;
@@ -591,7 +611,7 @@
             // refreshlbll
             // 
             this.refreshlbll.AutoSize = true;
-            this.refreshlbll.Location = new System.Drawing.Point(369, 335);
+            this.refreshlbll.Location = new System.Drawing.Point(359, 335);
             this.refreshlbll.Name = "refreshlbll";
             this.refreshlbll.Size = new System.Drawing.Size(80, 13);
             this.refreshlbll.TabIndex = 31;
@@ -600,7 +620,7 @@
             // RefreshValuelbl
             // 
             this.RefreshValuelbl.AutoSize = true;
-            this.RefreshValuelbl.Location = new System.Drawing.Point(455, 335);
+            this.RefreshValuelbl.Location = new System.Drawing.Point(439, 335);
             this.RefreshValuelbl.Name = "RefreshValuelbl";
             this.RefreshValuelbl.Size = new System.Drawing.Size(13, 13);
             this.RefreshValuelbl.TabIndex = 30;
@@ -776,51 +796,13 @@
             this.Namelbl.TabIndex = 9;
             this.Namelbl.Text = "Name: ";
             // 
-            // GenderValuelbl
-            // 
-            this.GenderValuelbl.AutoSize = true;
-            this.GenderValuelbl.Location = new System.Drawing.Point(225, 79);
-            this.GenderValuelbl.Name = "GenderValuelbl";
-            this.GenderValuelbl.Size = new System.Drawing.Size(27, 13);
-            this.GenderValuelbl.TabIndex = 8;
-            this.GenderValuelbl.Text = "N/A";
-            this.GenderValuelbl.Visible = false;
-            // 
-            // genderlbl
-            // 
-            this.genderlbl.AutoSize = true;
-            this.genderlbl.Location = new System.Drawing.Point(171, 79);
-            this.genderlbl.Name = "genderlbl";
-            this.genderlbl.Size = new System.Drawing.Size(48, 13);
-            this.genderlbl.TabIndex = 7;
-            this.genderlbl.Text = "Gender: ";
-            this.genderlbl.Visible = false;
-            // 
-            // lvlValuelbl
-            // 
-            this.lvlValuelbl.AutoSize = true;
-            this.lvlValuelbl.Location = new System.Drawing.Point(48, 79);
-            this.lvlValuelbl.Name = "lvlValuelbl";
-            this.lvlValuelbl.Size = new System.Drawing.Size(27, 13);
-            this.lvlValuelbl.TabIndex = 6;
-            this.lvlValuelbl.Text = "N/A";
-            // 
-            // lvllbl
-            // 
-            this.lvllbl.AutoSize = true;
-            this.lvllbl.Location = new System.Drawing.Point(3, 79);
-            this.lvllbl.Name = "lvllbl";
-            this.lvllbl.Size = new System.Drawing.Size(39, 13);
-            this.lvllbl.TabIndex = 5;
-            this.lvllbl.Text = "Level: ";
-            // 
             // GetDatabtn
             // 
             this.GetDatabtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GetDatabtn.ForeColor = System.Drawing.Color.Black;
-            this.GetDatabtn.Location = new System.Drawing.Point(484, 325);
+            this.GetDatabtn.Location = new System.Drawing.Point(500, 325);
             this.GetDatabtn.Name = "GetDatabtn";
-            this.GetDatabtn.Size = new System.Drawing.Size(128, 34);
+            this.GetDatabtn.Size = new System.Drawing.Size(112, 34);
             this.GetDatabtn.TabIndex = 4;
             this.GetDatabtn.Text = "Get API Data";
             this.GetDatabtn.UseVisualStyleBackColor = true;
@@ -1508,27 +1490,35 @@
             this.RefreshTrueDataForLoots.Interval = 30000;
             this.RefreshTrueDataForLoots.Tick += new System.EventHandler(this.RefreshTrueDataForLoots_Tick);
             // 
-            // LeslieLinkLootlbl
+            // StopRefreshingbtn
             // 
-            this.LeslieLinkLootlbl.AutoSize = true;
-            this.LeslieLinkLootlbl.Location = new System.Drawing.Point(240, 116);
-            this.LeslieLinkLootlbl.Name = "LeslieLinkLootlbl";
-            this.LeslieLinkLootlbl.Size = new System.Drawing.Size(70, 13);
-            this.LeslieLinkLootlbl.TabIndex = 66;
-            this.LeslieLinkLootlbl.TabStop = true;
-            this.LeslieLinkLootlbl.Text = "Leslie Loot 4:";
-            this.LeslieLinkLootlbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.StopRefreshingbtn.Location = new System.Drawing.Point(252, 324);
+            this.StopRefreshingbtn.Name = "StopRefreshingbtn";
+            this.StopRefreshingbtn.Size = new System.Drawing.Size(101, 34);
+            this.StopRefreshingbtn.TabIndex = 68;
+            this.StopRefreshingbtn.Text = "Stop Auto Refresh";
+            this.StopRefreshingbtn.UseVisualStyleBackColor = true;
+            this.StopRefreshingbtn.Click += new System.EventHandler(this.StopRefreshingbtn_Click);
             // 
-            // Dukelootlinklabel
+            // Scroogenamelbl
             // 
-            this.Dukelootlinklabel.AutoSize = true;
-            this.Dukelootlinklabel.Location = new System.Drawing.Point(3, 116);
-            this.Dukelootlinklabel.Name = "Dukelootlinklabel";
-            this.Dukelootlinklabel.Size = new System.Drawing.Size(69, 13);
-            this.Dukelootlinklabel.TabIndex = 67;
-            this.Dukelootlinklabel.TabStop = true;
-            this.Dukelootlinklabel.Text = "Duke Loot 4:";
-            this.Dukelootlinklabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.Scroogenamelbl.AutoSize = true;
+            this.Scroogenamelbl.Location = new System.Drawing.Point(3, 89);
+            this.Scroogenamelbl.Name = "Scroogenamelbl";
+            this.Scroogenamelbl.Size = new System.Drawing.Size(83, 13);
+            this.Scroogenamelbl.TabIndex = 70;
+            this.Scroogenamelbl.TabStop = true;
+            this.Scroogenamelbl.Text = "Scrooge Loot 4:";
+            this.Scroogenamelbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Scroogenamelbl_LinkClicked);
+            // 
+            // ScroogeTimertolvl4lbl
+            // 
+            this.ScroogeTimertolvl4lbl.AutoSize = true;
+            this.ScroogeTimertolvl4lbl.Location = new System.Drawing.Point(132, 89);
+            this.ScroogeTimertolvl4lbl.Name = "ScroogeTimertolvl4lbl";
+            this.ScroogeTimertolvl4lbl.Size = new System.Drawing.Size(49, 13);
+            this.ScroogeTimertolvl4lbl.TabIndex = 69;
+            this.ScroogeTimertolvl4lbl.Text = "00:00:00";
             // 
             // MainForm
             // 
@@ -1582,10 +1572,6 @@
         private System.Windows.Forms.CheckBox ApiKeyLockcbx;
         private System.Windows.Forms.TabControl MainTabBar;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Label lvlValuelbl;
-        private System.Windows.Forms.Label lvllbl;
-        private System.Windows.Forms.Label GenderValuelbl;
-        private System.Windows.Forms.Label genderlbl;
         private System.Windows.Forms.Label NameValuelbl;
         private System.Windows.Forms.Label Namelbl;
         private System.Windows.Forms.Label IDValuelbl;
@@ -1708,6 +1694,9 @@
         private System.Windows.Forms.Label DukeTimerlbl;
         private System.Windows.Forms.LinkLabel Dukelootlinklabel;
         private System.Windows.Forms.LinkLabel LeslieLinkLootlbl;
+        private System.Windows.Forms.Button StopRefreshingbtn;
+        private System.Windows.Forms.LinkLabel Scroogenamelbl;
+        private System.Windows.Forms.Label ScroogeTimertolvl4lbl;
     }
 }
 
