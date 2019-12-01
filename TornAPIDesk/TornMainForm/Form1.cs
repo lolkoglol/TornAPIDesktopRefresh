@@ -889,15 +889,17 @@ namespace TornMainForm
                 YataDataClass.DukeDataForlevel4 = YataDataClass.DukeTimingsForLevels["4"];
                 YataDataClass.DukeTimingsForLevels = YataDataClass.DukeDataForlevel4["due"];
 
+                YataDataClass.LeslieData = YataDataClass.LootTimers["15"];
+                YataDataClass.LeslieTimingsForLevels = YataDataClass.LeslieData["timings"];
+                YataDataClass.LeslieDataForlevel4 = YataDataClass.LeslieTimingsForLevels["4"];
+                YataDataClass.LeslieTimerForlevel4 = YataDataClass.LeslieDataForlevel4["due"];
+
                 YataDataClass.ScroogeData = YataDataClass.LootTimers["10"];
                 YataDataClass.ScroogeTimingsForLevels = YataDataClass.ScroogeData["timings"];
                 YataDataClass.ScroogeDataForlevel4 = YataDataClass.ScroogeTimingsForLevels["4"];
                 YataDataClass.ScroogeTimerForlevel4 = YataDataClass.ScroogeDataForlevel4["due"];
 
-                YataDataClass.LeslieData = YataDataClass.LootTimers["15"];
-                YataDataClass.LeslieTimingsForLevels = YataDataClass.LeslieData["timings"];
-                YataDataClass.LeslieDataForlevel4 = YataDataClass.LeslieTimingsForLevels["4"];
-                YataDataClass.LeslieTimerForlevel4 = YataDataClass.LeslieDataForlevel4["due"];
+                
 
             //start timers
             RefreshTrueDataForLoots.Start();
@@ -906,6 +908,7 @@ namespace TornMainForm
             {
                 
             }
+            RefreshTrueDataForLoots.Start();
             LeslieDukeTimersCountDown.Start();          
          
         }
@@ -1066,22 +1069,24 @@ namespace TornMainForm
             YataDataClass.YataTimers = MyFunctions.FetchUserData(7, null, YataDataClass.YataTimers);
 
             YataDataClass.LootTimers = JObject.Parse(YataDataClass.YataTimers);
-            YataDataClass.DukeData = YataDataClass.LootTimers["4"];
-            YataDataClass.DukeTimingsForLevels = YataDataClass.DukeData["timings"];
-            YataDataClass.DukeDataForlevel4 = YataDataClass.DukeTimingsForLevels["4"];
-            YataDataClass.DukeTimingsForLevels = YataDataClass.DukeDataForlevel4["due"];
 
-            YataDataClass.ScroogeData = YataDataClass.LootTimers["10"];
-            YataDataClass.ScroogeTimingsForLevels = YataDataClass.ScroogeData["timings"];
-            YataDataClass.ScroogeDataForlevel4 = YataDataClass.ScroogeTimingsForLevels["4"];
-            YataDataClass.ScroogeTimingsForLevels = YataDataClass.ScroogeTimerForlevel4["due"];
-            
 
-            YataDataClass.LeslieData = YataDataClass.LootTimers["15"];
-            YataDataClass.LeslieTimingsForLevels = YataDataClass.LeslieData["timings"];
-            YataDataClass.LeslieDataForlevel4 = YataDataClass.LeslieTimingsForLevels["4"];
-            YataDataClass.LeslieTimerForlevel4 = YataDataClass.LeslieDataForlevel4["due"];
+                YataDataClass.DukeData = YataDataClass.LootTimers["4"];
+                YataDataClass.DukeTimingsForLevels = YataDataClass.DukeData["timings"];
+                YataDataClass.DukeDataForlevel4 = YataDataClass.DukeTimingsForLevels["4"];
+                YataDataClass.DukeTimingsForLevels = YataDataClass.DukeDataForlevel4["due"];
 
+                YataDataClass.LeslieData = YataDataClass.LootTimers["15"];
+                YataDataClass.LeslieTimingsForLevels = YataDataClass.LeslieData["timings"];
+                YataDataClass.LeslieDataForlevel4 = YataDataClass.LeslieTimingsForLevels["4"];
+                YataDataClass.LeslieTimerForlevel4 = YataDataClass.LeslieDataForlevel4["due"];
+
+                YataDataClass.ScroogeData = YataDataClass.LootTimers["10"];
+                YataDataClass.ScroogeTimingsForLevels = YataDataClass.ScroogeData["timings"];
+                YataDataClass.ScroogeDataForlevel4 = YataDataClass.ScroogeTimingsForLevels["4"];
+                YataDataClass.ScroogeTimerForlevel4 = YataDataClass.ScroogeDataForlevel4["due"];
+                                
+                
                 LeslieDukeTimersCountDown.Start();
 
             }
