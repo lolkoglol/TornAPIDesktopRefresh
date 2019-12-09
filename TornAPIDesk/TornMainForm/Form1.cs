@@ -14,17 +14,17 @@ using System.Drawing;
 
 namespace TornMainForm
 {
-    public partial class MainForm : Form
+    public partial class MainForm1 : Form
     {
         public static string APIKey = null; // api key 
-        public MainForm()
+        public MainForm1()
         {
             InitializeComponent();
         }
 
         private void TornAPIKey_TextChanged(object sender, EventArgs e)
         {
-            MainForm.APIKey = TornAPIKey.Text; // api key assgined
+            MainForm1.APIKey = TornAPIKey.Text; // api key assgined
         }
 
 
@@ -46,7 +46,34 @@ namespace TornMainForm
         }
 
         public static class MyFunctions
-        {
+        {           
+               public static void TabColour(TabPage TargetObj , string forecolour, string backcolour)
+            {
+                TargetObj.ForeColor = Color.FromName(forecolour);
+                TargetObj.BackColor = Color.FromName(backcolour);
+            }
+            public static void RichtxtBoxColour(RichTextBox targteobj, string forecolor , string backcolour)
+            {
+                targteobj.BackColor = Color.FromName(backcolour);
+                targteobj.ForeColor = Color.FromName(forecolor);
+            }
+            public static void ButtonColour(Button targetbutton,string forecolour, string backcolour)
+            {
+                targetbutton.BackColor = Color.FromName(backcolour);
+                targetbutton.ForeColor = Color.FromName(forecolour);
+            }
+
+            public static void comboboxcolour(ComboBox target , string forecolour, string backcolour)
+            {
+                target.BackColor = Color.FromName(backcolour);
+                target.ForeColor = Color.FromName(forecolour);
+            }
+            public static void Textboxcolour(TextBox target, string forcolour, string backcolour )
+            {
+                target.BackColor = Color.FromName(backcolour);
+                target.ForeColor = Color.FromName(forcolour);
+            }
+
             /// <summary>
             /// switch options: 1 = user , 2 = property , 3 = faction , 4 = company , 5 = market , 6 = torn. fields = The api options (children) from the switch description option.
             /// 7 = Yata loot timers data
@@ -60,22 +87,22 @@ namespace TornMainForm
                 switch (switchOption)
                 {
                     case 1:
-                        test = string.Format("https://api.torn.com/user/?selections=" + fields + "&key=" + MainForm.APIKey);
+                        test = string.Format("https://api.torn.com/user/?selections=" + fields + "&key=" + MainForm1.APIKey);
                         break;
                     case 2:
-                        test = string.Format("https://api.torn.com/property/?selections=" + fields + "&key=" + MainForm.APIKey);
+                        test = string.Format("https://api.torn.com/property/?selections=" + fields + "&key=" + MainForm1.APIKey);
                         break;
                     case 3:
-                        test = test = string.Format("https://api.torn.com/faction/?selections=" + fields + "&key=" + MainForm.APIKey);
+                        test = test = string.Format("https://api.torn.com/faction/?selections=" + fields + "&key=" + MainForm1.APIKey);
                         break;
                     case 4:
-                        test = string.Format("https://api.torn.com/company/?selections=" + fields + "&key=" + MainForm.APIKey);
+                        test = string.Format("https://api.torn.com/company/?selections=" + fields + "&key=" + MainForm1.APIKey);
                         break;
                     case 5:
-                        test = string.Format("https://api.torn.com/market/?selections=" + fields + "&key=" + MainForm.APIKey);
+                        test = string.Format("https://api.torn.com/market/?selections=" + fields + "&key=" + MainForm1.APIKey);
                         break;
                     case 6:
-                        test = test = string.Format("https://api.torn.com/torn/?selections=" + fields + "&key=" + MainForm.APIKey);
+                        test = test = string.Format("https://api.torn.com/torn/?selections=" + fields + "&key=" + MainForm1.APIKey);
                         break;
                     case 7:
                         test = string.Format("https://yata.alwaysdata.net/loot/timings/");                       
@@ -109,7 +136,7 @@ namespace TornMainForm
 
             public static DialogResult APIErrorChecks() //Function to check if api returns errors
             {
-                WebRequest RequestBasic = WebRequest.Create("https://api.torn.com/user/?selections=basic&key=" + MainForm.APIKey);
+                WebRequest RequestBasic = WebRequest.Create("https://api.torn.com/user/?selections=basic&key=" + MainForm1.APIKey);
                 RequestBasic.Method = "GET";
                 HttpWebResponse ResponseBasic = null;
                 ResponseBasic = (HttpWebResponse)RequestBasic.GetResponse();
@@ -703,7 +730,7 @@ namespace TornMainForm
                  }
                catch (Exception)
                {
-                   MessageBox.Show("Error Report:300");
+                   MessageBox.Show("Get Api data first");
                }
 
           }).Start();
@@ -741,7 +768,7 @@ namespace TornMainForm
                      try
                     {
 
-                if (MainForm.APIKey != "" & MainForm.APIKey.Length == 16)// create file if it does not exsist
+                if (MainForm1.APIKey != "" & MainForm1.APIKey.Length == 16)// create file if it does not exsist
                     {
                         MyFunctions.AddJsonDataToDictionary(TornData.ItemsIdAndName, "items", "name", TornData.TornJsonFetchedInfo, 1003); //fetch items and add to dict
                         TornData.ItemIdList = TornData.ItemsIdAndName.Keys.ToList();
@@ -844,7 +871,7 @@ namespace TornMainForm
             {           
             SettingsAPIKeyValuetxtbox.Text = Settings.APIKey.Trim(' ');
             TornAPIKey.Text = Settings.APIKey.Trim(' ');
-            MainForm.APIKey = SettingsAPIKeyValuetxtbox.Text.Trim(' ');
+            MainForm1.APIKey = SettingsAPIKeyValuetxtbox.Text.Trim(' ');
                 if (Settings.APIKey != "")
                 {
                     ApiKeyLockcbx.Checked = true;
@@ -1117,6 +1144,106 @@ namespace TornMainForm
         private void Scroogenamelbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://www.torn.com/loader.php?sid=attack&user2ID=10");
+        }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/lolkoglol/TornAPIDesktopRefresh");        
+        }
+
+        private void DarkModechkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (DarkModechkbox.Checked == true)
+            {
+                
+                Form gee = MainForm1.ActiveForm;
+                gee.BackColor = Color.FromName("black");
+
+                TornCityTimelbl.ForeColor = Color.FromName("white");                             
+               
+                MyFunctions.RichtxtBoxColour(richTextBox1, "white", "black");
+                MyFunctions.RichtxtBoxColour(richTextBox2, "white", "black");
+
+                MyFunctions.TabColour(tabPage1, "white", "black");
+                MyFunctions.TabColour(tabPage2, "white", "black");
+                MyFunctions.TabColour(tabPage3, "white", "black");
+                MyFunctions.TabColour(tabPage4, "white", "black");
+                MyFunctions.TabColour(tabPage5, "white", "black");
+                MyFunctions.TabColour(tabPage6, "white", "black");
+                MyFunctions.TabColour(tabPage7, "white", "black");
+                MyFunctions.TabColour(tabPage8, "white", "black");
+                MyFunctions.TabColour(tabPage9, "white", "black");
+                MyFunctions.TabColour(tabPage10, "white", "black");
+                MyFunctions.TabColour(tabPage11, "white", "black");
+                MyFunctions.TabColour(tabPage12, "white", "black");
+                MyFunctions.TabColour(tabPage13, "white", "black");                           
+           
+                MyFunctions.comboboxcolour(ItemCombobox, "white", "black");
+                MyFunctions.comboboxcolour(UserInfoTextColour,"white","black");
+
+                MyFunctions.Textboxcolour(SettingsAPIKeyValuetxtbox, "white", "black");
+                MyFunctions.Textboxcolour(TornAPIKey, "white", "black");
+
+                MyFunctions.ButtonColour(StopRefreshingbtn, "white", "black");
+                MyFunctions.ButtonColour(GetDatabtn, "white", "black");
+                MyFunctions.ButtonColour(SetUserInfoTextColourbtn, "white", "black");
+                MyFunctions.ButtonColour(GetItemNamesAndIdbtn, "white", "black");
+                MyFunctions.ButtonColour(ItemSearchbtn, "white", "black");
+                MyFunctions.ButtonColour(StockGetDatabtn, "white", "black");
+
+
+                Creatorlinklabel.LinkColor = Color.FromArgb(133, 133, 133);
+                linkLabel1.LinkColor = Color.FromArgb(133, 133, 133);
+                Scroogenamelbl.LinkColor = Color.FromArgb(133, 133, 133);
+                LeslieLinkLootlbl.LinkColor = Color.FromArgb(133, 133, 133);
+                Dukelootlinklabel.LinkColor = Color.FromArgb(133, 133, 133);
+                VisitTornlbl.LinkColor = Color.FromArgb(133, 133, 133);
+            }
+
+            if (DarkModechkbox.Checked == false)
+            {
+                Form gee = MainForm1.ActiveForm;
+                gee.BackColor = Color.FromName("white");
+                TornCityTimelbl.ForeColor = Color.FromName("black");
+
+                MyFunctions.TabColour(tabPage1, "black", "white");
+                MyFunctions.TabColour(tabPage2, "black", "white");
+                MyFunctions.TabColour(tabPage3, "black", "white");
+                MyFunctions.TabColour(tabPage4, "black", "white");
+                MyFunctions.TabColour(tabPage5, "black", "white");
+                MyFunctions.TabColour(tabPage6, "black", "white");
+                MyFunctions.TabColour(tabPage7, "black", "white");
+                MyFunctions.TabColour(tabPage8, "black", "white");
+                MyFunctions.TabColour(tabPage9, "black", "white");
+                MyFunctions.TabColour(tabPage10, "black", "white");
+                MyFunctions.TabColour(tabPage11, "black", "white");
+                MyFunctions.TabColour(tabPage12, "black", "white");
+                MyFunctions.TabColour(tabPage13, "black", "white");
+
+                MyFunctions.ButtonColour(StopRefreshingbtn, "black", "Transparent");
+                MyFunctions.ButtonColour(GetDatabtn, "black", "Transparent");
+                MyFunctions.ButtonColour(SetUserInfoTextColourbtn, "black", "Transparent");
+                MyFunctions.ButtonColour(GetItemNamesAndIdbtn, "black", "Transparent");
+                MyFunctions.ButtonColour(ItemSearchbtn, "black", "Transparent");
+                MyFunctions.ButtonColour(StockGetDatabtn, "black", "Transparent");
+
+                MyFunctions.RichtxtBoxColour(richTextBox1, "black", "white");
+                MyFunctions.RichtxtBoxColour(richTextBox2, "black", "white");
+
+                MyFunctions.comboboxcolour(ItemCombobox, "black", "white");
+                MyFunctions.comboboxcolour(UserInfoTextColour, "black", "white");
+
+                MyFunctions.Textboxcolour(SettingsAPIKeyValuetxtbox, "black", "white");
+                MyFunctions.Textboxcolour(TornAPIKey, "black", "white");
+
+                Creatorlinklabel.LinkColor = Color.FromArgb(0, 0, 255);
+                linkLabel1.LinkColor = Color.FromArgb(0, 0, 255);
+                Scroogenamelbl.LinkColor = Color.FromArgb(0, 0, 255);
+                LeslieLinkLootlbl.LinkColor = Color.FromArgb(0, 0, 255);
+                Dukelootlinklabel.LinkColor = Color.FromArgb(0, 0, 255);
+                VisitTornlbl.LinkColor = Color.FromArgb(0, 0, 255);
+            }
+
         }
     }
     
