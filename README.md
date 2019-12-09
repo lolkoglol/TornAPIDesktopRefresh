@@ -20,7 +20,7 @@ An item search page is featured so you see the effect, market price, buy price, 
 
 <img src= "https://github.com/lolkoglol/TornAPIDesktopRefresh/blob/master/StockInfo.png" alt = "api3"/>
 
-Setting page allows you to save your api so you dont have to re-enter on app start up. Feature two allows you to change the text colour on the UserInfo page
+Setting page allows you to save your api so you dont have to re-enter on app start up. Feature two allows you to change the text colour on the UserInfo page or use dark mode.
 
 <img src= "https://github.com/lolkoglol/TornAPIDesktopRefresh/blob/master/2019-12-09.png" alt = "api4"/>
 
