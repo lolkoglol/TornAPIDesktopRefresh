@@ -358,7 +358,7 @@ namespace TornMainForm
                 UserData.Basic = MyFunctions.FetchUserData(1, "basic,profile,bars,money,cooldowns,notifications,travel,events,education", UserData.Basic); // Fields to fetch
 
                 UserData.User = JObject.Parse(UserData.Basic); // parse to fetchable jtoken data.
-                var details = JObject.Parse(UserData.Basic); // makes json string data callable. 
+                JObject details = JObject.Parse(UserData.Basic); // makes json string data callable. 
                      
                     UserData.Educationtimeleft = Convert.ToString(details["education_timeleft"]);
                    
@@ -370,9 +370,9 @@ namespace TornMainForm
                 TornData.TornTime = Convert.ToString(details["server_time"]);
                 UserData.ChainCooldowns = Convert.ToString(details["cooldowns"]); 
 
-                string status = Convert.ToString(details["status"]).Trim(new char[] { '[', ']', ' ', ',', '"', '.' }).Replace("\"", string.Empty).Replace(",", string.Empty);
-
-                Statuslbl.Text = "Status: " + status;
+                JObject status = JObject.Parse(Convert.ToString( details["status"]));
+                    JToken state =  status["state"];
+                Statuslbl.Text = "Status: " + state;
                 UserData.Lifejson = details["life"]; LifeValue.Text = Convert.ToString(UserData.Lifejson["current"] + " / " + UserData.Lifejson["maximum"]);
                 UserData.Energyjson = details["energy"]; EnergyValuelbl.Text = Convert.ToString(UserData.Energyjson["current"] + " / " + UserData.Energyjson["maximum"]);
                 UserData.Nervejson = details["nerve"]; NerveValuelbl.Text = Convert.ToString(UserData.Nervejson["current"] + " / " + UserData.Nervejson["maximum"]);
@@ -1078,7 +1078,15 @@ namespace TornMainForm
                     
             MyFunctions.TimerCountdownWithTicks(YataDataClass.LeslieDataForlevel4, LeslieTimerValuelbl, "due");
 
-            MyFunctions.TimerCountdownWithTicks(YataDataClass.ScroogeDataForlevel4, ScroogeTimertolvl4lbl, "due");
+                try
+                {
+                    MyFunctions.TimerCountdownWithTicks(YataDataClass.ScroogeDataForlevel4, ScroogeTimertolvl4lbl, "due");
+                }
+                catch (Exception)
+                {
+                    ScroogeTimertolvl4lbl.Text = "";
+                    
+                }         
 
             }
             catch (Exception)
@@ -1111,15 +1119,14 @@ namespace TornMainForm
                 YataDataClass.ScroogeData = YataDataClass.LootTimers["10"];
                 YataDataClass.ScroogeTimingsForLevels = YataDataClass.ScroogeData["timings"];
                 YataDataClass.ScroogeDataForlevel4 = YataDataClass.ScroogeTimingsForLevels["4"];
-                YataDataClass.ScroogeTimerForlevel4 = YataDataClass.ScroogeDataForlevel4["due"];
-                                
+                YataDataClass.ScroogeTimerForlevel4 = YataDataClass.ScroogeDataForlevel4["due"];                                
                 
                 LeslieDukeTimersCountDown.Start();
 
             }
             catch (Exception)
             {
-                
+                LeslieDukeTimersCountDown.Start();
             }            
         }               
         
@@ -1190,8 +1197,9 @@ namespace TornMainForm
                 MyFunctions.ButtonColour(GetItemNamesAndIdbtn, "white", "black");
                 MyFunctions.ButtonColour(ItemSearchbtn, "white", "black");
                 MyFunctions.ButtonColour(StockGetDatabtn, "white", "black");
+                MyFunctions.ButtonColour(SaveSettingsbtn, "white", "black");
 
-
+                
                 Creatorlinklabel.LinkColor = Color.FromArgb(133, 133, 133);
                 linkLabel1.LinkColor = Color.FromArgb(133, 133, 133);
                 Scroogenamelbl.LinkColor = Color.FromArgb(133, 133, 133);
@@ -1226,6 +1234,7 @@ namespace TornMainForm
                 MyFunctions.ButtonColour(GetItemNamesAndIdbtn, "black", "Transparent");
                 MyFunctions.ButtonColour(ItemSearchbtn, "black", "Transparent");
                 MyFunctions.ButtonColour(StockGetDatabtn, "black", "Transparent");
+                MyFunctions.ButtonColour(SaveSettingsbtn, "black", "Transparent");
 
                 MyFunctions.RichtxtBoxColour(richTextBox1, "black", "white");
                 MyFunctions.RichtxtBoxColour(richTextBox2, "black", "white");
