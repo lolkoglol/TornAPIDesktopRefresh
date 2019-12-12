@@ -121,7 +121,7 @@
     <value>Here you choose to save your api key. Enter your api key and click save.This will create a file in your applications current directory so make sure you have read and write permissions to this location.</value>
   </data>
   <metadata name="Refreshtimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+    <value>22, 17</value>
   </metadata>
   <metadata name="ButtonLimittimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>138, 17</value>

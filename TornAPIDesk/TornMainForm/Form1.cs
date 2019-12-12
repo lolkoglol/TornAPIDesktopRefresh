@@ -27,7 +27,6 @@ namespace TornMainForm
             MainForm1.APIKey = TornAPIKey.Text; // api key assgined
         }
 
-
         private void ApiKeyLockcbx_CheckedChanged(object sender, EventArgs e)
         {
             if (ApiKeyLockcbx.Checked == true)
@@ -296,6 +295,7 @@ namespace TornMainForm
             public static string Stock23 = null;    public static string Stock24 = null;          public static string Stock25 = null;
             public static string Stock26 = null;    public static string Stock27 = null;          public static string Stock28 = null;
             public static string Stock29 = null;    public static string Stock30 = null;
+           
 
         }
 
@@ -371,8 +371,8 @@ namespace TornMainForm
                 UserData.ChainCooldowns = Convert.ToString(details["cooldowns"]); 
 
                 JObject status = JObject.Parse(Convert.ToString( details["status"]));
-                    JToken state =  status["state"];
-                Statuslbl.Text = "Status: " + state;
+                    JToken state =  status["description"];
+                Statuslbl.Text = "Status: " + Convert.ToString( state).Trim(new char[] { '[', ']', ' ', ',', '"', '.' }).Replace("\"", string.Empty).Replace(",", string.Empty); ;
                 UserData.Lifejson = details["life"]; LifeValue.Text = Convert.ToString(UserData.Lifejson["current"] + " / " + UserData.Lifejson["maximum"]);
                 UserData.Energyjson = details["energy"]; EnergyValuelbl.Text = Convert.ToString(UserData.Energyjson["current"] + " / " + UserData.Energyjson["maximum"]);
                 UserData.Nervejson = details["nerve"]; NerveValuelbl.Text = Convert.ToString(UserData.Nervejson["current"] + " / " + UserData.Nervejson["maximum"]);
@@ -391,7 +391,6 @@ namespace TornMainForm
                 CityBankValuelbl.Text = "Money in Bank: " + Convert.ToString("$" + String.Format("{0:n0}", UserData.Bank["amount"]));
                 CoolDownValuelbl.Text = Convert.ToString(UserData.Chainjson["cooldown"]);
                 UserData.DBMCooldowns = details["cooldowns"];
-
                     
              
                 UserData.Notifications = details["notifications"];
@@ -406,9 +405,13 @@ namespace TornMainForm
 
                 // throw new Exception();
 
-                //Event page 
+                //Event page               
+
                 List<string> EventId = new List<string>();
                 List<string> EventEvent = new List<string>();
+                    EventId.Clear();
+                    EventEvent.Clear();
+                    richTextBox1.Clear();
                 UserData.Events = UserData.User["events"];
                 var LS = JsonConvert.SerializeObject(UserData.Events);
                 JObject tfe = JObject.Parse(LS);
@@ -427,7 +430,7 @@ namespace TornMainForm
                             JToken Idcontent = UserData.Events[resultString];
                             string AcEvent = Convert.ToString(Idcontent["event"]);
                             // making events neater
-                            AcEvent = AcEvent.Trim(new Char[] { ' ', '*', '<', '>', '[', ']', '^', '/', '\\', 'a', '=' });
+                            AcEvent = AcEvent.Trim(new Char[] {'*', '<', '>', '[', ']', '^', '/', '\\', 'a', '=' });
                             AcEvent = AcEvent.Replace("href", "");                          
                             AcEvent = AcEvent.Replace("</a>", "");
                             AcEvent = AcEvent.Replace("<b>", "");
@@ -436,6 +439,9 @@ namespace TornMainForm
                            
                             AcEvent = Regex.Replace(AcEvent, "XID", " ");
                             AcEvent = Regex.Replace(AcEvent, @"[^0-9a-zA-Z:,. ]+", "");
+                         
+
+                            
                             //removal of links
                             AcEvent = Regex.Replace(AcEvent, "http:www.torn.comprofiles.php?", " ");
                             AcEvent = Regex.Replace(AcEvent, "http:www.torn.comstockexchange.php", " ");
@@ -446,9 +452,8 @@ namespace TornMainForm
                             AcEvent = Regex.Replace(AcEvent, "http: www.torn.comjoblist.phppcorpinfoID", " ");
                             AcEvent = Regex.Replace(AcEvent, "http:www.torn.combank.php", " ");
                             AcEvent = AcEvent.Replace("http:www.torn.comtrade.phpstep", " ");
-
-
-
+                            
+                            
                             AcEvent = AcEvent.Replace("view"," ");
                             AcEvent = AcEvent.Replace("View", " ");
                             AcEvent = AcEvent.Replace("Please click here to continue", " "); 
@@ -464,7 +469,7 @@ namespace TornMainForm
                             AcEvent = AcEvent.Replace("8thb", "8th ");
                             AcEvent = AcEvent.Replace("9thb", "9th "); 
                             AcEvent = AcEvent.Replace("classh", " ");
-
+                            AcEvent = AcEvent.Replace("classtblue", " ");
 
 
                             AcEvent = AcEvent.Replace("sid", " sid ");
@@ -484,7 +489,7 @@ namespace TornMainForm
                                 AcEvent = AcEvent.Replace("here", "");
                             }
 
-                            AcEvent = Regex.Replace(AcEvent," [\\w]{ 0, 2}", " ");
+                      //      AcEvent = Regex.Replace(AcEvent," [\\w]{ 0, 2}", " ");
                         
                             // AcEvent = Regex.Replace(AcEvent, " [\\w]{ 18, 26}", " ");
                             AcEvent = AcEvent.TrimStart(' ');
@@ -591,7 +596,6 @@ namespace TornMainForm
             }
             catch (Exception)
             {
-
            
             }
 
@@ -925,7 +929,6 @@ namespace TornMainForm
                 YataDataClass.ScroogeTimingsForLevels = YataDataClass.ScroogeData["timings"];
                 YataDataClass.ScroogeDataForlevel4 = YataDataClass.ScroogeTimingsForLevels["4"];
                 YataDataClass.ScroogeTimerForlevel4 = YataDataClass.ScroogeDataForlevel4["due"];
-
                 
 
             //start timers
@@ -1105,7 +1108,6 @@ namespace TornMainForm
 
             YataDataClass.LootTimers = JObject.Parse(YataDataClass.YataTimers);
 
-
                 YataDataClass.DukeData = YataDataClass.LootTimers["4"];
                 YataDataClass.DukeTimingsForLevels = YataDataClass.DukeData["timings"];
                 YataDataClass.DukeDataForlevel4 = YataDataClass.DukeTimingsForLevels["4"];
@@ -1161,8 +1163,7 @@ namespace TornMainForm
         private void DarkModechkbox_CheckedChanged(object sender, EventArgs e)
         {
             if (DarkModechkbox.Checked == true)
-            {
-                
+            {                
                 Form gee = MainForm1.ActiveForm;
                 gee.BackColor = Color.FromName("black");
 
@@ -1254,6 +1255,8 @@ namespace TornMainForm
             }
 
         }
+
+        
     }
     
 }

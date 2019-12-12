@@ -489,9 +489,9 @@
             this.BoosterCdValuelbl.AutoSize = true;
             this.BoosterCdValuelbl.Location = new System.Drawing.Point(315, 224);
             this.BoosterCdValuelbl.Name = "BoosterCdValuelbl";
-            this.BoosterCdValuelbl.Size = new System.Drawing.Size(24, 13);
+            this.BoosterCdValuelbl.Size = new System.Drawing.Size(49, 13);
             this.BoosterCdValuelbl.TabIndex = 49;
-            this.BoosterCdValuelbl.Text = "n/a";
+            this.BoosterCdValuelbl.Text = "00:00:00";
             // 
             // BoosterCdlbl
             // 
@@ -507,9 +507,9 @@
             this.MedicalCooldownValue.AutoSize = true;
             this.MedicalCooldownValue.Location = new System.Drawing.Point(315, 254);
             this.MedicalCooldownValue.Name = "MedicalCooldownValue";
-            this.MedicalCooldownValue.Size = new System.Drawing.Size(24, 13);
+            this.MedicalCooldownValue.Size = new System.Drawing.Size(49, 13);
             this.MedicalCooldownValue.TabIndex = 47;
-            this.MedicalCooldownValue.Text = "n/a";
+            this.MedicalCooldownValue.Text = "00:00:00";
             // 
             // Medicallbl
             // 
@@ -534,9 +534,9 @@
             this.DrugCooldownValuelbl.AutoSize = true;
             this.DrugCooldownValuelbl.Location = new System.Drawing.Point(315, 164);
             this.DrugCooldownValuelbl.Name = "DrugCooldownValuelbl";
-            this.DrugCooldownValuelbl.Size = new System.Drawing.Size(24, 13);
+            this.DrugCooldownValuelbl.Size = new System.Drawing.Size(49, 13);
             this.DrugCooldownValuelbl.TabIndex = 44;
-            this.DrugCooldownValuelbl.Text = "n/a";
+            this.DrugCooldownValuelbl.Text = "00:00:00";
             // 
             // HappyTickValuelbl
             // 
@@ -1627,7 +1627,6 @@
         private System.Windows.Forms.Label ChainValuelbl;
         private System.Windows.Forms.Label Chainlbl;
         private System.Windows.Forms.LinkLabel VisitTornlbl;
-        private System.Windows.Forms.Timer Refreshtimer;
         private System.Windows.Forms.Timer ButtonLimittimer;
         private System.Windows.Forms.Timer OneSecondtimer;
         private System.Windows.Forms.Timer OneSecondtimeTwo;
@@ -1724,7 +1723,6 @@
         private System.Windows.Forms.ComboBox UserInfoTextColour;
         private System.Windows.Forms.Button SetUserInfoTextColourbtn;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button GetDatabtn;
         private System.Windows.Forms.Label EducationLengthValuelbl;
         private System.Windows.Forms.Label EducationLengthlbl;
         private System.Windows.Forms.Timer LeslieDukeTimersCountDown;
@@ -1738,6 +1736,8 @@
         private System.Windows.Forms.Label ScroogeTimertolvl4lbl;
         private System.Windows.Forms.LinkLabel linkLabel1;
         public System.Windows.Forms.CheckBox DarkModechkbox;
+        private System.Windows.Forms.Timer Refreshtimer;
+        private System.Windows.Forms.Button GetDatabtn;
     }
 }
 
