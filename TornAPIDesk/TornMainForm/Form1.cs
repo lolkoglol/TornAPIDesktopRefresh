@@ -10,7 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
-
+using System.Globalization;
 
 namespace TornMainForm
 {
@@ -218,8 +218,8 @@ namespace TornMainForm
             public static string StockInfoAsString(List<string> Name, List<string> AvailableShare, List<string> CurrentPrice, List<string> ForeCast, List<string> Demand, int index)
             {
                 
-                string Output = " Name: " + Name[index] + Environment.NewLine + " Available Shares: " +  AvailableShare[index] + Environment.NewLine
-                       + " Current Price: " + String.Format("{0:c}", CurrentPrice[index]) + Environment.NewLine
+                string Output = " Name: " + Name[index] + Environment.NewLine + " Available Shares: " +  string.Format("{0:#,##0.##}", Convert.ToInt64( AvailableShare[index])) + Environment.NewLine
+                       + " Current Price: " +  CurrentPrice[index] + Environment.NewLine
                        + " forecast: " + ForeCast[index] + Environment.NewLine +  " Demand: " + Demand[index];
                 return Output;
             }
@@ -294,8 +294,7 @@ namespace TornMainForm
             public static string Stock20 = null;    public static string Stock21 = null;          public static string Stock22 = null;
             public static string Stock23 = null;    public static string Stock24 = null;          public static string Stock25 = null;
             public static string Stock26 = null;    public static string Stock27 = null;          public static string Stock28 = null;
-            public static string Stock29 = null;    public static string Stock30 = null;
-           
+            public static string Stock29 = null;    public static string Stock30 = null;           
 
         }
 
@@ -385,7 +384,7 @@ namespace TornMainForm
                 // Points, money values
                 PointsValuelbl.Text = "Points " + Convert.ToString(String.Format("{0:n0}", UserData.User["points"]));
                 MoneyOnHandlbl.Text = "Money on hand: " + Convert.ToString("$" + String.Format("{0:n0}", UserData.User["money_onhand"]));
-                MoneyInVaultlbl.Text = "Money in Vault: " + Convert.ToString("$" + String.Format("{0:n0}", UserData.User["vault_amount"]));
+                MoneyInVaultlbl.Text =  Convert.ToString("$" + String.Format("{0:n0}", UserData.User["vault_amount"]));
                 CaymanbankValuelbl.Text = "Money in Cayman's: " + Convert.ToString("$" + String.Format("{0:n0}", UserData.User["cayman_bank"]));
                 UserData.Bank = UserData.User["city_bank"]; // bank values 
                 CityBankValuelbl.Text = "Money in Bank: " + Convert.ToString("$" + String.Format("{0:n0}", UserData.Bank["amount"]));
@@ -438,8 +437,7 @@ namespace TornMainForm
                             AcEvent = AcEvent.Replace("<//b>", "");                                                     
                            
                             AcEvent = Regex.Replace(AcEvent, "XID", " ");
-                            AcEvent = Regex.Replace(AcEvent, @"[^0-9a-zA-Z:,. ]+", "");
-                         
+                            AcEvent = Regex.Replace(AcEvent, @"[^0-9a-zA-Z:,. ]+", "");                        
 
                             
                             //removal of links
@@ -641,13 +639,11 @@ namespace TornMainForm
             }
             try
             {
-
             
-           RefreshValuelbl.Text = Convert.ToString(Convert.ToInt32(RefreshValuelbl.Text) - 1); // decrease refresh value by 1 per timer tick which should be 1 second.
+                 RefreshValuelbl.Text = Convert.ToString(Convert.ToInt32(RefreshValuelbl.Text) - 1); // decrease refresh value by 1 per timer tick which should be 1 second.
             }
             catch (Exception)
             {
-
                 
             }
             try
@@ -677,8 +673,8 @@ namespace TornMainForm
         {
             new Thread(() => // new thread is used for more cpu intense tasks. this will allow the user constant app use as its main thread will not be too busy.
           {
-              try
-              {
+             try
+            {
                   TornData.TornJsonFetchedInfo = MyFunctions.FetchUserData(6, "stocks,items", TornData.TornJsonFetchedInfo);                    
                   
              if (TornData.StocksIDandNames.ContainsKey("1") == false) // once information is feteched there is no need to update it as it stays constant.
@@ -731,10 +727,10 @@ namespace TornMainForm
               TornData.Stock30 = MyFunctions.StockInfoAsString(TornData.name, AvailableShares, CurrentPrices, forecast, demand, 30);                         
 
               TornData.StockTimerActive = true; // this will active timer to update info when button stock is pressed. is turned off by itself when activated.
-                 }
-               catch (Exception)
+                }
+              catch (Exception)
                {
-                   MessageBox.Show("Get Api data first");
+                  MessageBox.Show("Get Api data first");
                }
 
           }).Start();
@@ -744,6 +740,7 @@ namespace TornMainForm
                 TornData.StockTimerActive = true;
                 StockActivateTimer.Start();
                 StockInfoRefreshLimit.Start();
+
             }
             catch (Exception)
             {
@@ -774,7 +771,7 @@ namespace TornMainForm
 
                 if (MainForm1.APIKey != "" & MainForm1.APIKey.Length == 16)// create file if it does not exsist
                     {
-                        MyFunctions.AddJsonDataToDictionary(TornData.ItemsIdAndName, "items", "name", TornData.TornJsonFetchedInfo, 1003); //fetch items and add to dict
+                        MyFunctions.AddJsonDataToDictionary(TornData.ItemsIdAndName, "items", "name", TornData.TornJsonFetchedInfo, 1030); //fetch items and add to dict
                         TornData.ItemIdList = TornData.ItemsIdAndName.Keys.ToList();
                         TornData.ItemNamesList = TornData.ItemsIdAndName.Values.ToList();                    
                
@@ -799,7 +796,7 @@ namespace TornMainForm
                 }
                 if (File.Exists(Settings.ItemFileName) == true & TornData.ItemLoaded == false) 
                     {
-                    MyFunctions.AddJsonDataToDictionary(TornData.ItemsIdAndName, "items", "name", TornData.TornJsonFetchedInfo, 1025);
+                    MyFunctions.AddJsonDataToDictionary(TornData.ItemsIdAndName, "items", "name", TornData.TornJsonFetchedInfo, 1050);
                     TornData.NameThenIDofItems = File.ReadAllText(Settings.ItemFileName);
                                       
                     // TornData.TornItemNames = Convert.ToString(JObject.Parse(TornData.NameThenIDofItems));                 
@@ -813,7 +810,6 @@ namespace TornMainForm
                   MessageBox.Show("Is your executable in a file you have read and write permissions?, api key correct?");
                }
                 TornData.ReadytoFetchitems = true;
-
               
                 FetchItemsTimer.Start();
             }).Start();
@@ -879,7 +875,17 @@ namespace TornMainForm
                 if (Settings.APIKey != "")
                 {
                     ApiKeyLockcbx.Checked = true;
+                    try
+                    {
+                        MainForm1.APIKey = Settings.APIKey;
+                    }
+                    catch (Exception)
+                    {
+
+                    }
                 }
+              
+               
             }
             catch (Exception)
             {
@@ -928,8 +934,7 @@ namespace TornMainForm
                 YataDataClass.ScroogeData = YataDataClass.LootTimers["10"];
                 YataDataClass.ScroogeTimingsForLevels = YataDataClass.ScroogeData["timings"];
                 YataDataClass.ScroogeDataForlevel4 = YataDataClass.ScroogeTimingsForLevels["4"];
-                YataDataClass.ScroogeTimerForlevel4 = YataDataClass.ScroogeDataForlevel4["due"];
-                
+                YataDataClass.ScroogeTimerForlevel4 = YataDataClass.ScroogeDataForlevel4["due"];                
 
             //start timers
             RefreshTrueDataForLoots.Start();
@@ -1144,7 +1149,6 @@ namespace TornMainForm
 
         private void StopRefreshingbtn_Click(object sender, EventArgs e)
         {
-
             Refreshtimer.Stop();
             RefreshValuelbl.ForeColor = Color.FromName("red");
             RefreshValuelbl.Text = "Paused";
@@ -1199,7 +1203,6 @@ namespace TornMainForm
                 MyFunctions.ButtonColour(ItemSearchbtn, "white", "black");
                 MyFunctions.ButtonColour(StockGetDatabtn, "white", "black");
                 MyFunctions.ButtonColour(SaveSettingsbtn, "white", "black");
-
                 
                 Creatorlinklabel.LinkColor = Color.FromArgb(133, 133, 133);
                 linkLabel1.LinkColor = Color.FromArgb(133, 133, 133);
@@ -1207,6 +1210,10 @@ namespace TornMainForm
                 LeslieLinkLootlbl.LinkColor = Color.FromArgb(133, 133, 133);
                 Dukelootlinklabel.LinkColor = Color.FromArgb(133, 133, 133);
                 VisitTornlbl.LinkColor = Color.FromArgb(133, 133, 133);
+                Yatalinklbl.LinkColor = Color.FromArgb(133, 133, 133);
+                TornApiLinklbl.LinkColor = Color.FromArgb(133, 133, 133);
+                TornStatslinklbl.LinkColor = Color.FromArgb(133, 133, 133);
+                VaultLinklbl.LinkColor = Color.FromArgb(133, 133, 133);
             }
 
             if (DarkModechkbox.Checked == false)
@@ -1252,11 +1259,32 @@ namespace TornMainForm
                 LeslieLinkLootlbl.LinkColor = Color.FromArgb(0, 0, 255);
                 Dukelootlinklabel.LinkColor = Color.FromArgb(0, 0, 255);
                 VisitTornlbl.LinkColor = Color.FromArgb(0, 0, 255);
+                Yatalinklbl.LinkColor = Color.FromArgb(0, 0, 255);
+                TornApiLinklbl.LinkColor = Color.FromArgb(0, 0, 255);
+                TornStatslinklbl.LinkColor = Color.FromArgb(0, 0, 255);
+                VaultLinklbl.LinkColor = Color.FromArgb(0, 0, 255);
             }
-
         }
 
-        
+        private void Yatalinklbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://yata.alwaysdata.net/");        
+        }
+
+        private void TornApiLinklbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.torn.com/api.html#");
+        }
+
+        private void TornStatslinklbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.tornstats.com/");
+        }
+
+        private void VaultLinklbl_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.torn.com/properties.php#/p=options&tab=vault");
+        }
     }
     
 }

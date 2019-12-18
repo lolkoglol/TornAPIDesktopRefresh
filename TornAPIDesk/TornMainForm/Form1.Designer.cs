@@ -141,6 +141,10 @@
             this.StockInfo29lbl = new System.Windows.Forms.Label();
             this.StockGetDatabtn = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TornApiLinklbl = new System.Windows.Forms.LinkLabel();
+            this.Yatalinklbl = new System.Windows.Forms.LinkLabel();
+            this.TornStatslinklbl = new System.Windows.Forms.LinkLabel();
             this.DarkModechkbox = new System.Windows.Forms.CheckBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.UserInfoTextColour = new System.Windows.Forms.ComboBox();
@@ -162,6 +166,7 @@
             this.LoadItemRefreshLimiter = new System.Windows.Forms.Timer(this.components);
             this.LeslieDukeTimersCountDown = new System.Windows.Forms.Timer(this.components);
             this.RefreshTrueDataForLoots = new System.Windows.Forms.Timer(this.components);
+            this.VaultLinklbl = new System.Windows.Forms.LinkLabel();
             this.MainTabBar.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -218,6 +223,7 @@
             this.MainTabBar.Controls.Add(this.tabPage5);
             this.MainTabBar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MainTabBar.Location = new System.Drawing.Point(0, 0);
+            this.MainTabBar.Margin = new System.Windows.Forms.Padding(0);
             this.MainTabBar.Name = "MainTabBar";
             this.MainTabBar.Padding = new System.Drawing.Point(0, 0);
             this.MainTabBar.SelectedIndex = 0;
@@ -227,6 +233,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.VaultLinklbl);
             this.tabPage1.Controls.Add(this.Scroogenamelbl);
             this.tabPage1.Controls.Add(this.ScroogeTimertolvl4lbl);
             this.tabPage1.Controls.Add(this.StopRefreshingbtn);
@@ -287,6 +294,7 @@
             this.tabPage1.Controls.Add(this.TornAPIKey);
             this.tabPage1.ForeColor = System.Drawing.Color.Black;
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(648, 382);
@@ -599,11 +607,12 @@
             // MoneyInVaultlbl
             // 
             this.MoneyInVaultlbl.AutoSize = true;
-            this.MoneyInVaultlbl.Location = new System.Drawing.Point(428, 197);
+            this.MoneyInVaultlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MoneyInVaultlbl.Location = new System.Drawing.Point(515, 197);
             this.MoneyInVaultlbl.Name = "MoneyInVaultlbl";
-            this.MoneyInVaultlbl.Size = new System.Drawing.Size(80, 13);
+            this.MoneyInVaultlbl.Size = new System.Drawing.Size(19, 13);
             this.MoneyInVaultlbl.TabIndex = 37;
-            this.MoneyInVaultlbl.Text = "Money in Vault:";
+            this.MoneyInVaultlbl.Text = "$0";
             // 
             // MoneyOnHandlbl
             // 
@@ -1366,6 +1375,10 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.label2);
+            this.tabPage5.Controls.Add(this.TornApiLinklbl);
+            this.tabPage5.Controls.Add(this.Yatalinklbl);
+            this.tabPage5.Controls.Add(this.TornStatslinklbl);
             this.tabPage5.Controls.Add(this.DarkModechkbox);
             this.tabPage5.Controls.Add(this.linkLabel1);
             this.tabPage5.Controls.Add(this.UserInfoTextColour);
@@ -1384,10 +1397,53 @@
             this.tabPage5.Text = "Settings";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(7, 183);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 16);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Useful Sites";
+            // 
+            // TornApiLinklbl
+            // 
+            this.TornApiLinklbl.AutoSize = true;
+            this.TornApiLinklbl.Location = new System.Drawing.Point(7, 235);
+            this.TornApiLinklbl.Name = "TornApiLinklbl";
+            this.TornApiLinklbl.Size = new System.Drawing.Size(67, 13);
+            this.TornApiLinklbl.TabIndex = 16;
+            this.TornApiLinklbl.TabStop = true;
+            this.TornApiLinklbl.Text = "Try Torn API";
+            this.TornApiLinklbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TornApiLinklbl_LinkClicked);
+            // 
+            // Yatalinklbl
+            // 
+            this.Yatalinklbl.AutoSize = true;
+            this.Yatalinklbl.Location = new System.Drawing.Point(7, 285);
+            this.Yatalinklbl.Name = "Yatalinklbl";
+            this.Yatalinklbl.Size = new System.Drawing.Size(35, 13);
+            this.Yatalinklbl.TabIndex = 15;
+            this.Yatalinklbl.TabStop = true;
+            this.Yatalinklbl.Text = "YATA";
+            this.Yatalinklbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Yatalinklbl_LinkClicked);
+            // 
+            // TornStatslinklbl
+            // 
+            this.TornStatslinklbl.AutoSize = true;
+            this.TornStatslinklbl.Location = new System.Drawing.Point(7, 210);
+            this.TornStatslinklbl.Name = "TornStatslinklbl";
+            this.TornStatslinklbl.Size = new System.Drawing.Size(56, 13);
+            this.TornStatslinklbl.TabIndex = 14;
+            this.TornStatslinklbl.TabStop = true;
+            this.TornStatslinklbl.Text = "Torn Stats";
+            this.TornStatslinklbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TornStatslinklbl_LinkClicked);
+            // 
             // DarkModechkbox
             // 
             this.DarkModechkbox.AutoSize = true;
-            this.DarkModechkbox.Location = new System.Drawing.Point(530, 195);
+            this.DarkModechkbox.Location = new System.Drawing.Point(531, 137);
             this.DarkModechkbox.Name = "DarkModechkbox";
             this.DarkModechkbox.Size = new System.Drawing.Size(79, 17);
             this.DarkModechkbox.TabIndex = 13;
@@ -1398,12 +1454,12 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(6, 306);
+            this.linkLabel1.Location = new System.Drawing.Point(7, 260);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(68, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(104, 13);
             this.linkLabel1.TabIndex = 12;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "GitHub Page";
+            this.linkLabel1.Text = "This Projects GitHub";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked_1);
             // 
             // UserInfoTextColour
@@ -1421,7 +1477,7 @@
             "Orange",
             "Purple",
             "Red"});
-            this.UserInfoTextColour.Location = new System.Drawing.Point(244, 193);
+            this.UserInfoTextColour.Location = new System.Drawing.Point(245, 135);
             this.UserInfoTextColour.Name = "UserInfoTextColour";
             this.UserInfoTextColour.Size = new System.Drawing.Size(121, 21);
             this.UserInfoTextColour.Sorted = true;
@@ -1430,7 +1486,7 @@
             // SetUserInfoTextColourbtn
             // 
             this.SetUserInfoTextColourbtn.ForeColor = System.Drawing.Color.Black;
-            this.SetUserInfoTextColourbtn.Location = new System.Drawing.Point(81, 193);
+            this.SetUserInfoTextColourbtn.Location = new System.Drawing.Point(82, 135);
             this.SetUserInfoTextColourbtn.Name = "SetUserInfoTextColourbtn";
             this.SetUserInfoTextColourbtn.Size = new System.Drawing.Size(146, 22);
             this.SetUserInfoTextColourbtn.TabIndex = 10;
@@ -1473,7 +1529,7 @@
             // SettingsAPIkeylbl
             // 
             this.SettingsAPIkeylbl.AutoSize = true;
-            this.SettingsAPIkeylbl.Location = new System.Drawing.Point(6, 159);
+            this.SettingsAPIkeylbl.Location = new System.Drawing.Point(7, 101);
             this.SettingsAPIkeylbl.Name = "SettingsAPIkeylbl";
             this.SettingsAPIkeylbl.Size = new System.Drawing.Size(69, 13);
             this.SettingsAPIkeylbl.TabIndex = 4;
@@ -1484,7 +1540,7 @@
             this.SettingsAPILockchkbox.AutoSize = true;
             this.SettingsAPILockchkbox.Checked = true;
             this.SettingsAPILockchkbox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.SettingsAPILockchkbox.Location = new System.Drawing.Point(530, 159);
+            this.SettingsAPILockchkbox.Location = new System.Drawing.Point(531, 101);
             this.SettingsAPILockchkbox.Name = "SettingsAPILockchkbox";
             this.SettingsAPILockchkbox.Size = new System.Drawing.Size(70, 17);
             this.SettingsAPILockchkbox.TabIndex = 5;
@@ -1494,7 +1550,7 @@
             // 
             // SettingsAPIKeyValuetxtbox
             // 
-            this.SettingsAPIKeyValuetxtbox.Location = new System.Drawing.Point(81, 156);
+            this.SettingsAPIKeyValuetxtbox.Location = new System.Drawing.Point(82, 98);
             this.SettingsAPIKeyValuetxtbox.MaxLength = 16;
             this.SettingsAPIKeyValuetxtbox.Name = "SettingsAPIKeyValuetxtbox";
             this.SettingsAPIKeyValuetxtbox.Size = new System.Drawing.Size(443, 20);
@@ -1558,6 +1614,18 @@
             // 
             this.RefreshTrueDataForLoots.Interval = 30000;
             this.RefreshTrueDataForLoots.Tick += new System.EventHandler(this.RefreshTrueDataForLoots_Tick);
+            // 
+            // VaultLinklbl
+            // 
+            this.VaultLinklbl.AutoSize = true;
+            this.VaultLinklbl.Location = new System.Drawing.Point(428, 197);
+            this.VaultLinklbl.Name = "VaultLinklbl";
+            this.VaultLinklbl.Size = new System.Drawing.Size(81, 13);
+            this.VaultLinklbl.TabIndex = 71;
+            this.VaultLinklbl.TabStop = true;
+            this.VaultLinklbl.Text = "Money In Vault:";
+            this.VaultLinklbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.VaultLinklbl_LinkClicked_1);
+            
             // 
             // MainForm1
             // 
@@ -1738,6 +1806,11 @@
         public System.Windows.Forms.CheckBox DarkModechkbox;
         private System.Windows.Forms.Timer Refreshtimer;
         private System.Windows.Forms.Button GetDatabtn;
+        private System.Windows.Forms.LinkLabel TornApiLinklbl;
+        private System.Windows.Forms.LinkLabel Yatalinklbl;
+        private System.Windows.Forms.LinkLabel TornStatslinklbl;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.LinkLabel VaultLinklbl;
     }
 }
 
