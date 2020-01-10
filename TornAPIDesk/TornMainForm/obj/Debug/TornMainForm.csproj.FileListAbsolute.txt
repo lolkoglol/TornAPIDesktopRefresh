@@ -1,12 +1,10 @@
 c:\users\danie\onedrive\documents\visual studio 2015\Projects\TornAPIDesk\TornMainForm\bin\Debug\TornMainForm.exe.config
 c:\users\danie\onedrive\documents\visual studio 2015\Projects\TornAPIDesk\TornMainForm\bin\Debug\TornMainForm.exe
 c:\users\danie\onedrive\documents\visual studio 2015\Projects\TornAPIDesk\TornMainForm\bin\Debug\TornMainForm.pdb
-c:\users\danie\onedrive\documents\visual studio 2015\Projects\TornAPIDesk\TornMainForm\obj\Debug\TornMainForm.csprojResolveAssemblyReference.cache
 c:\users\danie\onedrive\documents\visual studio 2015\Projects\TornAPIDesk\TornMainForm\obj\Debug\TornMainForm.Properties.Resources.resources
 c:\users\danie\onedrive\documents\visual studio 2015\Projects\TornAPIDesk\TornMainForm\obj\Debug\TornMainForm.csproj.GenerateResource.Cache
 c:\users\danie\onedrive\documents\visual studio 2015\Projects\TornAPIDesk\TornMainForm\obj\Debug\TornMainForm.exe
 c:\users\danie\onedrive\documents\visual studio 2015\Projects\TornAPIDesk\TornMainForm\obj\Debug\TornMainForm.pdb
-c:\users\danie\onedrive\documents\visual studio 2015\Projects\TornAPIDesk\TornMainForm\obj\Debug\TornMainForm.MainForm.resources
 c:\users\danie\onedrive\documents\visual studio 2015\Projects\TornAPIDesk\TornMainForm\bin\Debug\Newtonsoft.Json.dll
 c:\users\danie\onedrive\documents\visual studio 2015\Projects\TornAPIDesk\TornMainForm\bin\Debug\Newtonsoft.Json.xml
 C:\Users\danie\OneDrive\Documents\Visual Studio 2015\Projects\TornAPIDesk\TornMainForm\bin\Debug\Json.dll
@@ -15,3 +13,5 @@ C:\Users\danie\OneDrive\Documents\Visual Studio 2015\Projects\TornAPIDesk\TornMa
 C:\Users\danie\OneDrive\Documents\Visual Studio 2015\Projects\TornAPIDesk\TornMainForm\bin\Debug\TornMainForm.application
 C:\Users\danie\OneDrive\Documents\Visual Studio 2015\Projects\TornAPIDesk\TornMainForm\obj\Debug\TornMainForm.exe.manifest
 C:\Users\danie\OneDrive\Documents\Visual Studio 2015\Projects\TornAPIDesk\TornMainForm\obj\Debug\TornMainForm.application
+C:\Users\danie\OneDrive\Documents\Visual Studio 2015\Projects\TornAPIDesk\TornMainForm\obj\Debug\TornMainForm.csprojResolveAssemblyReference.cache
+C:\Users\danie\OneDrive\Documents\Visual Studio 2015\Projects\TornAPIDesk\TornMainForm\obj\Debug\TornMainForm.MainForm1.resources
