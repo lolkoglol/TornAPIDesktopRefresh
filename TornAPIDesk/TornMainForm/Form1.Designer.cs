@@ -1356,7 +1356,7 @@
             // 
             // ClearTextRecentStockbtn
             // 
-            this.ClearTextRecentStockbtn.Location = new System.Drawing.Point(537, 273);
+            this.ClearTextRecentStockbtn.Location = new System.Drawing.Point(524, 273);
             this.ClearTextRecentStockbtn.Name = "ClearTextRecentStockbtn";
             this.ClearTextRecentStockbtn.Size = new System.Drawing.Size(75, 23);
             this.ClearTextRecentStockbtn.TabIndex = 1;

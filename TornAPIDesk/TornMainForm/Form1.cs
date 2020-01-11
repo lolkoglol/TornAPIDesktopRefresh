@@ -598,9 +598,9 @@ namespace TornMainForm
            {
                 try
                 {
-                                   
-                MyFunctions.APIErrorChecks();
                     Refreshtimer.Stop();
+                    MyFunctions.APIErrorChecks();
+                    
                 }
                 catch (Exception)
                 {
@@ -1472,7 +1472,6 @@ namespace TornMainForm
                 TornData.NewStocksAdded.Clear();
                 tabPage4.Text = "Stock Info [" + UserData.StocksAddedCounter +"]" ; 
 
-
             }
            
         }
@@ -1492,6 +1491,8 @@ namespace TornMainForm
         private void ClearTextRecentStockbtn_Click(object sender, EventArgs e)
         {
             RecentStocksAddedTxtbx.Text = "";
+            UserData.StocksAddedCounter = 0;
+            tabPage4.Text = "Stock Info [" + UserData.StocksAddedCounter + "]";
         }
     }
     
