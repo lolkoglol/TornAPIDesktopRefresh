@@ -801,7 +801,6 @@
             // GetDatabtn
             // 
             this.GetDatabtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GetDatabtn.ForeColor = System.Drawing.Color.Black;
             this.GetDatabtn.Location = new System.Drawing.Point(508, 340);
             this.GetDatabtn.Name = "GetDatabtn";
             this.GetDatabtn.Size = new System.Drawing.Size(112, 34);
