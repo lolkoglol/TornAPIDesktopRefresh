@@ -12,7 +12,8 @@ namespace TornMainForm
     public class AppSettings
     {
         public string APIkey { get; set; }
-        public string UserInfoForeGround { get; set; }
+        public string UserInfoForeGround { get; set; }      
+        public bool DarkMode { get; set; }
 
         public static AppSettings loadSettings()
         {
@@ -21,9 +22,16 @@ namespace TornMainForm
                 StreamReader sr = new StreamReader(MainForm1.Settings.SettingsFileName);
                 AppSettings a = JsonConvert.DeserializeObject<AppSettings>(sr.ReadToEnd());
                 MainForm1.Settings.APIKey = a.APIkey;
-                MainForm1.Settings.UserInfoForeGround = a.UserInfoForeGround;
+                MainForm1.Settings.UserInfoForeGround = a.UserInfoForeGround;              
+                if (a.DarkMode == true)
+                {
+                    MainForm1.Settings.DarkMode = true;
+                }
+
                 sr.Close();
-                return a;
+                
+               return a;
+              
             }
             else
             {

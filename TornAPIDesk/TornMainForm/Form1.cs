@@ -314,7 +314,9 @@ namespace TornMainForm
             public static string ItemFileName = Directory.GetCurrentDirectory() + "\\Items.json";
             public static string UserInfoForeGround = null;
             public static int StockButtonTimerLimit = 12;
-            public static int ItemRefreshLimit = 12;
+            public static int ItemRefreshLimit = 12;           
+            public static bool DarkMode;
+
 
         }
 
@@ -576,7 +578,7 @@ namespace TornMainForm
                             AcEvent = AcEvent.Replace("   ", " ");
                             AcEvent = AcEvent.Replace("  ", " ");
                             // \s\d{1,7}[A-Za-z0-9-*()^!"$&%£]{3,25}\s{1}
-                            AcEvent = Regex.Replace(AcEvent, @"(\s\d{1,7})([A-Za-z0-9-*()^!$&%£]{3,25})\s{1}", "${1} " + " " + "${2}"); //regex to seperate  Id and Names from each other. // currently also splits Log ID's which is not needed
+                            AcEvent = Regex.Replace(AcEvent, @"(\s\d{1,7})([A-Za-z0-9-*()^!$&%£]{3,25})\s{1}", "${1} " + " " + "${2} "); //regex to seperate  Id and Names from each other. // currently also splits Log ID's which is not needed
 
                        /*     if (AcEvent.Contains("attacked")) // need this function so that attack log id does not get split - currently incomplete
                             {
@@ -702,7 +704,7 @@ namespace TornMainForm
             }
             catch (Exception)
             {
-           
+                EducationLengthlbl.Visible = false;
             }
 
             if (Convert.ToInt32(UserData.travel["time_left"]) > 1 )
@@ -1012,6 +1014,18 @@ namespace TornMainForm
                 AppSettings f = new AppSettings();
                 f.APIkey = SettingsAPIKeyValuetxtbox.Text;
                 f.UserInfoForeGround = UserInfoTextColour.Text;
+                try
+                {             
+           
+            if (DarkModechkbox.Checked == true)
+            {
+                f.DarkMode = true;
+            }
+                }
+                catch (Exception)
+                {
+                    
+                }
                 f.saveSettings();
             }
             catch (Exception)
@@ -1041,7 +1055,11 @@ namespace TornMainForm
 
                     }
                 }
-              
+                if (Settings.DarkMode == true)
+                {
+                    DarkModechkbox.Checked = true;
+                 //   DarkModechkbox_CheckedChanged(sender, e);
+                }                           
                
             }
             catch (Exception)
@@ -1525,6 +1543,35 @@ namespace TornMainForm
             RecentStocksAddedTxtbx.Text = "";
             UserData.StocksAddedCounter = 0;
             tabPage4.Text = "Stock Info [" + UserData.StocksAddedCounter + "]";
+        }
+
+        private void TopCheckchkbx_CheckedChanged(object sender, EventArgs e)
+        {
+            if (TopCheckchkbx.Checked == true) // makes form above other applications
+            {
+                Form f = Form.ActiveForm;
+                f.TopMost = true;
+            }
+
+            if (TopCheckchkbx.Checked == false)
+            {
+                Form f = Form.ActiveForm;
+                f.TopMost = false;
+            }
+
+        }
+
+        private void FrontPageOnTopchbx_CheckedChanged(object sender, EventArgs e)
+        {
+            if (FrontPageOnTopchbx.Checked == true)
+            {
+                TopCheckchkbx.Checked = true;
+            }
+            if (FrontPageOnTopchbx.Checked == false)
+            {
+                TopCheckchkbx.Checked = false;
+            }
+
         }
     }
     

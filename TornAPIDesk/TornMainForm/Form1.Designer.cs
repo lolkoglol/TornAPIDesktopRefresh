@@ -142,6 +142,7 @@
             this.RecentStocksAddedTxtbx = new System.Windows.Forms.RichTextBox();
             this.StockGetDatabtn = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.TopCheckchkbx = new System.Windows.Forms.CheckBox();
             this.CalcLink = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.TornApiLinklbl = new System.Windows.Forms.LinkLabel();
@@ -169,6 +170,7 @@
             this.LeslieDukeTimersCountDown = new System.Windows.Forms.Timer(this.components);
             this.RefreshTrueDataForLoots = new System.Windows.Forms.Timer(this.components);
             this.StockAutoReFresh15MinChecker = new System.Windows.Forms.Timer(this.components);
+            this.FrontPageOnTopchbx = new System.Windows.Forms.CheckBox();
             this.MainTabBar.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -236,6 +238,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.FrontPageOnTopchbx);
             this.tabPage1.Controls.Add(this.VaultLinklbl);
             this.tabPage1.Controls.Add(this.Scroogenamelbl);
             this.tabPage1.Controls.Add(this.ScroogeTimertolvl4lbl);
@@ -1385,6 +1388,7 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.TopCheckchkbx);
             this.tabPage5.Controls.Add(this.CalcLink);
             this.tabPage5.Controls.Add(this.label2);
             this.tabPage5.Controls.Add(this.TornApiLinklbl);
@@ -1407,6 +1411,17 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Settings";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // TopCheckchkbx
+            // 
+            this.TopCheckchkbx.AutoSize = true;
+            this.TopCheckchkbx.Location = new System.Drawing.Point(408, 343);
+            this.TopCheckchkbx.Name = "TopCheckchkbx";
+            this.TopCheckchkbx.Size = new System.Drawing.Size(225, 17);
+            this.TopCheckchkbx.TabIndex = 41;
+            this.TopCheckchkbx.Text = "Make Form be on top of other applications";
+            this.TopCheckchkbx.UseVisualStyleBackColor = true;
+            this.TopCheckchkbx.CheckedChanged += new System.EventHandler(this.TopCheckchkbx_CheckedChanged);
             // 
             // CalcLink
             // 
@@ -1642,6 +1657,17 @@
             this.StockAutoReFresh15MinChecker.Interval = 8000;
             this.StockAutoReFresh15MinChecker.Tick += new System.EventHandler(this.StockAutoReFresh15MinChecker_Tick);
             // 
+            // FrontPageOnTopchbx
+            // 
+            this.FrontPageOnTopchbx.AutoSize = true;
+            this.FrontPageOnTopchbx.Location = new System.Drawing.Point(507, 0);
+            this.FrontPageOnTopchbx.Name = "FrontPageOnTopchbx";
+            this.FrontPageOnTopchbx.Size = new System.Drawing.Size(86, 17);
+            this.FrontPageOnTopchbx.TabIndex = 72;
+            this.FrontPageOnTopchbx.Text = "Stay On Top";
+            this.FrontPageOnTopchbx.UseVisualStyleBackColor = true;
+            this.FrontPageOnTopchbx.CheckedChanged += new System.EventHandler(this.FrontPageOnTopchbx_CheckedChanged);
+            // 
             // MainForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1830,6 +1856,8 @@
         public System.Windows.Forms.Button StockGetDatabtn;
         public System.Windows.Forms.Button GetDatabtn;
         public System.Windows.Forms.TabControl MainTabBar;
+        private System.Windows.Forms.CheckBox TopCheckchkbx;
+        private System.Windows.Forms.CheckBox FrontPageOnTopchbx;
     }
 }
 
