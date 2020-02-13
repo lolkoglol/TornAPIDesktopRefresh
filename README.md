@@ -16,7 +16,7 @@ An item search page is featured so you see the effect, market price, buy price, 
 <img src= "https://github.com/lolkoglol/TornAPIDesktopRefresh/blob/master/Main.png" alt = "api1"/>
 
 
-<img src= "https://github.com/lolkoglol/TornAPIDesktopRefresh/blob/master/ItemSearch.png" alt = "api2"/>
+<img src= "https://github.com/lolkoglol/TornAPIDesktopRefresh/blob/master/Item.png" alt = "api2"/>
 
 <img src= "https://github.com/lolkoglol/TornAPIDesktopRefresh/blob/master/Stock.png" alt = "api3"/>
 
