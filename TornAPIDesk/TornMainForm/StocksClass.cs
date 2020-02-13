@@ -11,6 +11,7 @@ namespace TornMainForm
         public string NameOfStock { get; set; }
         public string AcronymOfStock { get; set; }
         public string SharesAvailable { get; set; }
+        public long SharesAvailableNoFormat { get; set; }
         public double PriceOfStock { get; set; }
         public string Forecast { get; set; }
         public string Demand { get; set; }
