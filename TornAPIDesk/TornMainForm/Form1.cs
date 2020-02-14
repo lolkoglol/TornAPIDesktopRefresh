@@ -613,6 +613,8 @@ namespace TornMainForm
                 }
                 catch (Exception)
                 {
+                    OneSecondtimeTwo.Stop();
+                    RefreshValuelbl.Text = "Stopped"; 
                     Refreshtimer.Stop();
                     MessageBox.Show("Error: Api did not work. Try again in 30 Seconds");
                 }
@@ -1295,7 +1297,7 @@ namespace TornMainForm
 
         private void DarkModechkbox_CheckedChanged(object sender, EventArgs e)
         {
-            if (DarkModechkbox.Checked == true)
+            if (DarkModechkbox.Checked == true) // darkmode enabled
             {
                 Form gee = MainForm1.ActiveForm;
                 gee.BackColor = Color.FromName("black");
@@ -1304,7 +1306,7 @@ namespace TornMainForm
 
                 MyFunctions.RichtxtBoxColour(richTextBox1, "white", "black");
                 MyFunctions.RichtxtBoxColour(richTextBox2, "white", "black");
-                MyFunctions.RichtxtBoxColour(RecentStocksAddedTxtbx, "white", "black");
+                MyFunctions.RichtxtBoxColour(FilterStockResultBoxrchtxbx, "white", "black");
 
 
                 MyFunctions.TabColour(tabPage1, "white", "black");
@@ -1321,9 +1323,11 @@ namespace TornMainForm
                 MyFunctions.TabColour(tabPage12, "white", "black");
                 MyFunctions.TabColour(tabPage13, "white", "black");
                 MyFunctions.TabColour(tabPage14, "white", "black");
+                MyFunctions.TabColour(StockFilterTAB, "white", "black");
 
                 MyFunctions.comboboxcolour(ItemCombobox, "white", "black");
                 MyFunctions.comboboxcolour(UserInfoTextColour, "white", "black");
+                MyFunctions.comboboxcolour(OptionsForStockReturncmbx, "white", "black");
 
                 MyFunctions.Textboxcolour(SettingsAPIKeyValuetxtbox, "white", "black");
                 MyFunctions.Textboxcolour(TornAPIKey, "white", "black");
@@ -1336,6 +1340,8 @@ namespace TornMainForm
                 MyFunctions.ButtonColour(StockGetDatabtn, "white", "black");
                 MyFunctions.ButtonColour(SaveSettingsbtn, "white", "black");
                 MyFunctions.ButtonColour(ClearTextRecentStockbtn, "white", "black");
+                MyFunctions.ButtonColour(FetchStockFilterDatabtn, "white", "black");
+
 
                 Creatorlinklabel.LinkColor = Color.FromArgb(133, 133, 133);
                 linkLabel1.LinkColor = Color.FromArgb(133, 133, 133);
@@ -1350,7 +1356,7 @@ namespace TornMainForm
                 CalcLink.LinkColor = Color.FromArgb(133, 133, 133);
             }
 
-            if (DarkModechkbox.Checked == false)
+            if (DarkModechkbox.Checked == false) // lightmode options
             {
                 Form gee = MainForm1.ActiveForm;
                 gee.BackColor = Color.FromName("white");
@@ -1370,6 +1376,7 @@ namespace TornMainForm
                 MyFunctions.TabColour(tabPage12, "black", "white");
                 MyFunctions.TabColour(tabPage13, "black", "white");
                 MyFunctions.TabColour(tabPage14, "black", "white");
+                MyFunctions.TabColour(StockFilterTAB, "black", "white");
 
                 MyFunctions.ButtonColour(StopRefreshingbtn, "black", "Transparent");
                 MyFunctions.ButtonColour(GetDatabtn, "black", "Transparent");
@@ -1379,14 +1386,17 @@ namespace TornMainForm
                 MyFunctions.ButtonColour(StockGetDatabtn, "black", "Transparent");
                 MyFunctions.ButtonColour(SaveSettingsbtn, "black", "Transparent");
                 MyFunctions.ButtonColour(ClearTextRecentStockbtn, "black", "Transparent");
+                MyFunctions.ButtonColour(FetchStockFilterDatabtn, "black", "Transparent");
 
 
                 MyFunctions.RichtxtBoxColour(richTextBox1, "black", "white");
                 MyFunctions.RichtxtBoxColour(richTextBox2, "black", "white");
                 MyFunctions.RichtxtBoxColour(RecentStocksAddedTxtbx, "black", "white");
+                MyFunctions.RichtxtBoxColour(FilterStockResultBoxrchtxbx, "black", "white");
 
                 MyFunctions.comboboxcolour(ItemCombobox, "black", "white");
                 MyFunctions.comboboxcolour(UserInfoTextColour, "black", "white");
+                MyFunctions.comboboxcolour(OptionsForStockReturncmbx, "black", "white");
 
                 MyFunctions.Textboxcolour(SettingsAPIKeyValuetxtbox, "black", "white");
                 MyFunctions.Textboxcolour(TornAPIKey, "black", "white");
