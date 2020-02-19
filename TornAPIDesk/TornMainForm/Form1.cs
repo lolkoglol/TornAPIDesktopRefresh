@@ -472,14 +472,16 @@ namespace TornMainForm
                     // EventId.Reverse();
                     foreach (var item in EventId)
                     {
-                        try
-                        {
+                          try
+                     {
                             string.Concat(item, "evnt");
                             string resultString = Regex.Match(item, @"\d+").Value; // finds first occurance of number for event id
 
                             JToken Idcontent = UserData.Events[resultString];
                             string AcEvent = Convert.ToString(Idcontent["event"]);
                             // making events neater
+                            
+
                             AcEvent = AcEvent.Trim(new Char[] { '*', '<', '>', '[', ']', '^', '/', '\\', 'a', '=' });
                             AcEvent = AcEvent.Replace("href", "");
                             AcEvent = AcEvent.Replace("</a>", "");
@@ -489,27 +491,14 @@ namespace TornMainForm
 
                             AcEvent = Regex.Replace(AcEvent, "XID", " ");
                             AcEvent = Regex.Replace(AcEvent, @"[^0-9a-zA-Z:,. ]+", "");
-
-
-                            //removal of links
-                            //     AcEvent = Regex.Replace(AcEvent, @"https?:www\.?[A-Za-z0-9]?\.?[A-Za-z0-9]?\.?[A-Za-z0-9]?", " ");
-                            AcEvent = Regex.Replace(AcEvent, "http:www.torn.comprofiles.php?", " ");
-                            AcEvent = Regex.Replace(AcEvent, "http:www.torn.comstockexchange.php", " ");
-                            AcEvent = Regex.Replace(AcEvent, "http:www.torn.comloader.php", " ");
-                            AcEvent = Regex.Replace(AcEvent, "http:www.torn.comorganisedcrimes.php", " ");
-                            AcEvent = Regex.Replace(AcEvent, "sidracingtablograce", " ");
-                            AcEvent = Regex.Replace(AcEvent, "http:www.torn.comjoblist.phppcorpinfoID", " ");
-                            AcEvent = Regex.Replace(AcEvent, "http: www.torn.comjoblist.phppcorpinfoID", " ");
-                            AcEvent = Regex.Replace(AcEvent, "http:www.torn.combank.php", " ");
-                            AcEvent = AcEvent.Replace("http:www.torn.comtrade.phpstep", " ");
-                            AcEvent = AcEvent.Replace("http:www.torn.compoints.php", " ");
-
+                            AcEvent = AcEvent.Replace("classtgreen","");                        
 
                             AcEvent = AcEvent.Replace("view", " ");
                             AcEvent = AcEvent.Replace("View", " ");
                             AcEvent = AcEvent.Replace("Please click here to continue", " ");
 
                             //   AcEvent = Regex.Replace(AcEvent, @"(\d{1}\w{1,2}(b{1}", "${1}"); // untested regex.
+
                             AcEvent = AcEvent.Replace("1stb", "1st ");
                             AcEvent = AcEvent.Replace("2ndb", "2nd ");
                             AcEvent = AcEvent.Replace("3rdb", "3rd ");
@@ -553,16 +542,9 @@ namespace TornMainForm
                             AcEvent = AcEvent.Replace("   ", " ");
                             AcEvent = AcEvent.Replace("  ", " ");
                             // \s\d{1,7}[A-Za-z0-9-*()^!"$&%£]{3,25}\s{1}
-                            AcEvent = Regex.Replace(AcEvent, @"(\s\d{1,7})([A-Za-z0-9-*()^!$&%£]{3,25})\s{1}", "${1} " + " " + "${2} "); //regex to seperate  Id and Names from each other. 
-
-                            /*     if (AcEvent.Contains("attacked")) // need this function so that attack log id does not get split - currently incomplete
-                                 {
-                                string a =   AcEvent.Split ("attacked"[0]);
-                                     string b = Convert.ToString(AcEvent.Split("attacked"[1]));
-                                     string replacement = Regex.Replace(a, @"(\d{2,7})([A-Za-z0-9]{0,22})", "${1} " + " " + "${2}");
-                                     AcEvent = a.tos() + b.ToString();
-                                 }*/
-
+                            AcEvent = Regex.Replace(AcEvent, @"(\s\d{1,7})([A-Za-z0-9-*()^!$&%£]{3,25})\s{1}", "${1} " + " " + "${2} "); //regex to seperate  Id and Names from each other.                          
+                            AcEvent = Regex.Replace(AcEvent, @"bold http:www.torn.com\w*\W*\w*", "");
+                            AcEvent = Regex.Replace(AcEvent, @"http:www.torn.com\w*\W*\w*", ""); //removes linkeds after other replacements 
                             if (item.Contains("the") & item.Contains("details") & item.Contains("here"))
                             {
                                 AcEvent = AcEvent.Replace("the", "");
@@ -607,13 +589,14 @@ namespace TornMainForm
             {
                 try
                 {
+                    RefreshValuelbl.Text = "Stopped";
                     Refreshtimer.Stop();
                     MyFunctions.APIErrorChecks();
 
                 }
                 catch (Exception)
                 {
-                    OneSecondtimeTwo.Stop();
+                    
                     RefreshValuelbl.Text = "Stopped"; 
                     Refreshtimer.Stop();
                     MessageBox.Show("Error: Api did not work. Try again in 30 Seconds");
@@ -663,6 +646,29 @@ namespace TornMainForm
             MyFunctions.TimerCountdownWithTicks(UserData.DBMCooldowns, BoosterCdValuelbl, "booster");
             MyFunctions.TimerCountdownWithTicks(UserData.Chainjson, CoolDownValuelbl, "cooldown");
             MyFunctions.TimerCountdownWithTicks(UserData.Bank, BankTimeLeftValuelbl, "time_left");
+
+            // Torn Time
+            try
+            {
+
+          
+            DateTime begginingoftime = new DateTime(1970, 01, 01);
+
+            var details = JObject.Parse(Convert.ToString(UserData.User));
+            TornData.TornTime = Convert.ToString(Convert.ToInt64(TornData.TornTime) + 1);
+            TornData.TornTimeSpanInSeconds = Convert.ToInt64(TornData.TornTime);
+
+            TimeSpan torntime = TimeSpan.FromSeconds(Convert.ToUInt64(TornData.TornTime) + 1);
+
+            begginingoftime = begginingoftime + torntime;
+            TornCityTimelbl.Text = Convert.ToString("TCT: " + begginingoftime);
+            }
+            catch (Exception)
+            {
+
+                
+            }
+            //End TornTime
 
             try
             {
@@ -735,7 +741,7 @@ namespace TornMainForm
             }
             try
             { // setting torn time
-                DateTime begginingoftime = new DateTime(1970, 01, 01);
+              /*  DateTime begginingoftime = new DateTime(1970, 01, 01);
 
                 var details = JObject.Parse(Convert.ToString(UserData.User));
                 TornData.TornTime = Convert.ToString(Convert.ToInt64(TornData.TornTime) + 1);
@@ -744,11 +750,11 @@ namespace TornMainForm
                 TimeSpan torntime = TimeSpan.FromSeconds(Convert.ToUInt64(TornData.TornTime) + 1);
 
                 begginingoftime = begginingoftime + torntime;
-                TornCityTimelbl.Text = Convert.ToString("TCT: " + begginingoftime);
+                TornCityTimelbl.Text = Convert.ToString("TCT: " + begginingoftime);*/
             }
             catch (Exception)
             {
-                TornCityTimelbl.Text = "0";
+              //  TornCityTimelbl.Text = "0";
             }
 
         }
@@ -1527,7 +1533,6 @@ namespace TornMainForm
             {
 
 
-
                 if (OptionsForStockReturncmbx.Text == "Price Low - High")
                 {
                     double[] PriceOfStocks = new double[StockCount];
@@ -1550,7 +1555,6 @@ namespace TornMainForm
                             //  throw new Exception();
                         }
                     }
-
 
                 }
                 if (OptionsForStockReturncmbx.Text == "Price High - Low")
@@ -1679,8 +1683,12 @@ namespace TornMainForm
                     }
                 }
 
-            }
-           
+            }           
+
+        }
+
+        private void RefreshValuelbl_Click(object sender, EventArgs e)
+        {
 
         }
     }
